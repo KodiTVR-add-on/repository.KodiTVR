@@ -21,7 +21,7 @@
 	    <import addon="script.module.youtube.dl" optional="true"/>	
 	</requires>
 	<extension point="xbmc.addon.repository" name="[B][COLOR red]repository [COLOR red]KodiTVR[/B][/COLOR]">
-		<info compressed="false">https://raw.githubusercontent.com/KodiTVR/repository.KodiTVR/master/addons.xml</info>
+		<info compressed="false">https://raw.githubusercontent.com/KodiTVR-add-on/repository.KodiTVR/master/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/KodiTVR/repository.KodiTVR/master/addons.xml.md5</checksum>
 		<datadir zip="true">https://raw.githubusercontent.com/KodiTVR/repository.KodiTVR/master/zips</datadir>
 	</extension>
