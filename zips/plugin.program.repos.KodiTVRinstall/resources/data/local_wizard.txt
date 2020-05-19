@@ -1,0 +1,5 @@
+name="REPOS INSTALL"
+url="use_local_file"
+img="local_kodi.png"
+fanart="local_kodi.jpg"
+description="REPOS INSTALL"

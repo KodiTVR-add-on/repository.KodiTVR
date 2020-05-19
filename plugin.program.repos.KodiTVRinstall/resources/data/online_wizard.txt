@@ -1,0 +1,5 @@
+name="AresVikingsWizard"
+url="use_url"
+img="online_kodi.png"
+fanart="online_kodi.jpg"
+description="Ares Vikings Wizard"

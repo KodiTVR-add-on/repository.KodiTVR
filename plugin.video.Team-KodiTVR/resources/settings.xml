@@ -1,0 +1,24 @@
+﻿<settings>		
+  <category label="Informação Team-KodiTVR">
+       	<setting type="lsep" label="[COLOR lime]Versão do Add-on Actualizado 15/05/2020[/COLOR]" option="close" action="RunPlugin(plugin://plugin.video.Team-KodiTVR/?mode=7)" />
+        <setting type="lsep" label="[COLOR yellow]Facebook:[/COLOR] https://www.facebook.com/KodiTVR" option="close" action="RunPlugin(plugin://plugin.video.Team-KodiTVR/?mode=7)" />
+        <setting type="lsep" label="[COLOR yellow]Twitter:[/COLOR] @KodiTVR" option="close" action="RunPlugin(plugin://plugin.video.Team-KodiTVR/?mode=7)" />
+		<setting type="lsep" label="[COLOR yellow]Email:[/COLOR] koditvr@gmail.com" option="close" action="RunPlugin(plugin://plugin.video.Team-KodiTVR/?mode=7)" />
+		<setting type="lsep" label="[COLOR yellow]Web:[/COLOR] https://koditvr.wixsite.com/website" option="close" action="RunPlugin(plugin://plugin.video.Team-KodiTVR/?mode=7)" />
+		<setting type="lsep" label="[COLOR yellow]Instagram:[/COLOR] @KodiTVR" option="close" action="RunPlugin(plugin://plugin.video.Team-KodiTVR/?mode=7)" />
+		<setting type="lsep" label="[COLOR yellow]Telegram:[/COLOR] @KodiTVR" option="close" action="RunPlugin(plugin://plugin.video.Team-KodiTVR/?mode=7)" />
+ </category>
+		
+  <category label="Configuração General">
+        <setting type="lsep" label="Para o bom funcionamento clicar em" option="close" action="RunPlugin(plugin://plugin.video.Team-KodiTVR/?mode=7)" />
+        <setting type="lsep" label="[COLOR red]POR DEFEITO[/COLOR] clicar em [COLOR red]OK[/COLOR]" option="close" action="RunPlugin(plugin://plugin.video.Team-KodiTVR/?mode=7)" />
+		<setting id="ask_playlist_items" type="bool" label="Eleger Fonte de Video" default="true" visible="true"/>
+		<setting id="debug" type="bool" label="Enable Add-on Debugging" default="true" visible="true"/>
+        <setting id="1080pquality" label="[COLOR lime]Melhor qualidade 1080p[/COLOR]" type="bool" default="true"/>
+        <setting id="add_playlist" type="bool" label="Activar Multilink" default="true" visible="true"/>
+        <setting id="genesisorpulsar" type="enum" values="Genesis|Elementum" label="Play IMDBid with:" default="Genesis"visible="true"/>
+        <setting id="donotshowbychannels" label="Ocultar Canais" type="bool" default="true" visible="true"/>
+  </category>
+  </settings>
+
+

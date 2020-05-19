@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.Team-KodiTVR"
+       name="[COLOR gold]Team-KodiTVR[/COLOR][COLOR blue] 5[/COLOR].[COLOR yellow]4[/COLOR].[COLOR red]0[/COLOR]"
+       version="0.0.1"
+       provider-name="KodiTVR">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" optional="true" />
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />    
+     <import addon="script.module.livestreamer" optional="true"/>
+     <import addon="script.module.pyamf" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  
+     <extension point="xbmc.addon.repository" name="Team-KodiTVR Repository">
+		<info>https://raw.githubusercontent.com/KodiTVR-add-on/Team-KodiTVR/Repo/master/Repositorio/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/KodiTVR-add-on/Team-KodiTVR/Repo/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/KodiTVR-add-on/Team-KodiTVR/master/Repositorio/</datadir>
+	</extension>
+
+  <extension point="xbmc.addon.metadata">
+    <summary>Criado por Team-KodiTVR</summary>
+    <description>Team-KodiTVR 2020</description>
+	<news>
+		Instale add-ons KodiTVR partir deste repositório no seguinte caminho: Versão Kodi em Inglês-->  ADD-ON REPOSITORY, Kodi em Português--> REPOSITÓRIO DE ADD-ONS
+		Após a instalação, desinstale versões descontinuadas(antigas), e boa diversão!
+		Para maiores detalhes e suporte, acesse nossa página no facebook:  https://www.facebook.com/KodiTVR
+		Ou siga-nos no site: https://koditvr.wixsite.com/website
+	</news>
+	<disclaimer></disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>

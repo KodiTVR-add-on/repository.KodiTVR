@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.KodiTVR-Playlist" name="[COLOR blue][B]KodiTVR-Playlist[/COLOR][/B]" version="1.0.0" provider-name="KodiTVR">
+    <requires>
+    </requires>
+    <extension point="xbmc.python.pluginsource"
+               library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>KodiTVR-Playlist</summary>
+        <description>Add-on KodiTVR-Playlist para todas as plataformas.</description>
+    </extension>
+</addon>
