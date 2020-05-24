@@ -113,6 +113,21 @@ Add-on này sẽ bỏ qua và không chuyển đổi XML dùng regex.
     </extension>
 </addon>
 
+<addon id="plugin.program.KodiTVR-WIZARD" name=" [B][COLOR orange]WIZARD KodiTVR[/COLOR][/B]" version="1.0" provider-name="[B][COLOR red]KodiTVR[/COLOR][/B]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	</requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="startup.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">KodiTVR-WIZARD</summary>
+    <description lang="en">KodiTVR-WIZARD allows you to get access to the latest Custom Builds.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.program.repos.KodiTVRinstall" name="[B][COLOR yellow]REPOS-[/COLOR][/B][B][COLOR red]INST[/COLOR][/B][B][COLOR green]ALLER[/COLOR][/B]" version="1.0.0" provider-name="[COLOR cyan][B]KodiTVR[/COLOR][/B]">
   <requires>
     <import addon="repository.freemediaentertainment" optional="true" />
