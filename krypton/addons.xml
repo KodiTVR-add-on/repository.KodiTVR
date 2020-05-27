@@ -37,7 +37,7 @@
 			<screenshot>resources/screenshots/screenshot-11.jpg</screenshot>
 			<screenshot>resources/screenshots/screenshot-12.jpg</screenshot>
 		</assets>
-		<news>[I]All Versions[/I][CR] New Verson by KodiTVR [CR][I]v0.0.1[/I][CR]</news>
+		<news>[I]All Versions[/I][CR] New Version by KodiTVR [CR][I]v0.0.1[/I][CR]</news>
 		</extension>
     <extension point="kodi.context.item">
 	    <menu id="kodi.core.main">
