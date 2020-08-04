@@ -9,7 +9,7 @@
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
         <website>https://www.radio.pt/</website>
-        <source>https://github.com/KodiTVR-add-on/plugin.audio.radio_pt</source>
+        <source>https://github.com/KodiTVR-add-on/repository.KodiTVR/tree/master/plugin.audio.radio_pt</source>
         <forum>https://forum.kodi.tv/showthread.php?</forum>
         <license>GPL-2.0-only</license>
         <news>v3.0.3 (1/5/2020)
