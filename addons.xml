@@ -163,7 +163,7 @@ You can clone the project and host it in your own server.
         <forum></forum>
         <website>http://24.sapo.pt/jornais</website>
         <email>koditvr@gmail.com</email>
-        <source>https://github.com/KodiTVR-add-on/plugin.image.KodiTVR-JORNAL</source>
+        <source>https://github.com/KodiTVR-add-on/repository.KodiTVR/tree/master/plugin.image.KodiTVR-JORNAL</source>
         <news>Add-on 2020 capas dos jornais e  Revistas portuguesas no Kodi</news>
         <disclaimer lang="en_GB">Add-on not endorsed by SAPO, add-on endorsed by KodiTVR</disclaimer>
         <disclaimer lang="pt_PT">Add-on não desenvolvido pelo SAPO, add-on endorsed by KodiTVR</disclaimer>
