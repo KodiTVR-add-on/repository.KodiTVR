@@ -24,16 +24,16 @@
 		<info compressed="false">https://raw.githubusercontent.com/KodiTVR-add-on/repository.KodiTVR/master/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/KodiTVR-add-on/repository.KodiTVR/master/addons.xml.md5</checksum>
 		<datadir zip="true">https://raw.githubusercontent.com/KodiTVR-add-on/repository.KodiTVR/master/repository.KodiTVR/addon.xml</datadir>
-				<dir minversion="17.0.0">
+				
 			<info compressed="true">https://raw.githubusercontent.com/KodiTVR-add-on/repository.KodiTVR/master/krypton/addons.xml</info>
 			<checksum>https://raw.githubusercontent.com/KodiTVR-add-on/repository.KodiTVR/master/krypton/addons.xml.md5</checksum>
 			<datadir zip="true">https://raw.githubusercontent.com/KodiTVR-add-on/repository.KodiTVR/master/krypton</datadir>
-		</dir>
-		<dir minversion="17.9.0">
+		
+		
 			<info compressed="true">https://raw.githubusercontent.com/KodiTVR-add-on/repository.KodiTVR/master/leia/addons.xml</info>
 			<checksum>https://raw.githubusercontent.com/KodiTVR-add-on/repository.KodiTVR/master/leia/addons.xml.md5</checksum>
 			<datadir zip="true">https://raw.githubusercontent.com/KodiTVR-add-on/repository.KodiTVR/master/leia</datadir>
-		</dir> 
+		 
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary>KodiTVR Repo</summary>
