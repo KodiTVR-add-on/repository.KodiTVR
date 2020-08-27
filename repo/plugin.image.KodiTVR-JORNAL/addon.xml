@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.image.KodiTVR-JORNAL" name="[COLOR green]KodiTVR[/COLOR][COLOR yellow]-[/COLOR][COLOR red]JORNAL[/COLOR]" version="2.0.0" provider-name="[COLOR yellow]KodiTVR[/COLOR]">
+    <requires>
+        <import addon="xbmc.python" version="2.25.0"/>
+        <import addon="script.module.routing" version="0.2.0"/>
+        <import addon="script.module.requests"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>image</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Daily portuguese newspapper covers in Kodi</summary>
+        <summary lang="pt_PT">Capas diárias dos jornais portugueses no Kodi</summary>
+        <description lang="en_GB">A Kodi image plugin for Banca Sapo</description>
+        <description lang="pt_PT">Um plugin para o Kodi para aceder à Banca Sapo</description>
+        <language>pt</language>
+        <platform>all</platform>
+        <license>GPL-3.0</license>
+        <forum></forum>
+        <website>http://24.sapo.pt/jornais</website>
+        <email>koditvr@gmail.com</email>
+        <source>https://github.com/KodiTVR-add-on/repository.KodiTVR/tree/master/plugin.image.KodiTVR-JORNAL</source>
+        <news>Add-on 2020 capas dos jornais e  Revistas portuguesas no Kodi</news>
+        <disclaimer lang="en_GB">Add-on not endorsed by SAPO, add-on endorsed by KodiTVR</disclaimer>
+        <disclaimer lang="pt_PT">Add-on não desenvolvido pelo SAPO, add-on endorsed by KodiTVR</disclaimer>
+        <assets>
+            <icon>resources/images/icon.png</icon>
+            <fanart>resources/images/fanart.jpg</fanart>
+            <screenshot>resources/images/screenshot-01.jpg</screenshot>
+            <screenshot>resources/images/screenshot-02.jpg</screenshot>
+            <screenshot>resources/images/screenshot-03.jpg</screenshot>
+            <screenshot>resources/images/screenshot-04.jpg</screenshot>
+        </assets>
+    </extension>
+</addon>

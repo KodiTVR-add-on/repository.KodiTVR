@@ -1,0 +1,2 @@
+v2.0.0
+- Old XBMC add-on plugin.image.KodiTVR-JORNAL fixed to work for kodi leia 18.8
