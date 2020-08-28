@@ -11,7 +11,7 @@
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
         <website>https://www.radio.pt/</website>
-        <source>https://github.com/KodiTVR-add-on/plugin.audio.radio_pt</source>
+        <source>https://github.com/KodiTVR-add-on/repository.KodiTVR/tree/master/plugin.audio.radio_pt</source>
         <forum>https://forum.kodi.tv/showthread.php?</forum>
         <license>GPL-2.0-only</license>
         <news>v3.0.3 (1/5/2020)
@@ -178,7 +178,7 @@ You can clone the project and host it in your own server.
     </extension>
 </addon>
 
- <addon id="plugin.program.addoninstaller" version="1.2.9"
+    <addon id="plugin.program.addoninstaller" version="1.2.9"
     	name="Addon Installer" provider-name="tvaddons.ag, Blazetamer">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -200,6 +200,21 @@ You can clone the project and host it in your own server.
     </extension>
 </addon>
 
+<addon id="plugin.program.KodiTVR-WIZARD" name=" [B][COLOR orange]WIZARD KodiTVR[/COLOR][/B]" version="1.0" provider-name="[B][COLOR red]KodiTVR[/COLOR][/B]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	</requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="startup.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">KodiTVR-WIZARD</summary>
+    <description lang="en">KodiTVR-WIZARD allows you to get access to the latest Custom Builds.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.program.KodiTVRAddonCreator" name="*KodiTVR [COLOR cyan]Add-on Creator[/COLOR]" version="1.0.0" provider-name="KodiTVR">
     <requires>
     </requires>
@@ -212,16 +227,16 @@ You can clone the project and host it in your own server.
         <description>
 Use this add-on creator to make your own favorite XBMC/Kodi addons to use with[COLOR red][B] m3u and/or xml playlists (NO REGEX)[/B][/COLOR]
 
-Dùng addon creator này để tạo ra các XBMC/Kodi addons theo sở thích dùng chung với[COLOR red][B] danh sách m3u và/hoặc xml (NO REGEX)[/B][/COLOR]		
+Dùng addon creator này để tạo ra các XBMC/Kodi addons theo sở thích dùng chung với[COLOR red][B] danh sách m3u và/hoặc xml (NO REGEX)[/B][/COLOR]
 		</description>
-		<disclaimer></disclaimer>		
+		<disclaimer></disclaimer>
 		<platform>all</platform>
 		<license>http://www.gnu.org/licenses/</license>
 		<forum></forum>
-		<website></website>    
+		<website></website>
 		<email></email>
-		<mainsource>https://github.com/KodiTVR/repository.KodiTVR</mainsource>    
-		<source></source> 		
+		<mainsource>https://github.com/KodiTVR/repository.KodiTVR</mainsource>
+		<source></source>
     </extension>
 </addon>
 
@@ -239,32 +254,17 @@ Use this add-on to convert M3U to XML Playlist and vice versa.
 It will ignore XML with regex.
 
 Dùng add-on này để chuyển đổi M3U sang XML playlist và ngược lại.
-Add-on này sẽ bỏ qua và không chuyển đổi XML dùng regex.		
+Add-on này sẽ bỏ qua và không chuyển đổi XML dùng regex.
 		</description>
-		<disclaimer></disclaimer>		
+		<disclaimer></disclaimer>
 		<platform>all</platform>
 		<license>http://www.gnu.org/licenses/</license>
 		<forum></forum>
-		<website></website>    
+		<website></website>
 		<email></email>
-		<mainsource>https://github.com/KodiTVR/repository.KodiTVR</mainsource>    
-		<source></source>	
+		<mainsource>https://github.com/KodiTVR/repository.KodiTVR</mainsource>
+		<source></source>
     </extension>
-</addon>
-
-<addon id="plugin.program.KodiTVR-WIZARD" name=" [B][COLOR orange]WIZARD KodiTVR[/COLOR][/B]" version="1.0" provider-name="[B][COLOR red]KodiTVR[/COLOR][/B]">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	</requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>executable</provides>
-  </extension>
-  <extension point="xbmc.service" library="startup.py" start="startup" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">KodiTVR-WIZARD</summary>
-    <description lang="en">KodiTVR-WIZARD allows you to get access to the latest Custom Builds.</description>
-    <platform>all</platform>
-  </extension>
 </addon>
 
 <addon id="plugin.program.repos.KodiTVRinstall" name="[B][COLOR yellow]REPOS-[/COLOR][/B][B][COLOR red]INST[/COLOR][/B][B][COLOR green]ALLER[/COLOR][/B]" version="1.0.0" provider-name="[COLOR cyan][B]KodiTVR[/COLOR][/B]">
@@ -290,7 +290,7 @@ Add-on này sẽ bỏ qua và không chuyển đổi XML dùng regex.
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">[COLOR blue]KodiTVR Speed Tester[/COLOR] - Teste a velocidade de sua Internet no seu KODI.</summary>
-    <description lang="en">KodiTVR Speed Tester powered by speedtest.net will give you accurate Internet speed/ping test results. - Teste a velocidade da Internet no seu KODI.</description>
+    <description lang="en">KodiTVR Speed Tester will give you accurate Internet speed/ping test results. - Teste a velocidade da Internet no seu KODI.</description>
     <platform>all</platform>
   </extension>
 </addon>
@@ -340,7 +340,7 @@ Add-on này sẽ bỏ qua và không chuyển đổi XML dùng regex.
     <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>
     </extension>
-    
+
 
     <extension point="xbmc.addon.metadata">
         <summary>f4mTester</summary>
@@ -381,10 +381,10 @@ Add-on này sẽ bỏ qua và không chuyển đổi XML dùng regex.
     <import addon="script.module.httplib2" />
     <import addon="script.module.youtube.dl" optional="true"/>
     <import addon="plugin.video.youtube" version="3.0.0"/>
-    <import addon="script.module.simplejson" /> 
+    <import addon="script.module.simplejson" />
     <import addon="script.common.plugin.cache" version="2.5.2"/>
     <import addon="script.module.metahandler" version="2.5.1"/>
-			
+
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video</provides>
@@ -395,8 +395,8 @@ Add-on này sẽ bỏ qua và không chuyển đổi XML dùng regex.
     <platform>all</platform>
   </extension>
  </addon>
- 
- <addon id="plugin.video.KodiTVR-Canais"
+
+<addon id="plugin.video.KodiTVR-Canais"
        name="[COLOR red][B]KodiTVR-Canais[/B][/COLOR]"
        version="1.0"
        provider-name="KodiTVR">
@@ -412,20 +412,20 @@ Add-on này sẽ bỏ qua và không chuyển đổi XML dùng regex.
     <import addon="plugin.video.youtube" optional="true" />
 	<import addon="plugin.video.SportsDevil" optional="true" />
     <import addon="script.module.urlresolver" optional="true"/>
-    <import addon="script.module.simplejson" />    
+    <import addon="script.module.simplejson" />
      <import addon="script.module.livestreamer" optional="true"/>
      <import addon="script.module.pyamf" optional="true"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video</provides>
   </extension>
-  
-  	
+
+
   <extension point="xbmc.addon.metadata">
     <summary>Add-on KodiTVR-Canais de Vila Real</summary>
     <description>
        ADD-ON KodiTVR-Canais 2020 Sejam Bem-vindos...
-             
+
     </description>
     <platform>all</platform>
   </extension>
@@ -447,7 +447,7 @@ Add-on này sẽ bỏ qua và không chuyển đổi XML dùng regex.
     <import addon="script.module.youtube.dl" optional="true"/>
     <import addon="plugin.video.youtube" version="3.0.0"/>
     <import addon="script.module.urlresolver" optional="true"/>
-    <import addon="script.module.simplejson" /> 
+    <import addon="script.module.simplejson" />
     <import addon="script.common.plugin.cache" version="2.5.2"/>
     <import addon="script.module.metahandler" version="2.5.1"/>
 
@@ -461,20 +461,20 @@ Add-on này sẽ bỏ qua và không chuyển đổi XML dùng regex.
 O add-on KodiTVR-iptv apresenta as seguintes secções:
 Canais desportivos com transmissões em direto de várias modalidades
 Sports (Futebol-Desporto... E videos de Vila Real, Portugal)
-Canais World IPTV (Portugal-Vários Países-Adultos) 
+Canais World IPTV (Portugal-Vários Países-Adultos)
 Canais Arenavision (para ver com o Plexus)
-      [COLOR white][B]Todos os links disponibilizados neste Add-on estão disponíveis 
+      [COLOR white][B]Todos os links disponibilizados neste Add-on estão disponíveis
 em livre procura pela internet.[/B][/COLOR] - [COLOR red][B]Add-on EXCLUSIVO KodiTVR[/B][/COLOR]
-[COLOR yellow][B]ACESSE e INSCREVA-SE no Meu CANAL do YOUTUBE:[/B][/COLOR] 
+[COLOR yellow][B]ACESSE e INSCREVA-SE no Meu CANAL do YOUTUBE:[/B][/COLOR]
 http://www.youtube.com/KodiTVR
 
 [COLOR yellow]Bem-vindos a KodiTVR Add-ons
 Espero que gostem, Disfrutem![/COLOR]
-NOTA: para a correta visualização de alguns canais é necessário ter instalados: 
+NOTA: para a correta visualização de alguns canais é necessário ter instalados:
 f4mtester – f4mproxy - Sports Devil – Plexus - Elementum - Gdrive - Quasar - youtube
 O criador deste addon não possui nem está ligado de nenhuma forma ao conteúdo nele disponibilizado.
-Apenas disponibilizo conteúdos disponíveis 
-na internet.	
+Apenas disponibilizo conteúdos disponíveis
+na internet.
 	</description>
     <platform>all</platform>
   </extension>
@@ -533,11 +533,11 @@ na internet.
    <import addon="script.module.dateutil" />
    <import addon="script.module.simplejson" />
    <import addon="script.module.six" />
-   <import addon="script.module.requests" />   
+   <import addon="script.module.requests" />
    <import addon="plugin.video.f4mTester" />
    <import addon="script.module.slproxy" />
   </requires>
-  <extension 
+  <extension
     point="xbmc.python.pluginsource"
     library="default.py">
    <provides>video</provides>
@@ -567,16 +567,16 @@ na internet.
     <import addon="script.module.youtube.dl" optional="true"/>
     <import addon="plugin.video.youtube" optional="true" />
     <import addon="script.module.urlresolver" optional="true"/>
-    <import addon="script.module.simplejson" />    
+    <import addon="script.module.simplejson" />
      <import addon="script.module.livestreamer" optional="true"/>
      <import addon="script.module.pyamf" optional="true"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video</provides>
   </extension>
-  
+
      <extension point="xbmc.addon.repository" name="Team-KodiTVR Repository">
-		<info>https://raw.githubusercontent.com/KodiTVR-add-on/Team-KodiTVR/Repo/master/Repositorio/addons.xml</info>
+		<info>https://raw.githubusercontent.com/KodiTVR-add-on/repository.KodiTVR/master/plugin.video.Team-KodiTVR/addon.xml</info>
         <checksum>https://raw.githubusercontent.com/KodiTVR-add-on/Team-KodiTVR/Repo/master/Repositorio/addons.xml.md5</checksum>
         <datadir zip="true">https://raw.githubusercontent.com/KodiTVR-add-on/Team-KodiTVR/master/Repositorio/</datadir>
 	</extension>
@@ -717,14 +717,14 @@ na internet.
         <import addon="script.module.simple.downloader" version="0.9.4"/>
         <import addon="plugin.video.youtube" version="5.2.1" />
         <import addon="script.module.urlresolver" />
-        <import addon="script.module.simplejson" />    
+        <import addon="script.module.simplejson" />
         <import addon="script.module.livestreamer"/>
         <import addon="script.module.pyamf"/>
         <import addon="script.common.plugin.cache" version="2.5.2"/>
         <import addon="script.module.metahandler" version="2.9.0"/>
 	    <import addon="script.module.addon.common" />
 	    <import addon="script.module.addon.signals" version="0.0.1"/>
-	    <import addon="script.module.youtube.dl" optional="true"/>	
+	    <import addon="script.module.youtube.dl" optional="true"/>
 	</requires>
 	<extension point="xbmc.service" library="service.py" start="[login|startup]" />
 	<extension point="xbmc.addon.repository" name="[B][COLOR yellow]repository [COLOR yellow]KodiTVR[/B][/COLOR]">
@@ -740,7 +740,7 @@ na internet.
 			<info compressed="true">https://raw.githubusercontent.com/KodiTVR-add-on/repository.KodiTVR/master/leia/addons.xml</info>
 			<checksum>https://raw.githubusercontent.com/KodiTVR-add-on/repository.KodiTVR/master/leia/addons.xml.md5</checksum>
 			<datadir zip="true">https://raw.githubusercontent.com/KodiTVR-add-on/repository.KodiTVR/master/leia</datadir>
-		</dir> 
+		</dir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary>KodiTVR Repo</summary>
@@ -899,9 +899,9 @@ na internet.
     </extension>
 </addon>
 
-<addon id="script.module.metahandler" 
-     name="metahandler" 
-     version="3.0.3" 
+<addon id="script.module.metahandler"
+     name="metahandler"
+     version="3.0.3"
      provider-name="Eldorado, jsergio">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
@@ -932,7 +932,7 @@ na internet.
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="lib/default.py">
 		<provides>executable</provides>
-	</extension> 
+	</extension>
 	<extension point="xbmc.python.module" library="lib" />
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
@@ -1050,7 +1050,7 @@ na internet.
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
     <import addon="script.module.requests"/>
-	  <import addon="script.module.streamlink.base" />  
+	  <import addon="script.module.streamlink.base" />
   </requires>
   <extension point="xbmc.python.module" library="lib/"/>
   <extension point="xbmc.addon.metadata">
@@ -1352,7 +1352,7 @@ na internet.
 	<description lang="tr">Her gün eklenen, pek çok dildeki binlerce film ve dizi altyazısı. Kaynağından ücretsiz indirme, API desteği ve milyonlarca kullanıcı.</description>
 	<description lang="uz">Film va TV Taglavhalari ko'p tillarda, minglab tarjima qilingan taglavhalar har kuni tizimga yuklanadi. Bepul resursdan yuklab oling, API qo'llaydi, millionlab foydalanuvchilar.</description>
 	<description lang="zh">多语种的电影及剧集字幕，每日更新千余条翻译好的字幕。免费下载，提供API接口，已拥有上百万的用户。</description>
-    <disclaimer>Users need to provide OpenSubtitles.org username and password in add-on configuration</disclaimer>                                               
+    <disclaimer>Users need to provide OpenSubtitles.org username and password in add-on configuration</disclaimer>
 	<news>
 v5.0.16 (2016-11-26) by opensubtitles
 - Changed descriptions, icons, fanart... (by opensubtitles)
@@ -1365,15 +1365,152 @@ v5.0.15 (2016-11-26) by amet
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
     <forum>https://forum.opensubtitles.org/viewtopic.php?f=8&amp;t=15847</forum>
     <website>http://www.opensubtitles.org</website>
-    <email>admin [at] opensubtitles {dot} org</email>                                               
+    <email>admin [at] opensubtitles {dot} org</email>
 	<assets>
 	    <icon>resources/media/os_logo_512x512.png</icon>
-	    <fanart>resources/media/os_fanart.jpg</fanart>    
+	    <fanart>resources/media/os_fanart.jpg</fanart>
 		<screenshot>resources/media/screenshot_1.jpg</screenshot>
 		<screenshot>resources/media/screenshot_2.jpg</screenshot>
-		<screenshot>resources/media/screenshot_3.jpg</screenshot>				
+		<screenshot>resources/media/screenshot_3.jpg</screenshot>
 	</assets>
-    <source>https://github.com/opensubtitles/service.subtitles.opensubtitles</source>    
+    <source>https://github.com/opensubtitles/service.subtitles.opensubtitles</source>
   </extension>
+</addon>
+
+<addon id="service.xbmc.versioncheck" name="Version Check" version="0.5.4" provider-name="Team Kodi">
+    <requires>
+        <import addon="xbmc.python" version="2.14.0"/>
+    </requires>
+    <extension point="xbmc.service" library="resources/lib/runner.py" start="login"/>
+    <extension point="xbmc.addon.metadata">
+        <news>
+- add Kodi 18.6 stable release
+- include distro package for Python >= v3.8 where platform.linux_distribution is removed
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <summary lang="be">Kodi Version Check checks if you are running latest released version.</summary>
+        <summary lang="bg">Проверява дали ползвате най-новата версия на Kodi.</summary>
+        <summary lang="ca">Kodi Version Check comprova si està utilitzant la última versió publicada.</summary>
+        <summary lang="cs">Kontrola verze Kodi, zkontroluje, zda používáte nejnovější vydanou verzi.</summary>
+        <summary lang="da">Kodi undersøger om du benytter den nyeste version.</summary>
+        <summary lang="de">Kodi Versionsprüfung prüft, ob die neuste Version von Kodi installiert ist.</summary>
+        <summary lang="el">Ο Έλεγχος Έκδοσης Kodi εξετάζει αν έχετε την πιο πρόσφατη έκδοση του προγράμματος.</summary>
+        <summary lang="en">Kodi Version Check checks if you are running latest released version.</summary>
+        <summary lang="en_NZ">Kodi Version Check checks if you are running latest released version.</summary>
+        <summary lang="en_US">Kodi Version Check checks if you are running latest released version.</summary>
+        <summary lang="es">Kodi Version Check comprueba si está ejecutando la última versión de Kodi.</summary>
+        <summary lang="es_MX">Comprobador de Version de Kodi comprueba si se esta ejecutando ultima version publicada.</summary>
+        <summary lang="fi">Kodi Version Check tarkistaa onko käyttämäsi uusin versio.</summary>
+        <summary lang="fr">Le contrôle de version de Kodi vérifie si la dernière version sortie est utilisée.</summary>
+        <summary lang="fr_CA">Le contrôleur de version Kodi vérifie si vous utilisez la dernière version parue.</summary>
+        <summary lang="gl">Kodi Version Check verifica se está a executar a última versión.</summary>
+        <summary lang="he">בודק גרסת Kodi מוודא אם אתה מריץ את הגרסה הרשמית האחרונה.</summary>
+        <summary lang="hr">Kodi provjeritelj inačice provjerava imate li posljednju inačicu izdanja.</summary>
+        <summary lang="hu">Az Kodi verzió ellenőrző megvizsgálja, hogy a legújabb kiadást futtatja-e.</summary>
+        <summary lang="id">Kodi Version Check mengecek apakah Anda menggunakan versi rilis terbaru.</summary>
+        <summary lang="is">Kodi Version Check athugar hvort þú sért að keyra nýjustu viðurkennda útgáfu.</summary>
+        <summary lang="it">Kodi Version Check verifica se hai l'ultima versione rilasciata</summary>
+        <summary lang="ko">Kodi Version Checks는 최신 정식 릴리즈 버전을 사용중인지 검사해줍니다.</summary>
+        <summary lang="lt">Kodi Version Check patikrina ar naudojate naujausią versiją.</summary>
+        <summary lang="nl">Kodi versie-check controleert of je de laatst beschikbare versie hebt.</summary>
+        <summary lang="no">Kodi Versjonsettersyn sjekker om du kjører den sist utgitte versjonen.</summary>
+        <summary lang="pl">Dodatek Version Check sprawdza czy używasz najnowszej wersji Kodi.</summary>
+        <summary lang="pt">O Kodi Version Check verifica se a sua versão de lançamento do Kodi está actualizada.</summary>
+        <summary lang="pt_BR">Kodi Version Check verifica se você está executando a versão mais recente.</summary>
+        <summary lang="ro">Verificare versiune Kodi verifică dacă folosiți ultima versiune lansată.</summary>
+        <summary lang="ru">Kodi Version Check проверяет если вы используете последнюю версию</summary>
+        <summary lang="sk">Kodi Kontrola verzií overuje, či používate najnovšiu vydanú verziu.</summary>
+        <summary lang="sl">Preverjanje različice Kodi preveri, če imate nameščeno nazadnje izdano različico.</summary>
+        <summary lang="sv">Kodi Version Check kontrollerar om du använder den senaste versionen.</summary>
+        <summary lang="tr">Kodi Sürüm Kontrol yayınlanmış son sürümü kullanıp kullanmadığınızı kontrol eder.</summary>
+        <summary lang="zh">Kodi 版本检查检查你使用的是否为最新发布的版本。</summary>
+        <description lang="be">Kodi Version Check only supports a number of platforms/distros as releases may differ between them. For more information visit the kodi.tv website.</description>
+        <description lang="bg">Kodi Version Check поддържа няколко платформи/дистрибуции. За повече информация посетете страницата www.kodi.tv</description>
+        <description lang="ca">Kodi Version Check només és compatible amb una sèrie de plataformes / distribucions ja que les ultimes versions poden ser diferents entre elles. Per obtenir més informació, visiteu el lloc web kodi.tv.</description>
+        <description lang="cs">Kontrola verze Kodi podporuje pouze několik platforem/distribucí a verze mezi nimi se můžou lišit. Pro více informací navštivte webové stránky kodi.tv.</description>
+        <description lang="da">Kodi kan kun undersøge for opdateringer for visse platforme/udgaver, da der kan være forskel. For mere information, besøg kodi.tv.</description>
+        <description lang="de">Kodi Versionsprüfung unterstützt nur ein paar Plattformen/Distributionen, da sich die jeweiligen Veröffentlichungen unterscheiden können. Für weitere Informationen besuchen Sie die kodi.tv-Webseite.</description>
+        <description lang="el">Ο Έλεγχος Έκδοσης Kodi υποστηρίζει μόνο ορισμένα λειτουργικά συστήματα/διανομές, καθώς οι εκδόσεις διαφέρουν για το καθένα. Για περισσότερες πληροφορίες επισκεφθείτε το kodi.tv</description>
+        <description lang="en">Kodi Version Check only supports a number of platforms/distros as releases may differ between them. For more information visit the kodi.tv website.</description>
+        <description lang="en_NZ">Kodi Version Check only supports a number of platforms/distros as releases may differ between them. For more information visit the kodi.tv website.</description>
+        <description lang="en_US">Kodi Version Check only supports a number of platforms/distros as releases may differ between them. For more information visit the kodi.tv website.</description>
+        <description lang="es">Kodi Version Check solo soporta un número limitado de plataformas/distribuciones, ya que los lanzamientos pueden diferir entre ellos. Para más información, visite la web de kodi.tv.</description>
+        <description lang="fi">Kodi Version Check tukee vain joitain alustoja/distroja koska julkaisut saattavat poiketa toisistaan. Saadaksesi lisätietoa, vieraile kodi.tv:ssä.</description>
+        <description lang="fr">Le contrôle de version de Kodi ne prend en charge qu'un certain nombre de plate-formes/distributions car les versions peuvent varier entre elles. Pour plus d'informations, consulter le site Web kodi.tv.</description>
+        <description lang="fr_CA">Le contrôleur de version Kodi ne prend en charge qu'un certain nombre de plate-formes/distributions car les versions peuvent varier entre elles. Pour plus d'informations, visitez le site Web kodi.tv.</description>
+        <description lang="gl">Kodi Version Check só soporta un número limitado de plataformas/distribucións, xa que os lanzamentos poden diferir entre eles. Para máis información visitar o sitio web de kodi.tv.</description>
+        <description lang="he">בודק גרסת Kodi תומך רק במספר פלטפורמות/הפצות מאחר שסימון הגרסאות שונה בין אחת לשניה. למידע נוסף בקר באתר kodi.tv.</description>
+        <description lang="hr">Kodi provjeritelj inačice samo podržava broj platformi/distribucija koliko to dopuštaju pojedina izdanja. Za više informacija posjetite kodi.tv web stranicu.</description>
+        <description lang="hu">Az Kodi verzió-ellenőrző csak néhány platformot / disztribúciót támogat, mert a kiadások között különbségek lehetnek. További információkért keresse fel az kodi.tv oldalt.</description>
+        <description lang="id">Kodi Version Check hanya mendukung beberapa platform/distro karena rilisnya mungkin berbeda-beda. Untuk informasi lebih lanjut kunjungi situs kodi.tv.</description>
+        <description lang="it">Kodi Version Check supporta un numero di piattaforme e distribuzioni diverse tra loro. Per più informazioni visita il sito kodi.tv</description>
+        <description lang="ko">Kodi Versio Check는 일부 플랫폼/배포본만을 지원합니다. 자세한 정보는 kodi.tv 웹사이트에서 확인하세요</description>
+        <description lang="lt">Kodi Version Check palaiko tik kelias platformas/distribucijas, nes leidimai tarp jų gali skirtis. Norėdami gauti daugiau informacijos, apsilankykite Kodi.tv puslapyje.</description>
+        <description lang="nl">Kodi versie check ondersteunt alleen een aantal platforms/distro`s omdat uitgaven verschillen tussen hen. Voor meer informatie bezoek de kodi.tv website.</description>
+        <description lang="no">Kodi Versjonsettersyn støtter kun noen plattformer/distribusjoner fordi utgivelser kan være forskjellige mellom dem. Besøk kodi.tv for mer informasjon.</description>
+        <description lang="pl">Dodatek Version Check wspiera tylko część platform i dystrybucji. Więcej informacji na stronie kodi.tv</description>
+        <description lang="pt">O Kodi Version Check suporta apenas algumas plataformas/distribuições, porque os lançamentos podem não ser sempre idênticos. Para mais informação, visite o site kodi.tv.</description>
+        <description lang="pt_BR">Verificador de versões do Kodi somente suporta algumas plataformas/distros em que os lançamentos podem diferenciar entre si. Para maiores informações visite o website kodi.tv.</description>
+        <description lang="ru">Проверка новых версий Kodi поддерживается только на ряде платформ/дистрибутивов и они могут различаться между собой. Для получения доп. информации посетите сайт kodi.tv</description>
+        <description lang="sl">Preverjanje različice Kodi podpira le nekatere platforme/distribucije, saj se izdaje med njimi lahko zelo razlikujejo. Za več informacij obiščite spletišče kodi.tv</description>
+        <description lang="sv">Kodi Version Check stöder endeast ett antal plattformar/distributioner eftersom utgivningar kan skilja mellan dessa. För mer information besök kodi.tv webplatsen.</description>
+        <description lang="tr">Kodi Sürüm Kontrol sürümler arasında değişiklik olduğu için sadece birkaç platform/dağıtım destekler. Daha fazla bilgi için kodi.tv web sitesini ziyaret edin.</description>
+        <description lang="zh">Kodi 版本检查只支持部分平台/发行版，它们之间的版本可能会有所不同。欲了解更多信息，请访问 kodi.tv 网站。</description>
+        <disclaimer lang="be">Feel free to use this script. For information visit kodi.tv</disclaimer>
+        <disclaimer lang="bg">Ползвайте скрипта свободно. За повече информация посетете www.kodi.tv</disclaimer>
+        <disclaimer lang="ca">Sigues lliure d'utilitzar aquest script. Per més informació visita kodi.tv</disclaimer>
+        <disclaimer lang="cs">Neváhejte použít tento skript. Pro více informací navštivte kodi.tv</disclaimer>
+        <disclaimer lang="da">Du er velkommen til at bruge dette script. For information, besøg kodi.tv</disclaimer>
+        <disclaimer lang="de">Zögern Sie nicht, dieses Skript zu verwenden. Für Informationen besuchen Sie kodi.tv</disclaimer>
+        <disclaimer lang="el">Χρησιμοποιήστε αυτό το script ελεύθερα. Για πληροφορίες επισκεφθείτε το kodi.tv</disclaimer>
+        <disclaimer lang="en">Feel free to use this script. For information visit kodi.tv</disclaimer>
+        <disclaimer lang="en_NZ">Feel free to use this script. For information visit kodi.tv</disclaimer>
+        <disclaimer lang="en_US">Feel free to use this script. For information visit kodi.tv</disclaimer>
+        <disclaimer lang="es">Puede usar libremente este programa. Para más información, visite kodi.tv</disclaimer>
+        <disclaimer lang="es_MX">Sientase libre de utilizar este script. Para mas información visita kodi.tv</disclaimer>
+        <disclaimer lang="fr">Utiliser ce script si désiré. Pour plus d'informations, consulter le site kodi.tv</disclaimer>
+        <disclaimer lang="fr_CA">N'hésitez pas à utiliser ce script. Pour plus d'informations visitez kodi.tv</disclaimer>
+        <disclaimer lang="gl">Síntase libre de usar este script, para máis información visitar kodi.tv.</disclaimer>
+        <disclaimer lang="he">תרגיש חופשי להשתמש בסקריפט זה. למידע נוסף בקר ב-kodi.tv</disclaimer>
+        <disclaimer lang="hr">Slobodno koristite ovu skriptu. Za više informacija posjetite kodi.tv</disclaimer>
+        <disclaimer lang="hu">Használja bátran ezt a szkriptet! Információkért keresse fel az kodi.tv oldalt!</disclaimer>
+        <disclaimer lang="id">Jangan sungkan menggunakan script ini. Untuk informasi hubungi kodi.tv</disclaimer>
+        <disclaimer lang="it">Usa liberamente lo script. Per informazioni visita kodi.tv</disclaimer>
+        <disclaimer lang="ko">이 스크립트를 자유롭게 사용하세요. 관련 정보는 kodi.tv를 방문하세요.</disclaimer>
+        <disclaimer lang="lt">Galite laisvai naudoti šį scenarijų. Apsilankykite kodi.tv, norėdami gauti daugiau informacijos.</disclaimer>
+        <disclaimer lang="nl">Gebruik dit script vrijblijvend. Voor meer informatie bezoek kodi.tv</disclaimer>
+        <disclaimer lang="no">Du har fri tillatelse til å benytte dette skriptet. Besøk kodi.tv for informasjon</disclaimer>
+        <disclaimer lang="pl">Zapraszamy do używania tego dodatku. Więcej informacji na stronie kodi.tv</disclaimer>
+        <disclaimer lang="pt">Esteja à vontade para usar este script. Para mais informação, visite kodi.tv.</disclaimer>
+        <disclaimer lang="pt_BR">Sinta-se livre para usar este script. Para maiores informações visite kodi.tv</disclaimer>
+        <disclaimer lang="ro">Simțiți-vă liberi să folosiți acest script. Pentru informații vizitați kodi.tv</disclaimer>
+        <disclaimer lang="ru">Используйте этот скрипт на свое усмотрение. Для информации посетите kodi.tv</disclaimer>
+        <disclaimer lang="sl">Izvolite uporabiti ta skript. Za dodatne informacije obiščite kodi.tv</disclaimer>
+        <disclaimer lang="sv">Använd gärna detta skript. För information, besök kodi.tv</disclaimer>
+        <disclaimer lang="tr">Bu betiği kullanmaktan çekinmeyin. Daha fazla bilgi için kodi.tv adresini ziyaret edin</disclaimer>
+        <disclaimer lang="zh">可放心使用此脚本，更多信息访问 kodi.tv</disclaimer>
+        <platform>all</platform>
+        <license>GPL-2.0-or-later, GPL-3.0-or-later, Apache-2.0</license>
+        <forum>https://forum.kodi.tv/showthread.php?tid=160228</forum>
+        <website>https://kodi.tv</website>
+        <source>https://github.com/XBMC-Addons/service.xbmc.versioncheck</source>
+    </extension>
+</addon>
+
+<addon id="xbmc.python" version="2.26.0" provider-name="Team Kodi">
+  <backwards-compatibility abi="2.1.0"/>
+  <requires>
+    <import addon="xbmc.core" version="0.1.0"/>
+  </requires>
+  <extension-point id="script" schema="script.xsd"/>
+  <extension-point id="subtitles" schema="script.xsd"/>
+  <extension-point id="lyrics" schema="script.xsd"/>
+  <extension-point id="weather" schema="script.xsd"/>
+  <extension-point id="library" schema="script.xsd"/>
+  <extension-point id="screensaver" schema="script.xsd"/>
+  <extension-point id="plugin" schema="pluginsource.xsd"/>
+  <extension-point id="context.item" schema="contextitem.xsd"/>
 </addon>
 </addons>
