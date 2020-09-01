@@ -298,14 +298,14 @@ Add-on này sẽ bỏ qua và không chuyển đổi XML dùng regex.
 <addon id="plugin.video.Add-on_KodiTVR" name="[COLORgreen]KodiTVR[COLORyellow]_Music_[COLORred]Rock[/COLOR]" version="1.0.0" provider-name="KodiTVR">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.addon.common" version="2.0.0"/>
+    <import addon="script.module.addon.common" version="2.0.0"/> 
     <import addon="plugin.video.youtube" version="5.0.0"/>
   </requires>
-
+	
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video</provides>
   </extension>
-
+	
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Add-on_KodiTVR Music Rock</summary>
     <description lang="en">Plugin video Add-on KodiTVR Music Rock para relembrar os principais hinos classic Rock etc. by KodiTVR</description>
@@ -386,6 +386,20 @@ Add-on này sẽ bỏ qua và không chuyển đổi XML dùng regex.
   </extension>
 </addon>
 
+<addon id="plugin.video.gdrive" version="8.866" name="gdrive" provider-name="ddurdle">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video audio image programs</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Listen to music, watch videos and view photos from your Google Drive account</summary>
+        <description>Plays music and video from your Google Drive account.  Not affiliated with Google.</description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
 <addon id="plugin.video.KodiTVR"
        name="[COLOR yellow][B]KodiTVR-Filmes[/COLOR][/B]"
        version="1.0"
@@ -415,6 +429,53 @@ Add-on này sẽ bỏ qua và không chuyển đổi XML dùng regex.
     <platform>all</platform>
   </extension>
  </addon>
+ 
+ <addon id="plugin.video.KodiTVR_Live_Sport" name="[COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]Sport[/COLOR]" version="0.0.1" provider-name="KodiTVR">
+  <requires>
+    <!--import addon="xbmc.python" version="2.1.0"/-->
+    <import addon="script.module.dateutil" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">[COLORblue]KodiTVR_Live_Sport HD by KodiTVR[/COLOR]</summary>
+    <description lang="en">KodiTVR_Live_Sport Streams from Internet</description>
+    <disclaimer lang="en">[COLORyellow]All the streams on this add-on [COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]Sport[/COLOR] are hosted on the third party site and uploaded by other people. We are not responsible for any content that hosted on on the third-party sites. If you have any legal issues please contact appropriate video owners hosters.[/COLOR]</disclaimer>
+	<language>EN</language>
+    <license>GNU GPL, version 2</license>
+    <twitter>https://twitter.com/KodiTVR</twitter>
+    <news>
+    </news>
+  </extension>
+</addon>
+
+<addon id="plugin.video.KodiTVR_World_Live" name="[COLORblue][B]KodiTVR[/B][/COLOR] [B][COLORred]World Tv[B][COLORwhite] Live[/B][/COLOR]" version="20" provider-name="KodiTVR">
+  <requires>
+    <import addon="xbmc.python" version="2.26.0"/>
+    <import addon="script.module.pycryptodome" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.kodi-six" />
+    <import addon="script.module.future" />
+    <import addon="script.module.routing" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en_gb">KodiTVR World Tv Live</summary>
+    <description lang="en_gb">KodiTVR World Tv Live...add-on com canais de vários países, Kids TV, Sports TV, Movies...</description>
+    <disclaimer lang="en_gb"></disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license>GPL-3.0</license>
+    <forum></forum>
+    <website>https://koditvr.wixsite.com/website</website>
+    <email>koditvr@gmail.com</email>
+    <source></source>
+  </extension>
+</addon>
 
 <addon id="plugin.video.KodiTVR-Canais"
        name="[COLOR red][B]KodiTVR-Canais[/B][/COLOR]"
@@ -512,53 +573,6 @@ na internet.
         <summary>KodiTVR-Playlist</summary>
         <description>Add-on KodiTVR-Playlist para todas as plataformas.</description>
     </extension>
-</addon>
-
-<addon id="plugin.video.KodiTVR_Live_Sport" name="[COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]Sport[/COLOR]" version="0.0.1" provider-name="KodiTVR">
-  <requires>
-    <!--import addon="xbmc.python" version="2.1.0"/-->
-    <import addon="script.module.dateutil" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">[COLORblue]KodiTVR_Live_Sport HD by KodiTVR[/COLOR]</summary>
-    <description lang="en">KodiTVR_Live_Sport Streams from Internet</description>
-    <disclaimer lang="en">[COLORyellow]All the streams on this add-on [COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]Sport[/COLOR] are hosted on the third party site and uploaded by other people. We are not responsible for any content that hosted on on the third-party sites. If you have any legal issues please contact appropriate video owners hosters.[/COLOR]</disclaimer>
-	<language>EN</language>
-    <license>GNU GPL, version 2</license>
-    <twitter>https://twitter.com/KodiTVR</twitter>
-    <news>
-    </news>
-  </extension>
-</addon>
-
-<addon id="plugin.video.KodiTVR_World_Live" name="[COLORblue][B]KodiTVR[/B][/COLOR] [B][COLORred]World Tv[B][COLORwhite] Live[/B][/COLOR]" version="20" provider-name="KodiTVR">
-  <requires>
-    <import addon="xbmc.python" version="2.26.0"/>
-    <import addon="script.module.pycryptodome" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.kodi-six" />
-    <import addon="script.module.future" />
-    <import addon="script.module.routing" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <reuselanguageinvoker>true</reuselanguageinvoker>
-    <summary lang="en_gb">KodiTVR World Tv Live</summary>
-    <description lang="en_gb">KodiTVR World Tv Live...add-on com canais de vários países, Kids TV, Sports TV, Movies...</description>
-    <disclaimer lang="en_gb"></disclaimer>
-    <language></language>
-    <platform>all</platform>
-    <license>GPL-3.0</license>
-    <forum></forum>
-    <website>https://koditvr.wixsite.com/website</website>
-    <email>koditvr@gmail.com</email>
-    <source></source>
-  </extension>
 </addon>
 
 <addon id="plugin.video.sport365.live" name="Sport365" version="2.6.1" provider-name="Bugatsinho">
@@ -768,6 +782,19 @@ na internet.
    	<disclaimer lang="es">El autor no aloja ni distribuye cualquier contenido que ud. pudiera reproducir usando este addon. El autor no tiene participacion en el desarrollo de cualquier tecnologia incluida. Cuando requiera ayuda en el foro de Kodi por favor respete las reglas (http://kodi.wiki/view/Forum_rules).</disclaimer>
     <platform>all</platform>
   </extension>
+</addon>
+
+<addon id="repository.ddurdle" name="ddurdle's XBMC Addons" version="1.0.2" provider-name="ddurdle">
+	<extension point="xbmc.addon.repository" name="ddurdle's XBMC Addon Repository">
+		<info compressed="false">https://raw.github.com/ddurdle/repository.ddurdle/master/addons.xml</info>
+		<checksum>https://raw.github.com/ddurdle/repository.ddurdle/master/addons.xml.md5</checksum>
+		<datadir zip="true">http://dmdsoftware.net/repository.ddurdle/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install ddurdle's Addons</summary>
+		<description>Download and install addons by ddurdle</description>
+		<platform>all</platform>
+	</extension>
 </addon>
 
 <addon id="repository.elementum" name="Elementum Repository" version="0.1.51" provider-name="elgatito"><requires></requires><extension point="xbmc.addon.repository" name="Elementum Repository"><info compressed="false">http://127.0.0.1:65220/repository/elgatito/plugin.video.elementum/addons.xml</info><checksum>http://127.0.0.1:65220/repository/elgatito/plugin.video.elementum/addons.xml.md5</checksum><datadir zip="true">http://127.0.0.1:65220/repository/elgatito/</datadir></extension><extension point="xbmc.addon.metadata"><platform>all</platform><summary lang="en">GitHub repository for Elementum updates</summary></extension></addon>
