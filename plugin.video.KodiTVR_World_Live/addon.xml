@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.KodiTVR_World_Live" name="[COLORblue][B]KodiTVR[/B][/COLOR] [B][COLORred]World Tv[B][COLORwhite] Live[/B][/COLOR]" version="20" provider-name="KodiTVR">
+  <requires>
+    <import addon="xbmc.python" version="2.26.0"/>
+    <import addon="script.module.pycryptodome" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.kodi-six" />
+    <import addon="script.module.future" />
+    <import addon="script.module.routing" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en_gb">KodiTVR World Tv Live</summary>
+    <description lang="en_gb">KodiTVR World Tv Live...add-on com canais de vários países, Kids TV, Sports TV, Movies...</description>
+    <disclaimer lang="en_gb"></disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license>GPL-3.0</license>
+    <forum></forum>
+    <website>https://koditvr.wixsite.com/website</website>
+    <email>koditvr@gmail.com</email>
+    <source></source>
+  </extension>
+</addon>

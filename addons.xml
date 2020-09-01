@@ -295,6 +295,26 @@ Add-on này sẽ bỏ qua và không chuyển đổi XML dùng regex.
   </extension>
 </addon>
 
+<addon id="plugin.video.Add-on_KodiTVR" name="[COLORgreen]KodiTVR[COLORyellow]_Music_[COLORred]Rock[/COLOR]" version="1.0.0" provider-name="KodiTVR">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.addon.common" version="2.0.0"/>
+    <import addon="plugin.video.youtube" version="5.0.0"/>
+  </requires>
+
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Add-on_KodiTVR Music Rock</summary>
+    <description lang="en">Plugin video Add-on KodiTVR Music Rock para relembrar os principais hinos classic Rock etc. by KodiTVR</description>
+    <platform>all</platform>
+    <forum></forum>
+    <website>https://koditvr.wixsite.com/website</website>
+  </extension>
+</addon>
+
 <addon id="plugin.video.elementum" name="Elementum" version="0.1.58" provider-name="elgatito">
     <requires>
         <import addon="xbmc.addon" version="16.0.0" />
@@ -492,6 +512,53 @@ na internet.
         <summary>KodiTVR-Playlist</summary>
         <description>Add-on KodiTVR-Playlist para todas as plataformas.</description>
     </extension>
+</addon>
+
+<addon id="plugin.video.KodiTVR_Live_Sport" name="[COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]Sport[/COLOR]" version="0.0.1" provider-name="KodiTVR">
+  <requires>
+    <!--import addon="xbmc.python" version="2.1.0"/-->
+    <import addon="script.module.dateutil" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">[COLORblue]KodiTVR_Live_Sport HD by KodiTVR[/COLOR]</summary>
+    <description lang="en">KodiTVR_Live_Sport Streams from Internet</description>
+    <disclaimer lang="en">[COLORyellow]All the streams on this add-on [COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]Sport[/COLOR] are hosted on the third party site and uploaded by other people. We are not responsible for any content that hosted on on the third-party sites. If you have any legal issues please contact appropriate video owners hosters.[/COLOR]</disclaimer>
+	<language>EN</language>
+    <license>GNU GPL, version 2</license>
+    <twitter>https://twitter.com/KodiTVR</twitter>
+    <news>
+    </news>
+  </extension>
+</addon>
+
+<addon id="plugin.video.KodiTVR_World_Live" name="[COLORblue][B]KodiTVR[/B][/COLOR] [B][COLORred]World Tv[B][COLORwhite] Live[/B][/COLOR]" version="20" provider-name="KodiTVR">
+  <requires>
+    <import addon="xbmc.python" version="2.26.0"/>
+    <import addon="script.module.pycryptodome" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.kodi-six" />
+    <import addon="script.module.future" />
+    <import addon="script.module.routing" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en_gb">KodiTVR World Tv Live</summary>
+    <description lang="en_gb">KodiTVR World Tv Live...add-on com canais de vários países, Kids TV, Sports TV, Movies...</description>
+    <disclaimer lang="en_gb"></disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license>GPL-3.0</license>
+    <forum></forum>
+    <website>https://koditvr.wixsite.com/website</website>
+    <email>koditvr@gmail.com</email>
+    <source></source>
+  </extension>
 </addon>
 
 <addon id="plugin.video.sport365.live" name="Sport365" version="2.6.1" provider-name="Bugatsinho">
@@ -1119,6 +1186,30 @@ na internet.
 		<license>MIT</license>
 		<source>https://pypi.python.org/pypi/unshortenit/0.3.0</source>
 	</extension>
+</addon>
+
+<addon id="script.module.World_KodiTVR" name="World KodiTVR" version="1.0" provider-name="KodiTVR">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.livestreamer" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.routing" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_gb">All credit goes to the Original Dev RACC</summary>
+    <description lang="en_gb">World KodiTVR Module add-on com canais de vários países, Kids TV, Sports TV, Movies...</description>
+    <disclaimer lang="en_gb"></disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license></license>
+    <forum></forum>
+    <website>https://koditvr.wixsite.com/website</website>
+    <email>koditvr@gmail.com</email>
+    <source></source>
+  </extension>
 </addon>
 
 <addon id="script.skin.info.service" name="Skin Info Service" version="2.0.0" provider-name="phil65">
