@@ -583,7 +583,7 @@ na internet.
   </extension>
 </addon>
 
-<addon id="plugin.video.KodiTVR_Streams" name="KodiTVR-Streams" version="0.0.5" provider-name="KodiTVR">
+<addon id="plugin.video.KodiTVR_Streams" name="KodiTVR-STREAM EVENTS" version="0.0.1" provider-name="KodiTVR">
     <requires>
         <import addon="xbmc.python" version="2.14.0"/>
         <import addon="script.module.routing" version="0.2.0"/>
