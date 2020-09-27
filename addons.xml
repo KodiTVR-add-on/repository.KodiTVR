@@ -563,7 +563,7 @@ na internet.
     </extension>
 </addon>
 
-<addon id="plugin.video.KodiTVR_Live_Sport" name="[COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]Sport[/COLOR]" version="0.0.1" provider-name="KodiTVR">
+<addon id="plugin.video.KodiTVR_Live_Sport" name="[COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]Sport[/COLOR]" version="0.0.7" provider-name="KodiTVR">
   <requires>
     <!--import addon="xbmc.python" version="2.1.0"/-->
     <import addon="script.module.dateutil" />
@@ -578,8 +578,7 @@ na internet.
 	<language>EN</language>
     <license>GNU GPL, version 2</license>
     <twitter>https://twitter.com/KodiTVR</twitter>
-    <news>
-    </news>
+    <news>-Add youtube links support.</news>
   </extension>
 </addon>
 
