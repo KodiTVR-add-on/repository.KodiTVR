@@ -1,0 +1,30 @@
+v0.0.7 (2020-10-04)
+- sources: add buffstream1.com
+- sources: add hockeynews.site
+- sources: add hhdstreams.club
+- sources: add mazymedias.com
+- sources: add fightpass.site
+- sources: add liveonscore.tv
+- sources(streamcr7-net): add m3u8 search alternative
+
+v0.0.6 (2020-10-04)
+- providers(streams100): update event url
+
+v0.0.5 (2020-08-15)
+- providers: rename soccerstreams100.tv to streams100.net
+- providers: update root/event URLs for soccerstreams100.tv
+
+v0.0.3 (2020-02-18)
+- providers: add acestream table support for soccerstreams100.tv
+- sources: fix myoplay.live
+- sources: fix ovostreams.com
+
+v0.0.2 (2020-02-08)
+- bs4: swap html5lib to html.parser
+- imp: remove jsbeautifier
+- sources: add streamfoot.tk
+- sources: add reddit-streams.blogspot.com
+
+v0.0.1 (2020-01-31)
+- (initial)
+
