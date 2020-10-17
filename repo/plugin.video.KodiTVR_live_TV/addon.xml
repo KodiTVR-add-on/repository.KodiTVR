@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.KodiTVR_Live_TV" name="[COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]TV[/COLOR]" version="21" provider-name="KodiTVR">
+  <requires>
+    <import addon="xbmc.python" version="2.26.0"/>
+    <import addon="script.module.pycryptodome" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.kodi-six" />
+    <import addon="script.module.future" />
+    <import addon="script.module.routing" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en_gb">KodiTVR_Live_TV</summary>
+    <description lang="en_gb">KodiTVR_Live_TV</description>
+    <disclaimer lang="en_gb">[COLORyellow]All the streams on this add-on [COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]TV[/COLOR] are hosted on the third party site and uploaded by other people. We are not responsible for any content that hosted on on the third-party sites. If you have any legal issues please contact appropriate video owners hosters.[/COLOR]</disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license>GPL-3.0</license>
+    <forum></forum>
+    <website>https://koditvr.wixsite.com/website</website>
+    <email>koditvr@gmail.com</email>
+    <source></source>
+  </extension>
+</addon>
