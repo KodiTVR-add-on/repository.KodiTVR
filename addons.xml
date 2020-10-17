@@ -599,13 +599,15 @@ na internet.
     </extension>
 </addon>
 
-<addon id="plugin.video.KodiTVR_World_Live" name="[COLORblue][B]KodiTVR[/B][/COLOR] [B][COLORred]World Tv[B][COLORwhite] Live[/B][/COLOR]" version="20" provider-name="KodiTVR">
+<addon id="plugin.video.KodiTVR_World_Live" name="[COLORblue][B]KodiTVR[/B][/COLOR] [B][COLORred]World Tv[B][COLORwhite] Live[/B][/COLOR]" version="107" provider-name="KodiTVR">
   <requires>
-    <import addon="xbmc.python" version="2.26.0"/>
+    <import addon="xbmc.python" version="2.26.0" />
     <import addon="script.module.pycryptodome" />
-    <import addon="script.module.requests" />
+    <import addon="script.module.dateutil" />
+    <import addon="script.module.pyamf" />
     <import addon="script.module.kodi-six" />
     <import addon="script.module.future" />
+    <import addon="script.module.requests" />
     <import addon="script.module.routing" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
@@ -623,6 +625,7 @@ na internet.
     <website>https://koditvr.wixsite.com/website</website>
     <email>koditvr@gmail.com</email>
     <source></source>
+	 <assets></assets>
   </extension>
 </addon>
 

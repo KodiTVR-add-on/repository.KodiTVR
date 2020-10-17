@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2019 RACC
+# Copyright (C) 2018 RACC
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -14,7 +14,7 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-from __future__ import unicode_literals
+from __future__ import unicode_literals, absolute_import
 
 import sys
 from xbmcgui import ListItem
@@ -22,113 +22,281 @@ from kodi_six import xbmc, xbmcgui, xbmcaddon, xbmcplugin
 from routing import Plugin
 
 import os
-import time
-from requests.exceptions import RequestException
-from resources.lib.swift import SwiftStream
+import json
+from future.moves.urllib.parse import urlencode
+
+from datetime import datetime
+from dateutil.parser import parse
+from dateutil.tz import gettz, tzlocal
+
+from resources.lib.lntv import LnTv, LiveStream
+
+try:
+    from xbmcvfs import translatePath
+except ImportError:
+    from kodi_six.xbmc import translatePath
 
 addon = xbmcaddon.Addon()
 plugin = Plugin()
 plugin.name = addon.getAddonInfo("name")
-USER_DATA_DIR = xbmc.translatePath(addon.getAddonInfo("profile"))
-data_time = int(addon.getSetting("data_time") or "0")
-cache_time = int(addon.getSetting("cache_time") or "0") * 60 * 60
+user_agent = "Dalvik/2.1.0 (Linux; U; Android 5.1.1; AFTT Build/LVY48F)"
+USER_DATA_DIR = translatePath(addon.getAddonInfo("profile"))
+ADDON_DATA_DIR = translatePath(addon.getAddonInfo("path"))
+RESOURCES_DIR = os.path.join(ADDON_DATA_DIR, "resources")
 if not os.path.exists(USER_DATA_DIR):
     os.makedirs(USER_DATA_DIR)
 
+cert_file = os.path.join(RESOURCES_DIR, "com.lnt.androidnettv.crt")
+cert_key_file = os.path.join(RESOURCES_DIR, "com.lnt.androidnettv.key")
 
-def log(msg, level=xbmc.LOGNOTICE):
-    xbmc.log("[{0}] {1}".format(plugin.name, msg), level=level)
+mytv = LnTv(USER_DATA_DIR, cert_file, cert_key_file)
 
 
-TV = SwiftStream(USER_DATA_DIR)
-current_time = int(time.time())
-if current_time - data_time > cache_time:
-    try:
-        TV.update_categories()
-        addon.setSetting("data_time", str(current_time))
-        log("[{0}] Categories updated".format(current_time))
-    except (ValueError, RequestException) as e:
-        if data_time == 0:
-            """ No data """
-            dialog = xbmcgui.Dialog()
-            dialog.notification(plugin.name, e.message, xbmcgui.NOTIFICATION_ERROR)
-            xbmcplugin.endOfDirectory(plugin.handle, False)
+try:
+    locale_timezone = json.loads(
+        xbmc.executeJSONRPC(
+            '{"jsonrpc": "2.0", "method": "Settings.GetSettingValue", "params": {"setting": "locale.timezone"}, "id": 1}'
+        )
+    )
+    if "result" in locale_timezone:
+        if locale_timezone["result"]["value"]:
+            local_tzinfo = gettz(locale_timezone["result"]["value"])
         else:
-            """ Data update failed """
-            log("[{0}] Categories update fail, data age: {1}".format(current_time, data_time))
-            log(e.message)
+            local_tzinfo = tzlocal()
+    else:
+        local_tzinfo = tzlocal()
+except:
+    local_tzinfo = ""
+
+
+def xbmc_curl_encode(url):
+    return "{0}|{1}".format(url[0], urlencode(url[1]))
+
+
+def time_from_zone(timestring, newfrmt="default", in_zone="UTC"):
+    try:
+        if newfrmt == "default":
+            newfrmt = xbmc.getRegion("time").replace(":%S", "")
+        in_time = parse(timestring)
+        in_time_with_timezone = in_time.replace(tzinfo=gettz(in_zone))
+        local_time = in_time_with_timezone.astimezone(local_tzinfo)
+        return local_time.strftime(newfrmt)
+    except:
+        return timestring
 
 
 @plugin.route("/")
 def root():
+    mytv.update_live_channels()
     list_items = []
-    for cat in TV.get_categories():
-        li = ListItem(cat.category_name, offscreen=True)
-        li.setArt({"thumb": cat.category_image, "icon": cat.category_image})
-        url = plugin.url_for(list_channels, cat_id=cat.cid)
+    for category in mytv.get_live_categories():
+        li = ListItem(category.cat_name, offscreen=True)
+        url = plugin.url_for(list_channels, cat=category.cat_id)
         list_items.append((url, li, True))
+
+    li = ListItem("[VOD]", offscreen=True)
+    url = plugin.url_for(vod)
+    list_items.append((url, li, True))
+
+    li = ListItem("[Live]", offscreen=True)
+    url = plugin.url_for(list_live)
+    list_items.append((url, li, True))
+
     xbmcplugin.addDirectoryItems(plugin.handle, list_items)
     xbmcplugin.endOfDirectory(plugin.handle)
 
 
-@plugin.route("/list_channels/<cat_id>")
-def list_channels(cat_id):
+@plugin.route("/vod")
+def vod():
+    mytv.update_vod_channels()
     list_items = []
-    try:
-        for channel in TV.get_category(cat_id, cache_time):
-            title = channel.title
-            image = channel.thumbnail
+    for category in mytv.get_vod_categories():
+        li = ListItem(category.cat_name, offscreen=True)
+        url = plugin.url_for(vod_list, cat=category.cat_id)
+        list_items.append((url, li, True))
+
+    xbmcplugin.addDirectoryItems(plugin.handle, list_items)
+    xbmcplugin.endOfDirectory(plugin.handle)
+
+
+@plugin.route("/vod_list/<cat>")
+def vod_list(cat):
+    mytv.update_vod_channels()
+    image_headers = {"User-Agent": mytv.user_agent}
+    list_items = []
+    for channel in mytv.get_vod_channels_by_category(int(cat)):
+        li = ListItem(channel.name, offscreen=True)
+        image = xbmc_curl_encode((channel.image_path, image_headers))
+        li.setProperty("IsPlayable", "true")
+        li.setInfo(type="Video", infoLabels={"Title": channel.name, "mediatype": "video"})
+        li.setArt({"thumb": image, "icon": image})
+        url = plugin.url_for(play_vod, channel=channel.channel_id)
+        list_items.append((url, li, False))
+
+    xbmcplugin.addDirectoryItems(plugin.handle, list_items)
+    xbmcplugin.setContent(plugin.handle, "videos")
+    xbmcplugin.endOfDirectory(plugin.handle)
+
+
+@plugin.route("/list_live")
+def list_live():
+    live_data = mytv.get_live_events()
+    list_items = []
+    for day, events in live_data.items():
+        for event in events:
+            if len(event["channel_list"]) == 0:
+                continue
+            event_time = time_from_zone(datetime.utcfromtimestamp(int(event["start"])).strftime("%c"), "%Y-%m-%d %H:%M")
+            title = "[{0}] {1}".format(event_time, event["title"])
             li = ListItem(title, offscreen=True)
             li.setProperty("IsPlayable", "true")
-            li.setArt({"thumb": image, "icon": image})
             li.setInfo(type="Video", infoLabels={"Title": title, "mediatype": "video"})
-            li.setContentLookup(False)
-            url = plugin.url_for(play, cat_id=channel.cid, channel_id=channel._id)
+            url = plugin.url_for(event_resolve, title=event["title"].encode("utf-8"))
             list_items.append((url, li, False))
-        xbmcplugin.addDirectoryItems(plugin.handle, list_items)
-        xbmcplugin.endOfDirectory(plugin.handle)
-    except (ValueError, RequestException) as e:
-        """ No data """
-        log(e.message)
+
+    xbmcplugin.addSortMethod(plugin.handle, xbmcplugin.SORT_METHOD_LABEL)
+    xbmcplugin.addDirectoryItems(plugin.handle, list_items)
+    xbmcplugin.setContent(plugin.handle, "videos")
+    xbmcplugin.endOfDirectory(plugin.handle)
+
+
+@plugin.route("/event_resolve.pvr")
+def event_resolve():
+    def find_event(data, title):
+        for day, events in live_data.items():
+            for event in events:
+                if event["title"] == title:
+                    return event
+
+    live_data = mytv.get_live_events()
+
+    live_event = find_event(live_data, plugin.args["title"][0])
+    if len(live_event["channel_list"]) > 1:
+        select_list = []
+        for channel in live_event["channel_list"]:
+            select_list.append(channel["c_name"])
         dialog = xbmcgui.Dialog()
-        dialog.notification(plugin.name, e.message, xbmcgui.NOTIFICATION_ERROR)
-        xbmcplugin.endOfDirectory(plugin.handle, False)
+        ret = dialog.select("Choose Stream", select_list)
+        selected_channel = live_event["channel_list"][ret]
+    else:
+        selected_channel = live_event["channel_list"][0]
 
+    resolved_stream = ()
+    link = selected_channel["links"][0]
 
-@plugin.route("/play/<cat_id>/<channel_id>/play.pvr")
-def play(cat_id, channel_id):
-    channel = TV.get_channel_by_id(cat_id, channel_id, cache_time)
-    title = channel.title
-    image = channel.thumbnail
-    try:
-        if len(channel.streams) > 1:
-            dialog = xbmcgui.Dialog()
-            ret = dialog.select("Choose Stream", [s.name for s in channel.streams])
-            stream = channel.streams[ret]
-        else:
-            stream = channel.streams[0]
-        media_url = TV.get_stream_link(stream)
-        li = ListItem(title, path=media_url, offscreen=True)
-        if "playlist.m3u8" in media_url:
-            if addon.getSetting("inputstream") == "true":
-                li.setMimeType("application/vnd.apple.mpegurl")
-                li.setProperty("inputstreamaddon", "inputstream.adaptive")
-                li.setProperty("inputstream.adaptive.manifest_type", "hls")
-                li.setProperty("inputstream.adaptive.stream_headers", media_url.split("|")[-1])
-            else:
-                li.setMimeType("application/vnd.apple.mpegurl")
-        else:
-            li.setMimeType("video/x-mpegts")
-        li.setArt({"thumb": image, "icon": image})
+    stream = mytv.get_live_link(link)
+    new_stream = LiveStream(
+        url=stream.get("link"),
+        token=stream.get("token"),
+        user_agent=stream.get("user_agent"),
+        referer=stream.get("referer"),
+        player_referer=stream.get("player_referer"),
+        player_user_agent=stream.get("player_user_agent"),
+    )
+
+    resolved_stream = mytv.resolve_stream(new_stream)
+    li = ListItem(path=xbmc_curl_encode(resolved_stream))
+    if "playlist.m3u8" in resolved_stream[0]:
         li.setContentLookup(False)
-        xbmcplugin.setResolvedUrl(plugin.handle, True, li)
-    except (ValueError, RequestException) as e:
-        log(e.message)
+        li.setMimeType("application/vnd.apple.mpegurl")
+        if addon.getSetting("inputstream") == "true":
+            if int(xbmc.__version__[0]) < 3:
+                li.setProperty("inputstreamaddon", "inputstream.adaptive")
+            else:
+                li.setProperty("inputstream", "inputstream.adaptive")
+            li.setProperty("inputstream.adaptive.manifest_type", "hls")
+            li.setProperty("inputstream.adaptive.stream_headers", urlencode(resolved_stream[1]))
+    xbmcplugin.setResolvedUrl(plugin.handle, True, li)
+
+
+@plugin.route("/list_channels/<cat>")
+def list_channels(cat=None):
+    mytv.update_live_channels()
+    image_headers = {"User-Agent": mytv.user_agent}
+    list_items = []
+    for channel in mytv.get_live_channels_by_category(int(cat)):
+        li = ListItem(channel.name, offscreen=True)
+        image = xbmc_curl_encode((channel.image_path, image_headers))
+        li.setProperty("IsPlayable", "true")
+        li.setInfo(type="Video", infoLabels={"Title": channel.name, "mediatype": "video"})
+        li.setArt({"thumb": image, "icon": image})
+        url = plugin.url_for(play, c_id=channel.channel_id)
+        list_items.append((url, li, False))
+
+    xbmcplugin.addDirectoryItems(plugin.handle, list_items)
+    xbmcplugin.setContent(plugin.handle, "videos")
+    xbmcplugin.endOfDirectory(plugin.handle)
+
+
+@plugin.route("/play/<c_id>/play.pvr")
+def play(c_id):
+    mytv.update_live_channels()
+    image_headers = {"User-Agent": mytv.user_agent}
+    stream_list = mytv.get_streams_by_channel_id(int(c_id))
+    if stream_list.count() > 1:
+        select_list = []
+        for stream in stream_list:
+            select_list.append("Stream {0} {1}".format(stream.token, stream.stream_id))
         dialog = xbmcgui.Dialog()
-        dialog.notification(plugin.name, e.message, xbmcgui.NOTIFICATION_ERROR)
-        xbmcplugin.setResolvedUrl(plugin.handle, False, ListItem())
+        ret = dialog.select("Choose Stream", select_list)
+        # if not
+        selected_stream = stream_list[ret]
+    else:
+        selected_stream = stream_list[0]
+
+    resolved_stream = mytv.resolve_stream(selected_stream)
+    image = xbmc_curl_encode((selected_stream.livechannel.image_path, image_headers))
+    title = selected_stream.livechannel.name
+    li = ListItem(title, path=xbmc_curl_encode(resolved_stream))
+    li.setArt({"thumb": image, "icon": image})
+    if "playlist.m3u8" in resolved_stream[0]:
+        li.setContentLookup(False)
+        li.setMimeType("application/vnd.apple.mpegurl")
+        if addon.getSetting("inputstream") == "true":
+            if int(xbmc.__version__[0]) < 3:
+                li.setProperty("inputstreamaddon", "inputstream.adaptive")
+            else:
+                li.setProperty("inputstream", "inputstream.adaptive")
+            li.setProperty("inputstream.adaptive.manifest_type", "hls")
+            li.setProperty("inputstream.adaptive.stream_headers", urlencode(resolved_stream[1]))
+    xbmcplugin.setResolvedUrl(plugin.handle, True, li)
+
+
+@plugin.route("/play_vod")
+def play_vod():
+    mytv.update_vod_channels()
+    image_headers = {"User-Agent": mytv.user_agent}
+    channel = int(plugin.args["channel"][0])
+    stream_list = mytv.get_vodstreams_by_channel_id(channel)
+    if stream_list.count() > 1:
+        select_list = []
+        for stream in stream_list:
+            select_list.append(stream.quality)
+        dialog = xbmcgui.Dialog()
+        ret = dialog.select("Choose Stream", select_list)
+        # if not
+        selected_stream = stream_list[ret]
+    else:
+        selected_stream = stream_list[0]
+
+    resolved_stream = mytv.resolve_stream(selected_stream)
+    image = xbmc_curl_encode((selected_stream.vodchannel.image_path, image_headers))
+    title = selected_stream.vodchannel.name
+    li = ListItem(title, path=xbmc_curl_encode(resolved_stream))
+    li.setArt({"thumb": image, "icon": image})
+    if "playlist.m3u8" in resolved_stream[0]:
+        li.setContentLookup(False)
+        li.setMimeType("application/vnd.apple.mpegurl")
+        if addon.getSetting("inputstream") == "true":
+            if int(xbmc.__version__[0]) < 3:
+                li.setProperty("inputstreamaddon", "inputstream.adaptive")
+            else:
+                li.setProperty("inputstream", "inputstream.adaptive")
+            li.setProperty("inputstream.adaptive.manifest_type", "hls")
+            li.setProperty("inputstream.adaptive.stream_headers", urlencode(resolved_stream[1]))
+    xbmcplugin.setResolvedUrl(plugin.handle, True, li)
 
 
 if __name__ == "__main__":
     plugin.run(sys.argv)
-    del TV
+    del mytv
