@@ -235,21 +235,6 @@ You can clone the project and host it in your own server.
     </extension>
 </addon>
 
-<addon id="plugin.program.KodiTVR-WIZARD" name=" [B][COLOR orange]WIZARD KodiTVR[/COLOR][/B]" version="1.0" provider-name="[B][COLOR red]KodiTVR[/COLOR][/B]">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	</requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>executable</provides>
-  </extension>
-  <extension point="xbmc.service" library="startup.py" start="startup" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">KodiTVR-WIZARD</summary>
-    <description lang="en">KodiTVR-WIZARD allows you to get access to the latest Custom Builds.</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
 <addon id="plugin.program.KodiTVRAddonCreator" name="*KodiTVR [COLOR cyan]Add-on Creator[/COLOR]" version="1.0.0" provider-name="KodiTVR">
     <requires>
     </requires>
