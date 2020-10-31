@@ -1,4 +1,4 @@
-<addon id="plugin.audio.radio_pt" name="[COLOR yellow]KodiTVR Radio[/COLOR]" provider-name="KodiTVR" version="3.0.3">
+<addon id="plugin.audio.KodiTVR_radio_pt" name="[COLOR yellow]KodiTVR Radio[/COLOR]" provider-name="KodiTVR" version="3.0.3">
     <requires>
         <import addon="xbmc.python" version="2.14.0" />
         <import addon="script.module.xbmcswift2" version="2.5.0" />
@@ -9,7 +9,7 @@
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
         <website>https://www.radio.pt/</website>
-        <source>https://github.com/KodiTVR-add-on/repository.KodiTVR/tree/master/plugin.audio.radio_pt</source>
+        <source>https://github.com/KodiTVR-add-on/repository.KodiTVR/tree/master/plugin.audio.KodiTVR_radio_pt</source>
         <forum>https://forum.kodi.tv/showthread.php?</forum>
         <license>GPL-2.0-only</license>
         <news>v3.0.3 (1/5/2020)
