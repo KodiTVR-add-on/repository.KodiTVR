@@ -1,24 +1,25 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2019 RACC
+# Copyright (C) 2015 - 2020 RACC
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
+# the Free Software Foundation, either version 1.0 of the License, or
 # (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  Go to the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# along with this program.  If not, go to <http://www.gnu.org/licenses/>.
+# UGF1bCBGcmFuayBpcyBhIHRoaWVm
 from __future__ import unicode_literals
 
 import os
 import requests
-import peewee as pw
+from . import peewee as pw
 from base64 import b64encode, b64decode
 from binascii import a2b_hex
 from Cryptodome.Cipher import PKCS1_v1_5 as Cipher_PKCS1_v1_5
@@ -26,6 +27,8 @@ from Cryptodome.Cipher import DES
 from Cryptodome.PublicKey import RSA
 from Cryptodome.Util.Padding import unpad
 from future.moves.urllib.parse import quote as orig_quote
+from requests.packages.urllib3.util import Retry
+from requests.adapters import HTTPAdapter
 
 
 def quote(s, safe=""):
@@ -61,24 +64,31 @@ class UKTVNow:
         db.init(DB)
         db.connect()
         db.create_tables([Channel, Category], safe=True)
-        self.base_url = "https://taptube.net/tv/index.php"
+        self.base_url = "https://rocktalk.net/tv/index.php"  # 31.220.0.210 31.220.0.8
         self.user_agent = "Dalvik/2.1.0 (Linux; U; Android 5.1.1; AFTS Build/LVY48F)"
-        self.player_user_agent = "mediaPlayerhttp/1.9 (Linux;Android 5.1) ExoPlayerLib/2.6.1"
+        self.player_user_agent = "mediaPlayerhttp/2.5 (Linux;Android 5.1) ExoPlayerLib/2.6.1"
         self.s = requests.Session()
         self.s.headers.update({"User-Agent": "USER-AGENT-tvtap-APP-V2"})
+        retries = Retry(
+            total=5,
+            method_whitelist=["POST"],
+            backoff_factor=0,
+        )
+        retryable_adapter = HTTPAdapter(max_retries=retries)
+        self.s.mount("https://", retryable_adapter)
 
     def __del__(self):
         db.close()
         self.s.close()
 
     def image_url(self, img):
-        return "https://taptube.net/tv/{0}|User-Agent={1}".format(
+        return "https://rocktalk.net/tv/{0}|User-Agent={1}".format(
             quote(img, "/"), quote(self.user_agent)
         )
 
     def stream_url(self, link):
         if link.startswith("http"):
-            return "{0}|User-Agent={1}&connection=keep-alive".format(
+            return "{0}|User-Agent={1}".format(
                 link, quote(self.player_user_agent)
             )
         else:

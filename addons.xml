@@ -594,7 +594,7 @@ na internet.
   </extension>
 </addon>
 
-<addon id="plugin.video.KodiTVR_Live_TV" name="[COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]TV[/COLOR]" version="21" provider-name="KodiTVR">
+<addon id="plugin.video.KodiTVR_Live_TV" name="[COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]TV[/COLOR]" version="2.5" provider-name="KodiTVR">
   <requires>
     <import addon="xbmc.python" version="2.26.0"/>
     <import addon="script.module.pycryptodome" />

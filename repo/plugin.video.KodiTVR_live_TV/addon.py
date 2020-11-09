@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2019 RACC
+# Copyright (C) 2015 - 2020 RACC
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -9,11 +9,13 @@
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  Go to the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# along with this program.  If not, go to <http://www.gnu.org/licenses/>.
+#
+# RnJhbmsgdGhlIHRoaWVm
 from __future__ import unicode_literals
 
 import sys
@@ -26,17 +28,22 @@ import time
 from requests.exceptions import RequestException
 from resources.lib.uktvnow import UKTVNow
 
+try:
+    from xbmcvfs import translatePath
+except ImportError:
+    from kodi_six.xbmc import translatePath
+
 addon = xbmcaddon.Addon()
 plugin = Plugin()
 plugin.name = addon.getAddonInfo("name")
-USER_DATA_DIR = xbmc.translatePath(addon.getAddonInfo("profile"))
+USER_DATA_DIR = translatePath(addon.getAddonInfo("profile"))
 data_time = int(addon.getSetting("data_time") or "0")
 cache_time = int(addon.getSetting("cache_time") or "0")
 if not os.path.exists(USER_DATA_DIR):
     os.makedirs(USER_DATA_DIR)
 
 
-def log(msg, level=xbmc.LOGNOTICE):
+def log(msg, level=xbmc.LOGDEBUG):
     xbmc.log("[{0}] {1}".format(plugin.name, msg), level=level)
 
 
@@ -50,8 +57,9 @@ if current_time - data_time > cache_time * 60 * 60:
     except (ValueError, RequestException) as e:
         if data_time == 0:
             """ No data """
+            log(e.message)
             dialog = xbmcgui.Dialog()
-            dialog.notification(plugin.name, e.message, xbmcgui.NOTIFICATION_ERROR)
+            dialog.notification(plugin.name, repr(e.message), xbmcgui.NOTIFICATION_ERROR)
             xbmcplugin.endOfDirectory(plugin.handle, False)
         else:
             """ Data update failed """
@@ -81,11 +89,11 @@ def list_channels(cat_id=None):
         li.setProperty("IsPlayable", "true")
         li.setArt({"thumb": image, "icon": image})
         li.setInfo(type="Video", infoLabels={"Title": title, "mediatype": "video"})
-        li.setContentLookup(False)
         url = plugin.url_for(play, pk_id=channel.pk_id)
         list_items.append((url, li, False))
     xbmcplugin.addSortMethod(plugin.handle, xbmcplugin.SORT_METHOD_LABEL)
     xbmcplugin.addDirectoryItems(plugin.handle, list_items)
+    xbmcplugin.setContent(plugin.handle, "videos")
     xbmcplugin.endOfDirectory(plugin.handle)
 
 
@@ -105,27 +113,27 @@ def play(pk_id):
         else:
             link = links[0]
 
+        li = ListItem(title, path=link)
+        li.setArt({"thumb": image, "icon": image})
         if "playlist.m3u8" in link:
+            li.setContentLookup(False)
+            li.setMimeType("application/vnd.apple.mpegurl")
             if addon.getSetting("inputstream") == "true":
-                li = ListItem(title, path=link, offscreen=True)
-                li.setMimeType("application/vnd.apple.mpegurl")
-                li.setProperty("inputstreamaddon", "inputstream.adaptive")
+                if sys.version_info[0] == 2:
+                    li.setProperty("inputstreamaddon", "inputstream.adaptive")
+                else:
+                    li.setProperty("inputstream", "inputstream.adaptive")
                 li.setProperty("inputstream.adaptive.manifest_type", "hls")
                 li.setProperty("inputstream.adaptive.stream_headers", link.split("|")[-1])
-            else:
-                li = ListItem(title, path=link, offscreen=True)
-                li.setMimeType("application/vnd.apple.mpegurl")
-        else:
-            li = ListItem(title, path=link, offscreen=True)
-        li.setArt({"thumb": image, "icon": image})
-        li.setContentLookup(False)
+
         xbmcplugin.setResolvedUrl(plugin.handle, True, li)
     except (ValueError, RequestException) as e:
         log(e.message)
         dialog = xbmcgui.Dialog()
-        dialog.notification(plugin.name, e.message, xbmcgui.NOTIFICATION_ERROR)
+        dialog.notification(plugin.name, repr(e.message), xbmcgui.NOTIFICATION_ERROR)
         xbmcplugin.setResolvedUrl(plugin.handle, False, ListItem())
 
 
 if __name__ == "__main__":
     plugin.run(sys.argv)
+    del TV
