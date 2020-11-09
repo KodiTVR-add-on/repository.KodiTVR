@@ -9,7 +9,7 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">[COLOR lime]KodiTVR Xtream-IPTV[/COLOR]</summary>
-    <website>http://www.xtream-codes.com/</website>
+    <website></website>
     <description lang="en"></description>
     <forum></forum>
     <email></email>
