@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.xtream-codes" name="[COLOR white]KodiTVR[/COLOR] [COLOR gold]Xtream[/COLOR][COLOR black]-[/COLOR][COLOR gold]IPTV[/COLOR]" version="2.2" provider-name="KodiTVR">
+<addon id="plugin.video.xtream-codes" name="[COLORwhite]KodiTVR[/COLOR] [COLORgold]Xtream[/COLOR][COLORblack]-[/COLOR][COLORgold]IPTV[/COLOR]" version="2.2" provider-name="KodiTVR">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.addon.common" />
@@ -9,9 +9,8 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">[COLOR lime]KodiTVR Xtream-IPTV[/COLOR]</summary>
-    <website></website>
     <description lang="en"></description>
-    <forum></forum>
+    <forum>http://www.xtream-codes.com/forum</forum>
     <email></email>
     <disclaimer lang="en"></disclaimer>
     <platform>all</platform>
