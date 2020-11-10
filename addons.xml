@@ -811,7 +811,7 @@ na internet.
   </extension>
 </addon>
 
-<addon id="plugin.video.xtream-codes" name="[COLORwhite]KodiTVR[/COLOR] [COLORgold]Xtream[/COLOR][COLORblack]-[/COLOR][COLORgold]IPTV[/COLOR]" version="2.2" provider-name="KodiTVR">
+<addon id="plugin.video.xtream-codes" name="KodiTVR [COLORgold]Xtream[/COLOR][COLORblack]-[/COLOR][COLORgold]IPTV[/COLOR]" version="2.2" provider-name="KodiTVR">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.addon.common" />
@@ -820,7 +820,7 @@ na internet.
         <provides>video executable</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">[COLOR lime]KodiTVR Xtream-IPTV[/COLOR]</summary>
+    <summary lang="en">KodiTVR Xtream-IPTV</summary>
     <description lang="en"></description>
     <forum>http://www.xtream-codes.com/forum</forum>
     <email></email>
