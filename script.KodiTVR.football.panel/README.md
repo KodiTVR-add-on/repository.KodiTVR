@@ -1,5 +1,5 @@
 # script.KodiTVR.football.panel
-![Icon](https://raw.githubusercontent.com/KodiTVR-add-on/script.KodiTVR.football.panel/master/icon.png)
+![Icon](https://raw.githubusercontent.com/KodiTVR-add-on/master/script.KodiTVR.football.panel/icon.png)
 
 A KodiTVR football panel made for Kodi.
 Livescores, League tables and RSS feeds as a screensaver or program add-on. Fully customizable, each item is updated on time intervals and scrolls through the screen. Presents the team logos, score, goal details, time and redcards.
