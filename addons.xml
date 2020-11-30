@@ -1403,6 +1403,27 @@ na internet.
     </extension>
 </addon>
 
+<addon id="script.matchcenter" name="KodiTVR Match center" version="2.1.2" provider-name="KodiTVR">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+		<import addon="script.module.thesportsdb" version="1.0.1"/>
+		<import addon="script.module.pytz" version="2014.2"/>
+		<import addon="script.module.twitter" version="1.17.1"/>
+		<import addon="script.keymap" version="1.0.10"/>
+	</requires>
+	<extension point="xbmc.python.script" library="main.py" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<website>http://www.thesportsdb.com/</website>
+		<source>https://github.com/KodiTVR-add-on/script.matchcenter</source>
+		<forum>http://forum.kodi.tv/showthread.php</forum>
+		<summary lang="en">Extended football match information</summary>
+		<summary lang="pt">Informação extra para encontros de futebol</summary>
+		<description lang="en">This add-on brings a window that can be mapped to a remote key to show livescores for the current live football games, access match information (goals, cards, subs, lineups) or follow what others are saying about the match in twitter.[CR][CR]Powered by: http://www.thesportsdb.com</description>
+		<description lang="pt">Este add-on apresenta uma janela (que pode ser mapeada a um botão do comando) para apresentar os resultados ao vivo dos jogos de futebol, aceder a informação relaccionada com o jogo em questão (golos, cartões, substituições, equipa titular) ou aquilo que os outros estão a dizer acerca do jogo no twitter. [CR][CR]Suportado por: http://www.thesportsdb.com</description>
+    </extension>
+</addon>
+
 <addon id="script.module..KodiTVR_live_TV" name="[COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]TV[/COLOR]" version="2.5" provider-name="KodiTVR">
   <requires>
     <import addon="xbmc.python" version="2.26.0"/>
@@ -1757,6 +1778,22 @@ na internet.
   </extension>
 </addon>
 
+<addon id="script.module.thesportsdb" name="KodiTVR The Sports DB" version="1.0.1" provider-name="KodiTVR">
+  <requires>
+    <import addon="xbmc.python" version="2.20.0" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <website>http://www.thecocktaildb.com/</website>
+	<source>https://github.com/KodiTVR-add-on/script.module.thesportsdb</source>
+	<forum>http://forum.kodi.tv/showthread.php</forum>
+    <summary lang="en">Python module for thesportsdb.com</summary>
+    <description lang="en">A collection of python methods to wrap the thesportsdb.com API calls</description>
+  </extension>
+</addon>
+
 <addon id="script.module.unidecode" name="unidecode" version="0.4.16" provider-name="Tomaz Solc (Tomaz.solc@tablix.org)">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
@@ -1904,6 +1941,31 @@ na internet.
 		<fanart>fanart.jpg</fanart>
 	</assets>
 	</extension>
+</addon>
+
+<addon id="script.sportscenter" version="0.0.25" name="KodiTVR Sports Center" provider-name="KodiTVR">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.thesportsdb"/>
+    <import addon="script.module.twitter"/>
+    <import addon="script.module.feedparser"/>
+    <import addon="script.module.pytz" />
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>game</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="startup">
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">KodiTVR Sports for Kodi</summary>
+    <description lang="en">KodiTVR SportsCenter is a Kodi frontend for sports. It lets you organize colection of sports recordings, access actual season information, livescores, tables, players and general sports metadata courtesy of thesportsdb.com. It can be integrated with third party scripts.</description>
+    <language></language>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum></forum>
+    <website></website>
+    <source></source>
+  </extension>
 </addon>
 
 <addon id="script.video.F4mProxy"
