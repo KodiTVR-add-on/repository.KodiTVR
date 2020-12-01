@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.KodiTVR-PRO-m3u" name="[COLOR green]KodiTVR[/COLOR] [COLOR yellow]PRO[/COLOR] [COLOR red]M3U[/COLOR]" version="0.0.7" provider-name="[B]Kodi[/B]TVR">
+    <requires>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="app.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>KodiTVR PRO M3U</summary>
+        <description>[COLOR green]KodiTVR[/COLOR] [COLOR yellow]Pro[/COLOR] [COLOR red]M3U[/COLOR] - KodiTVR PRO M3U</description>
+        <disclaimer lang="pt">Todos os links encontrados neste add-on são fruto de uma pesquisa na net, todos eles encontram-se em qualquer site de iptv, nós simplesmente utilizamos esses links e os concentramos num só local, assim sendo declinamos qualquer responsabilidade por eles emitidos ou conteudo partilhado.[CR]Para mais informações podem-nos encontrar na pagina do facebook KodiTVR.</disclaimer>
+        <disclaimer lang="en">All links found in this add-on are the result of a search on the net, all of them are in any iptv site, we simply use these links and concentrate them in one place, therefore we disclaim any responsibility for them issued or shared content.[CR]For more information you can find us on facebook KodiTVR page.</disclaimer>
+        <disclaimer lang="es">Todos los enlaces que se encuentran en este add-on son el resultado de una búsqueda en la red, todos ellos se encuentran en cualquier sitio IPTV, simplemente usamos estos enlaces y concentrarlos en un solo lugar, por lo tanto, no asumimos ninguna responsabilidad por ellos emitidos o contenido compartido.[CR]Para más información nos puede encontrar en la página de facebook, KodiTVR.</disclaimer>
+    </extension>
+</addon>
