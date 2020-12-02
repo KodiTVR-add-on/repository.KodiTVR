@@ -477,6 +477,53 @@ Add-on này sẽ bỏ qua và không chuyển đổi XML dùng regex.
   </extension>
  </addon>
 
+<addon id="plugin.video.KodiTVR-ADULT-XXL"
+       name="[COLORred]KodiTVR ADULT XXL[B][/B][/COLOR]"
+       version="2.4"
+       provider-name="KodiTVR">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.t0mm0.common" version="2.0.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />
+    <import addon="script.common.plugin.cache" version="2.5.2"/>
+    <import addon="script.module.metahandler" version="2.5.1"/>
+
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="pt">KodiTVR ADULT XXL -[COLOR red]Add-on EXCLUSIVO KodiTVR[/COLOR]</summary>
+    <description lang="pt">
+O add-on KodiTVR ADULT XXL apresenta as seguintes secções:
+Canais para adultos...
+Canais World IPTV (Portugal-Vários Países-Adultos)
+      [COLOR white][B]Todos os links disponibilizados neste Add-on estão disponíveis
+em livre procura pela internet.[/B][/COLOR] - [COLOR red][B]Add-on EXCLUSIVO KodiTVR[/B][/COLOR]
+[COLOR yellow][B]ACESSE e INSCREVA-SE no Meu CANAL do YOUTUBE:[/B][/COLOR]
+http://www.youtube.com/Add-onKodiTVR
+
+[COLOR yellow]Bem-vindos a KodiTVR Add-ons
+Espero que gostem, Disfrutem![/COLOR]
+NOTA: para a correta visualização de alguns canais é necessário ter instalados:
+f4mtester – f4mproxy - Sports Devil – Plexus - youtube
+O criador deste add-on não possui nem está ligado de nenhuma forma ao conteúdo nele disponibilizado.
+Apenas disponibilizo conteúdos disponíveis
+na internet.
+	</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.KodiTVR-Canais"
        name="[COLOR red][B]KodiTVR-Canais[/B][/COLOR]"
        version="1.0"
@@ -508,55 +555,6 @@ Add-on này sẽ bỏ qua và không chuyển đổi XML dùng regex.
        ADD-ON KodiTVR-Canais 2020 Sejam Bem-vindos...
 
     </description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.KodiTVR-iptv"
-       name="[COLOR mediumblue]KodiTVR-iptv[B][/B][/COLOR]"
-       version="2.4"
-       provider-name="KodiTVR">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.t0mm0.common" version="2.0.0"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.beautifulsoup4" />
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.requests" />
-    <import addon="script.module.httplib2" />
-    <import addon="script.module.youtube.dl" optional="true"/>
-    <import addon="plugin.video.youtube" version="3.0.0"/>
-    <import addon="script.module.urlresolver" optional="true"/>
-    <import addon="script.module.simplejson" />
-    <import addon="script.common.plugin.cache" version="2.5.2"/>
-    <import addon="script.module.metahandler" version="2.5.1"/>
-
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="pt">IPTV KodiTVR -[COLOR red]Add-on EXCLUSIVO KodiTVR[/COLOR]</summary>
-    <description lang="pt">
-O add-on KodiTVR-iptv apresenta as seguintes secções:
-Canais desportivos com transmissões em direto de várias modalidades
-Sports (Futebol-Desporto... E videos de Vila Real, Portugal)
-Canais World IPTV (Portugal-Vários Países-Adultos)
-Canais Arenavision (para ver com o Plexus)
-      [COLOR white][B]Todos os links disponibilizados neste Add-on estão disponíveis
-em livre procura pela internet.[/B][/COLOR] - [COLOR red][B]Add-on EXCLUSIVO KodiTVR[/B][/COLOR]
-[COLOR yellow][B]ACESSE e INSCREVA-SE no Meu CANAL do YOUTUBE:[/B][/COLOR]
-http://www.youtube.com/Add-onKodiTVR
-
-[COLOR yellow]Bem-vindos a KodiTVR Add-ons
-Espero que gostem, Disfrutem![/COLOR]
-NOTA: para a correta visualização de alguns canais é necessário ter instalados:
-f4mtester – f4mproxy - Sports Devil – Plexus - Elementum - Gdrive - Quasar - youtube
-O criador deste addon não possui nem está ligado de nenhuma forma ao conteúdo nele disponibilizado.
-Apenas disponibilizo conteúdos disponíveis
-na internet.
-	</description>
     <platform>all</platform>
   </extension>
 </addon>
