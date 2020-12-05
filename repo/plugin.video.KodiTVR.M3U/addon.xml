@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.KodiTVR.M3U" name="KodiTVR[COLORred] M3U[/COLOR]" version="77.1.0" provider-name="KodiTVR">
+    <requires>
+    </requires>
+    <extension point="xbmc.python.pluginsource"
+               library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>KodiTVR_M3U</summary>
+        <description>[COLORred]Channels for app Kodi by KodiTVR.[/COLOR]  [COLORwhite]Canais para o aplicativo Kodi da KodiTVR.[/COLOR]  [COLORblue]KodiTVR is not responsible for the use of this add-on. KodiTVR não é responsável pelo uso deste add-on.[/COLOR] [COLORgold]KodiTVR is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.  KodiTVR não é de forma alguma afiliado com Kodi, Team Kodi, ou a Fundação XBMC.[/COLOR]</description>
+    </extension>
+</addon>
