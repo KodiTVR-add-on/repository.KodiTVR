@@ -1,0 +1,32 @@
+#EXTINF:-1,[COLORgreen]BRAZILIAN RADIO[/COLOR]    [COLORdarkblue]KodiTVR[/COLOR] [COLORyellow]IPTV[/COLOR]
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5452
+#EXTM3U
+
+#EXTM3U
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5439
+#EXTINF:-1,RADIO GOSPEL HITS
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5440
+#EXTINF:-1,RADIO MGT LOVE HITS
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5441
+#EXTINF:-1,RADIO MARMALADE
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5442
+#EXTINF:-1,RADIO 1 FM REGGAETRADE 
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5443
+#EXTINF:-1,RADIO POSITIVA
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5444
+#EXTINF:-1,RADIO PONTE FM
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5445
+#EXTINF:-1,RADIO ORBAN OPTICODEC
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5446
+#EXTINF:-1,RADIO CROSS 
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5447
+#EXTINF:-1,----- EXTRA RADIOS -----
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5448
+#EXTINF:-1,RADIO STRICTLY HOUSE 
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5449
+#EXTINF:-1,RADIO DREQUENCY 5 FM
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5450
+#EXTINF:-1,RADIO KWVE FM
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5451
+#EXTINF:-1,RADIO WICKED MUSIC
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5452

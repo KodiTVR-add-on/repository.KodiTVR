@@ -1,0 +1,69 @@
+#EXTINF:-1,[COLORgreen]PORTUGUESE RADIO[/COLOR]       [COLORyellow]KodiTVR[/COLOR] [COLORred]IPTV[/COLOR]
+http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/69994
+#EXTM3U
+#EXTINF:-1,##### |PT| MUSICA #####
+http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68533
+#EXTINF:-1,|PT| TRACE URBAN
+http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68532
+#EXTINF:-1,|PT| TRACE TOCA
+http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68531
+#EXTINF:-1,|PT| VH1
+http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68530
+#EXTINF:-1,|PT| VH1 CLASSIC
+http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68529
+#EXTINF:-1,|PT| AFRO MUSIC
+http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68528
+#EXTINF:-1,|PT| MTV PORTUGAL
+http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68527
+#EXTINF:-1,|PT| MCM POP
+http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68526
+#EXTINF:-1,|PT| MEZZO
+http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68525
+#EXTINF:-1,----- RADIOS PORTUGAL -----
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5415
+#EXTINF:-1,RADIO ANSIAES
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5416
+#EXTINF:-1,RADIO CAMPANARIO
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5417
+#EXTINF:-1,RADIO CASTRENSE
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5418
+#EXTINF:-1,RADIO ORBITAL
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5419
+#EXTINF:-1,RADIO ONDAS DE LIMA 
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5420
+#EXTINF:-1,RADIO VOZ DA PLANICIE 
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5421
+#EXTINF:-1,RADIO CISTER FM
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5422
+#EXTINF:-1,RADIO ELMO
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5423
+#EXTINF:-1,RADIO COVA DA BEIRA
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5424
+#EXTINF:-1,RADIO ALVOR
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5425
+#EXTINF:-1,RADIO VOZ ALENQUER
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5426
+#EXTINF:-1,RADIO ALTO AVE
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5427
+#EXTINF:-1,RADIO BARCELOS
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5428
+#EXTINF:-1,RADIO RFM 80
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5429
+#EXTINF:-1,RADIO ANTENA 1
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5430
+#EXTINF:-1,RADIO ANTENA 2
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5431
+#EXTINF:-1,RADIO 94 FM 
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5432
+#EXTINF:-1,RADIO NOVA
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5433
+#EXTINF:-1,RADIO ONDA VIVA
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5434
+#EXTINF:-1,RADIO NOVE3CINCO 
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5435
+#EXTINF:-1,RADIO HIPER FM
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5436
+#EXTINF:-1,RADIO TSF MADEIRA
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5437
+#EXTINF:-1,RADIO COMERCIAL 
+http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5438
