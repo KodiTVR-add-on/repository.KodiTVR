@@ -1,0 +1,10 @@
+Version 1.0.1
+---------------
+fixed typos + added providers
+
+
+Version 1.0
+---------------
+
+
+
