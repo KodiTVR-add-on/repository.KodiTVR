@@ -82,10 +82,10 @@ YOUTUBE_CHANNEL_ID_60 = "UCzHCZXmqIdjqRnpdp0l_T6g"
 YOUTUBE_CHANNEL_ID_61 = "ASMONACOFCSA"
 YOUTUBE_CHANNEL_ID_62 = "2galatasaray"
 YOUTUBE_CHANNEL_ID_63 = "FBSKTV"
-YOUTUBE_CHANNEL_ID_64 = "santostvoficial"
-YOUTUBE_CHANNEL_ID_65 = "flamengo"
-YOUTUBE_CHANNEL_ID_66 = "OficialCruzeiro"
-YOUTUBE_CHANNEL_ID_67 = "UC68zCuC0QGtkKD261FJ99SQ"
+YOUTUBE_CHANNEL_ID_64 = "ajax"
+YOUTUBE_CHANNEL_ID_65 = "bocaentretenimientos"
+YOUTUBE_CHANNEL_ID_66 = "cariverplatetv"
+YOUTUBE_CHANNEL_ID_67 = "spursofficial"
 
 
 # Entry point
@@ -546,26 +546,26 @@ def main_list(params):
 
     plugintools.add_item( 
         #action="", 
-        title="Santos Futebol Clube",
+        title="AFC Ajax",
         url="plugin://plugin.video.youtube/user/"+YOUTUBE_CHANNEL_ID_64+"/",
-        thumbnail="https://yt3.ggpht.com/ytc/AAUvwnhVsE3oJ6O4CEWOuJrLhQHG_q18E0PWCy31KBrTCJw=s88-c-k-c0x00ffffff-no-rj",
+        thumbnail="https://yt3.ggpht.com/ytc/AAUvwnig6NZKZRPR6C0DyIp1DGfj4cUk3uoBfMz4l89pew=s88-c-k-c0x00ffffff-no-rj",
         folder=True )
     plugintools.add_item( 
         #action="", 
-        title="FLA TV",
+        title="Club Atlético Boca Juniors",
         url="plugin://plugin.video.youtube/user/"+YOUTUBE_CHANNEL_ID_65+"/",
-        thumbnail="https://yt3.ggpht.com/ytc/AAUvwnhLEocUcPiHswB9JUvhscpyGFXuCep9DHe1ngLu=s88-c-k-c0x00ffffff-no-rj",
+        thumbnail="https://yt3.ggpht.com/ytc/AAUvwni5Hf_vRhFiUpxsX7w5y1UhjYSE1QvBV381c8rePw=s88-c-k-c0x00ffffff-no-rj",
         folder=True )
     plugintools.add_item( 
         #action="", 
-        title="Cruzeiro Esporte Clube",
+        title="Club Atlético River Plate",
         url="plugin://plugin.video.youtube/user/"+YOUTUBE_CHANNEL_ID_66+"/",
-        thumbnail="https://yt3.ggpht.com/ytc/AAUvwngw_iMZGwhEgyu2grvtHuzFarmvVPuql50nFPYjcw=s88-c-k-c0x00ffffff-no-rj",
+        thumbnail="https://yt3.ggpht.com/ytc/AAUvwnjVH6m97wVSBG7KVzx17EV1_WwbQ4m0fFGZGyA97Q=s88-c-k-c0x00ffffff-no-rj",
         folder=True )
     plugintools.add_item( 
         #action="", 
-        title="Football World",
-        url="plugin://plugin.video.youtube/channel/"+YOUTUBE_CHANNEL_ID_67+"/",
-        thumbnail="https://yt3.ggpht.com/ytc/AAUvwnhRypM0Zj9vppPE9XwnaAkIggE0zXT4K77iP9M=s88-c-k-c0x00ffffff-no-rj",
+        title="Tottenham Hotspur",
+        url="plugin://plugin.video.youtube/user/"+YOUTUBE_CHANNEL_ID_67+"/",
+        thumbnail="https://yt3.ggpht.com/ytc/AAUvwniWmCvWqErL14F1kNa7bgF_xoLOoeISQJ_4IXzfMsU=s88-c-k-c0x00ffffff-no-rj",
         folder=True )
 run()
