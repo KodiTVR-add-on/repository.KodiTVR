@@ -821,6 +821,27 @@ na internet.
     </extension>
 </addon>
 
+<addon id="plugin.video.KodiTVR_Brasileirao"
+	name="[COLORlime]KodiTVR[/COLOR] [COLORgold]Brasileirão[/COLOR]"
+	version="1.0.4"
+	provider-name="KodiTVR">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.addon.common" version="2.0.0"/>
+    <import addon="plugin.video.youtube" version="5.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">[COLORdarkblue]ESPORTE - Campeonato Brasileiro de Futebol - Série A / B / C.[/COLOR]</summary>
+    <description lang="en">Lista de canais de clubes brasileiros para o add-on...p'o Kodi, apresentando todos os canais oficiais e páginas de fãs dos Clubes do [COLORyellow](ESPORTE)[/COLOR] [COLORlime]Campeonato Brasileiro de Futebol.[/COLOR]</description>
+    <platform>all</platform>
+	<repository>repository KodiTVR</repository>
+	<website>https://koditvr.wixsite.com/website</website>
+  </extension>
+</addon>
+
 <addon id="plugin.video.KodiTVR_Liga-Nos"
 	name="KodiTVR LIGA NOS"
 	version="1.0.4"
