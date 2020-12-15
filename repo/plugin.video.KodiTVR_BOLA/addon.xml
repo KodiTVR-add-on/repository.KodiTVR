@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.KodiTVR_BOLA"
+	name="[COLORgreen]KodiTVR [COLORyellow][B]•[/B][/COLOR] [COLORred]BOLA[/COLOR]"
+	version="1.0.3"
+	provider-name="KodiTVR">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.addon.common" version="2.0.0"/>
+    <import addon="plugin.video.youtube" version="5.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">A selection of channels with the best football videos, [COLORsilver][[/COLOR][COLORgreen]P[/COLOR][COLORred]T[/COLOR][COLORsilver]][/COLOR]Uma seleção de canais com os melhores videos de futebol.</summary>
+    <description lang="en">A list of YouTube football channels and playlists selected by KodiTVR, [COLORsilver][[/COLOR][COLORgreen]P[/COLOR][COLORred]T[/COLOR][COLORsilver]][/COLOR]Uma lista de canais e playlists do Youtube de futebol selecionados pelo KodiTVR; Follow us on twitter: @KodiTVR, [COLORsilver][[/COLOR][COLORgreen]P[/COLOR][COLORred]T[/COLOR][COLORsilver]][/COLOR]Siga-nos no Twitter: @KodiTVR</description>
+    <platform>all</platform>
+	<repository>repository KodiTVR</repository>
+	<twitter>@KodiTVR</twitter>
+  </extension>
+</addon>
