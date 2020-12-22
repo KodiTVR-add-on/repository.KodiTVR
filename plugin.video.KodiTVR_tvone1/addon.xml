@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.KodiTVR_tvone1" name="KodiTVR ON LIVE TV" version="50" provider-name="KodiTVR">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="xbmc.addon" version="17.0.0"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.kodi-six" />
+    <import addon="script.module.future" />
+    <import addon="script.module.routing" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en_gb">KodiTVR ON TV STREAM</summary>
+    <description lang="en_gb">KodiTVR ON TV STREAM</description>
+    <disclaimer lang="en_gb"></disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license>GPL-3.0-only</license>
+    <forum></forum>
+    <website>https://koditvr.wixsite.com/website</website>
+    <email>koditvr@gmail.com</email>
+    <source></source>
+    <assets></assets>
+  </extension>
+</addon>

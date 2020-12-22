@@ -1,0 +1,7 @@
+<settings>
+    <category label="General">
+        <setting label="Stream Server" id="stream_server" type="text" default="http://127.0.0.1:8000"/>
+        <setting label="Default playback mode" id="playback_mode" type="select" values="HLS|RTMFP|RTMFP Netgroup (P2P)" default="HLS"/>
+        <setting label="Cache time (Hours)" type="slider" id="cache_time" default="8" range="0,80" option="int"/>
+    </category>
+</settings>
