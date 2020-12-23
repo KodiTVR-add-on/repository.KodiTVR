@@ -27,21 +27,21 @@
     <category label="30718">
         <setting label="30718" type="lsep"/>
         <setting label="30719" type="action" option="close"
-               action="RunPlugin(plugin://plugin.video.tmdb/?mode=clearCache)"/>
+               action="RunPlugin(plugin://plugin.video.KodiTVR.CINE/?mode=clearCache)"/>
     </category>
 
     <!-- scraper settings -->
     <category label="[B][COLOR lightseagreen]S[COLOR white]crapers[/COLOR][/B]">
         <setting label="30733" type="lsep"/>
         <setting label="30734" type="action" option="close"
-               action="RunPlugin(plugin://plugin.video.tmdb/?mode=ScraperSettings)"/>
+               action="RunPlugin(plugin://plugin.video.KodiTVR.CINE/?mode=ScraperSettings)"/>
         <setting id="use_link_dialog" label="30744" type="bool" default="true" />
         <setting id="link_fallthrough" label="30745" type="bool"	default="true" visible="eq(-1,true)"/>
     </category>
     <category label="[B][COLOR lightseagreen]R[COLOR white]esolvers[/COLOR][/B]">
         <setting label="30741" type="lsep"/>
         <setting label="30742" type="action" option="close"
-               action="RunPlugin(plugin://plugin.video.tmdb/?mode=ResolverSettings)"/>
+               action="RunPlugin(plugin://plugin.video.KodiTVR.CINE/?mode=ResolverSettings)"/>
 
         <!-- filtering settings -->
         <setting label="30735" type="lsep"/>
@@ -61,7 +61,7 @@
    <category label="[B][COLOR white]Enter Own API's[/COLOR][/B]">
         <setting id="debug" type="bool" label="API's" default="false" visible="true"/>
         <setting id="first_run" label="first run" type="bool" default="false" visible="false"/>
-        <setting label="Cache Location" id="cache_folder" type="folder" default="special://profile/addon_data/plugin.video.tmdb/" visible="false"/>
+        <setting label="Cache Location" id="cache_folder" type="folder" default="special://profile/addon_data/plugin.video.KodiTVR.CINE/" visible="false"/>
         <setting label="TVDB API Key" type="text" id="tvdb_api_key" option="hidden" default="34148470FD68E26B" visible="eq(-3,true)"/>
         <setting label="TMDB API Key" type="text" id="tmdb_api_key" option="hidden" default="05255aa68df8270bf028f182b01ad799" visible="eq(-4,true)"/>
         <setting label="Trakt Client ID" type="text" id="trakt_api_client_id" option="hidden" default="b84b41aab8d4a0e18f1205c70cd5b8db8aad887e45bd9e981666f1342ec75001" visible="eq(-5,true)"/>
