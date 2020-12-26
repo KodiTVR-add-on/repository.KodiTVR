@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.World_KodiTVR" name="World KodiTVR" version="1.0" provider-name="KodiTVR">
+<addon id="script.module.World_KodiTVR" name="[B][COLORsilver]World KodiTVR[/COLOR][/B] [B][COLORred]live TV[/COLOR][/B]" version="2.6" provider-name="KodiTVR">
   <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.livestreamer" />
+    <import addon="xbmc.python" version="2.26.0"/>
+    <import addon="script.module.pycryptodome" />
     <import addon="script.module.requests" />
+    <import addon="script.module.kodi-six" />
+    <import addon="script.module.future" />
     <import addon="script.module.routing" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_gb">All credit goes to the Original Dev RACC</summary>
-    <description lang="en_gb">World KodiTVR Module add-on com canais de vários países, Kids TV, Sports TV, Movies...</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en_gb">All credit goes to the Original Dev</summary>
+    <description lang="en_gb">[B][COLORred]World KodiTVR live TV Module add-on com canais de vários países, Kids TV, Sports TV, Movies...[/COLOR][/B]</description>
     <disclaimer lang="en_gb"></disclaimer>
     <language></language>
     <platform>all</platform>
