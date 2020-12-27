@@ -69,7 +69,7 @@ else: SOURCES = []
 
 def mensagem():
     
-    MSG2 = "https://raw.githubusercontent.com/KodiTVR-add-on/KodiTVR-ADULT-XXL/main/alarme.txt"				
+    MSG2 = "https://pastebin.com/raw/zNPpbCCF"				
     MSG = MSG2
     addon1 = "-[COLORred]KodiTVR-ADULT-XXL[B][/B][/COLOR] -"
     LINE1 = urllib2.urlopen(MSG).read()

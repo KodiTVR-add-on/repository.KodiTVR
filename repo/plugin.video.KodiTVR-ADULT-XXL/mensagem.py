@@ -3,9 +3,9 @@ import urllib
 import urllib2
 
 def mensagem():
-    MSG2 = "https://raw.githubusercontent.com/KodiTVR-add-on/KodiTVR-ADULT-XXL/master/alarme.txt"				
+    MSG2 = "https://pastebin.com/raw/zNPpbCCF"				
     MSG = MSG2
-    __ADDONNAME__ = "KodiTVR-iptv"
+    __ADDONNAME__ = "KodiTVR ADULT XXL"
     addon = xbmcaddon.Addon('plugin.video.KodiTVR-ADULT-XXL')
     home = xbmc.translatePath(addon.getAddonInfo('path').decode('utf-8'))
     icon = os.path.join(home, 'icon.png')
