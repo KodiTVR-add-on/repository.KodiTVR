@@ -2230,6 +2230,18 @@ v3.0.5
   </extension>
 </addon>
 
+<addon id="script.koditvr.artwork" version="1.0.2" name="[COLORlime]IPTV KodiTVR Artwork[/COLOR]" provider-name="KodiTVR">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Themes for the KodiTVR Add-on</summary>
+		<description></description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
 <addon id="script.module.civitasscrapers" name="Civitas Scrapers Module" version="2.0" provider-name="CivitasAdmin">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
