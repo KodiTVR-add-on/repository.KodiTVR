@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.KodiTVR_Live_Sport" name="[COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]Sport[/COLOR]" version="0.0.11" provider-name="KodiTVR">
+<addon id="plugin.video.KodiTVR_Live_Sport" name="[COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]Sport[/COLOR]" version="0.1.4" provider-name="KodiTVR">
   <requires>
     <!--import addon="xbmc.python" version="2.1.0"/-->
     <import addon="script.module.dateutil" />
+    <import addon="script.module.six" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video</provides>
@@ -14,6 +15,10 @@
 	<language>EN</language>
     <license>GNU GPL, version 2</license>
     <twitter>https://twitter.com/KodiTVR</twitter>
-    <news>-add youtube links support</news>
+    <news>-compatible with both Kodi version</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
   </extension>
 </addon>

@@ -629,35 +629,39 @@ Add-on này sẽ bỏ qua và không chuyển đổi XML dùng regex.
     </extension>
 </addon>
 
-<addon id="plugin.video.KodiTVR"
-       name="[COLOR yellow][B]KodiTVR-Filmes[/COLOR][/B]"
-       version="1.0"
-       provider-name="KodiTVR">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.t0mm0.common" version="2.0.0"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.beautifulsoup4"/>
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.requests" />
-    <import addon="script.module.httplib2" />
-    <import addon="script.module.youtube.dl" optional="true"/>
-    <import addon="plugin.video.youtube" version="3.0.0"/>
-    <import addon="script.module.simplejson" />
-    <import addon="script.common.plugin.cache" version="2.5.2"/>
-    <import addon="script.module.metahandler" version="2.5.1"/>
-
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Team-KodiTVR</summary>
-    <description lang="en">Add-on KodiTVR para todas as plataformas</description>
-    <platform>all</platform>
-  </extension>
- </addon>
+<addon id="plugin.video.koditvr" version="2.0.81" name="[COLORlime]IPTV KodiTVR[/COLOR]" provider-name="KodiTVR">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.koditvr.artwork" />
+		<import addon="script.module.resolveurl" />
+		<import addon="script.module.requests" />
+		<import addon="script.module.metahandler" />
+        <import addon="script.module.js2py" />
+        <import addon="script.module.pyjsparser" />
+		<import addon="script.module.beautifulsoup4" />
+		<import addon="plugin.video.youtube"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="koditvr.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<description lang="en">IPTV: TV, Movies, Sports.</description>
+        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.</disclaimer>
+        <license></license>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<news>
+			v2.0.81
+-TV
+- MOVIES
+- SPORTS
+- IPTV
+		</news>
+	</extension>
+</addon>
 
 <addon id="plugin.video.KodiTVR-ADULT-XXL"
        name="[COLORred]KodiTVR ADULT XXL[B][/B][/COLOR]"
@@ -884,10 +888,11 @@ na internet.
   </extension>
 </addon>
 
-<addon id="plugin.video.KodiTVR_Live_Sport" name="[COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]Sport[/COLOR]" version="0.0.11" provider-name="KodiTVR">
+<addon id="plugin.video.KodiTVR_Live_Sport" name="[COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]Sport[/COLOR]" version="0.1.4" provider-name="KodiTVR">
   <requires>
     <!--import addon="xbmc.python" version="2.1.0"/-->
     <import addon="script.module.dateutil" />
+    <import addon="script.module.six" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video</provides>
@@ -899,7 +904,11 @@ na internet.
 	<language>EN</language>
     <license>GNU GPL, version 2</license>
     <twitter>https://twitter.com/KodiTVR</twitter>
-    <news>-add youtube links support</news>
+    <news>-compatible with both Kodi version</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
   </extension>
 </addon>
 
