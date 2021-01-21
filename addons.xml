@@ -1079,6 +1079,57 @@ na internet.
   </extension>
 </addon>
 
+<addon id="plugin.video.KodiTVR_ZONE" name="[COLORblue]KodiTVR[/COLOR] [COLORgold]TV[/COLOR] [COLORred]ONLINE[/COLOR]" version="1.0" provider-name="[B][COLORlime]KodiTVR[/COLOR][/B]">
+<requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.t0mm0.common"/>
+    <import addon="script.module.beautifulsoup"/>
+    <import addon="script.module.beautifulsoup4"/>
+    <import addon="script.module.simple.downloader"/>
+    <import addon="script.module.requests"/>
+    <import addon="script.module.httplib2"/>
+    <import addon="script.module.urlresolver"/>
+    <import addon="script.module.simplejson"/>
+    <import addon="script.common.plugin.cache"/>
+    <import addon="script.module.metahandler"/>
+</requires>
+
+<extension point="xbmc.python.pluginsource" library="main.py">
+	<provides>video</provides>
+</extension>
+
+<extension point="xbmc.addon.metadata">
+    <summary>[COLOR red]KodiTVR IPTV[/COLOR]</summary>
+    <description lang="en">[COLOR silver]Seja bem-vindo...[/COLOR]
+
+	[COLORlime]O add-on KodiTVR_ZONE apresenta as seguintes secções:
+Live TV, MOVIES, TVSHOWS, KIDS, "SPORTS - WEB - PT - INTERNATIONAL"
+KodiTVR foi criado para divulgar e apoiar o uso do Kodi, um aplicativo que permite assistir a canais de televisão paga como eventos exclusivos ou canais de outros países através de streaming gratuito na Internet.
+Navegue pelo site: [COLOR silver] https://koditvr.wixsite.com/website [/COLOR] para descobrir quem somos e como podemos ajudar-te.
+No KodiTVR, o nosso compromisso não se restringe a fornecer listas, serviços de qualidade, mas sim também fazer o máximo para garantir que os nossos seguidores fiquem completamente satisfeitos.
+Convidamos todos a navegar pelo site para conhecer tudo o que temos para oferecer,
+Queremos continuar a lutar para encontrar addons a funcionar no KodiTVR para todas as suas necessidades de entretenimento!
+Depois de conhecermos as dificuldades para encontrar addons para o Kodi totalmente funcionais para filmes, séries, programas de televisão, IPTV, desenhos animados, música, desporto etc. Instalamos alguns addons.
+E esse é exactamente o nosso compromisso. Entre em contacto para saber mais.....[/COLOR]
+KODITVR SE ESFORÇA PARA SUPERAR AS SUAS EXPECTATIVAS.
+Canais IPTV (BR - PT - INTERNATIONAL)
+[COLORyellow]NOTA: para a correta visualização de alguns canais é necessário ter instalados:
+f4mtester – f4mproxy - Sports Devil – Plexus - Elementum - Quasar
+O criador deste add-on não possui nem está ligado de nenhuma forma ao conteúdo nele disponibilizado.
+Apenas disponibiliza conteúdos de terceiros	Live TV + MOVIES + TVSHOWS + RADIO...[/COLOR]</description>
+    <disclaimer lang="en">[COLOR blue]SPORTS - WEB - PT - INTERNATIONAL[/COLOR]</disclaimer>
+	<platform>all</platform>
+    <assets>
+	<icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+    <screenshot>resources/screenshots/01.jpg</screenshot>
+    <screenshot>resources/screenshots/02.jpg</screenshot>
+    <screenshot>resources/screenshots/03.jpg</screenshot>
+	</assets>
+</extension>
+
+</addon>
+
 <addon id="plugin.video.p2p-streams"
        name="p2p-streams"
        version="1.2.0b"
