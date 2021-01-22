@@ -76,7 +76,7 @@
     <!-- Dev mode - future features for playlisters and developers -->
     <category label="30770">
         <setting id="debug" type="bool" label="30758" default="false" visible="true"/>
-        <setting id="root_xml" type="text" label="30060" option="hidden" default="aHR0cHM6Ly9wYXN0ZWJpbi5jb20vcmF3L0dMQTZlNnJN" visible="false"/>
+        <setting id="root_xml" type="text" label="30060" option="hidden" default="aHR0cHM6Ly9wdC50ZXh0YmluLm5ldC9yYXcvTGlWdmNtbEJFeQ==" visible="false"/>
         <setting id="message_xml_url" type="text" label="News File Location" option="hidden" default="http://openmetaplayers-4db.m3u.xyz/" visible="true"/>
         <setting label="Current API Set Version" id="current_version" type="text" option="hidden" default="0" visible="false"/>
         <setting label="Enable Service Notification" id="enable_notification" type="bool" option="hidden" default="true" visible="false"/>
