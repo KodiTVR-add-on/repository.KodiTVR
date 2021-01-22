@@ -114,7 +114,7 @@ def main():
     elif 'xcat8' in mode:
         url = "http://pastebin.com/raw.php?i=vzM7hxjn"
     elif 'xcat9' in mode:
-        url = "http://pastebin.com/raw.php?i=HsGhYWpe"
+        url = "https://ghostbin.co/paste/8fodc/raw"
     else:
         categorie()
         sys.exit(0)
