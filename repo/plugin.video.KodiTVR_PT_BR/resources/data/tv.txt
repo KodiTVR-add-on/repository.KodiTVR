@@ -1,171 +1,215 @@
 #EXTM3U
 #EXTINF:-1,[COLORgreen]PORTUGUESE TV[/COLOR]       [COLORyellow]KodiTVR[/COLOR] [COLORred]IPTV[/COLOR]
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70281
-#EXTINF:-1,|PT|HEVC| RTP 1 HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70280
-#EXTINF:-1,|PT|HEVC| RTP 2 HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70279
-#EXTINF:-1,|PT|HEVC| RTP 3 HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70278
-#EXTINF:-1,|PT|HEVC| SIC HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70277
-#EXTINF:-1,|PT|HEVC| SIC MULHER HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70276
-#EXTINF:-1,|PT|HEVC| SIC NOTICIAS HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70275
-#EXTINF:-1,|PT|HEVC| SIC RADICAL HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70274
-#EXTINF:-1,|PT|HEVC| SIC CARAS HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70273
-#EXTINF:-1,|PT|HEVC| TVI FICCAO HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70272
-#EXTINF:-1,|PT|HEVC| TVI HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70271
-#EXTINF:-1,|PT|HEVC| TVI24 HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70270
-#EXTINF:-1,|PT|HEVC| PORTO CANAL HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70269
-#EXTINF:-1,|PT|HEVC| GLOBO PORTUGAL HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70268
-#EXTINF:-1,|PT|HEVC| ZAP VIVA HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70267
-#EXTINF:-1,|PT|HEVC| E! ENTERTAINMENT HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70266
-#EXTINF:-1,##### |PT|HEVC| CULTURA #####
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70246
-#EXTINF:-1,|PT|HEVC| NATIONAL GEOGRAPHIC HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70245
-#EXTINF:-1,|PT|HEVC| NAT GEO WILD HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70244
-#EXTINF:-1,|PT|HEVC| ID INVESTIGATION DISCOVERY HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70243
-#EXTINF:-1,|PT|HEVC| TRAVEL CHANNEL HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70242
-#EXTINF:-1,|PT|HEVC| HISTORIA HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70241
-#EXTINF:-1,|PT|HEVC| FINE LIVING NETWORK HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70240
-#EXTINF:-1,|PT|HEVC| DOG TV HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70239
-#EXTINF:-1,|PT|HEVC| ODISSEIA HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70238
-#EXTINF:-1,|PT|HEVC| 24 KITCHEN HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70237
-#EXTINF:-1,|PT|HEVC| CASA E COZINHA HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70236
-#EXTINF:-1,##### |PT|HEVC| DESPORTO #####
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70235
-#EXTINF:-1,|PT|HEVC| BTV 1 HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70234
-#EXTINF:-1,|PT|HEVC| A BOLA TV HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70233
-#EXTINF:-1,|PT|HEVC| SPORTING TV HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70232
-#EXTINF:-1,|PT|HEVC| EUROSPORT 1 HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70231
-#EXTINF:-1,|PT|HEVC| SPORT TV + HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70230
-#EXTINF:-1,|PT|HEVC| SPORT TV 1 HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70229
-#EXTINF:-1,|PT|HEVC| SPORT TV 2 HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70228
-#EXTINF:-1,|PT|HEVC| SPORT TV 3 HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70227
-#EXTINF:-1,|PT|HEVC| SPORT TV NBA HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70226
-#EXTINF:-1,|PT|HEVC| ELEVEN SPORTS 1 HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70225
-#EXTINF:-1,|PT|HEVC| ELEVEN SPORTS 2 HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70224
-#EXTINF:-1,|PT|HEVC| ELEVEN SPORTS  3 HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70223
-#EXTINF:-1,|PT|HEVC| ELEVEN SPORTS 4 HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70222
-#EXTINF:-1,|PT|HEVC| ELEVEN SPORTS 5 HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70221
-#EXTINF:-1,|PT|HEVC| ELEVEN SPORTS 6 HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70220
-#EXTINF:-1,|PT|HEVC| FIGHT NETWORK HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70219
-#EXTINF:-1,|PT|HEVC| CANAL 11 HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70218
-#EXTINF:-1,|PT|HEVC| CMTV HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/70217
-#EXTINF:-1,##### |PT| PORTUGAL #####
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68609
-#EXTINF:-1,|PT| CORONA VIRUS INFO
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68608
-#EXTINF:-1,|PT| RTP 1 HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68607
-#EXTINF:-1,|PT| RTP 2 HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68606
-#EXTINF:-1,|PT| RTP 1
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68605
-#EXTINF:-1,|PT| RTP 2
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68604
-#EXTINF:-1,|PT| RTP 3
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68603
-#EXTINF:-1,|PT| RTP ACORES
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68602
-#EXTINF:-1,|PT| RTP AFRICA
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68601
-#EXTINF:-1,|PT| RTP MADEIRA
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68600
-#EXTINF:-1,|PT| RTP MEMORIA
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68599
-#EXTINF:-1,|PT| SIC
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68598
-#EXTINF:-1,|PT| SIC MULHER
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68597
-#EXTINF:-1,|PT| SIC NOTICIAS
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68596
-#EXTINF:-1,|PT| SIC RADICAL
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68595
-#EXTINF:-1,|PT| SIC CARAS
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68594
-#EXTINF:-1,|PT| SIC K
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68593
-#EXTINF:-1,|PT| CANAL Q
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68592
-#EXTINF:-1,|PT| PORTO CANAL
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68591
-#EXTINF:-1,|PT| TVE 24H
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68590
-#EXTINF:-1,|PT| TVI
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68589
-#EXTINF:-1,|PT| TVI 24
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68588
-#EXTINF:-1,|PT| TVI FICCAO
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68587
-#EXTINF:-1,|PT| MCS EXTREME
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68586
-#EXTINF:-1,|PT| TVI REALITY
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68585
-#EXTINF:-1,|PT| TV RECORD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68584
-#EXTINF:-1,|PT| ZAP VIVA HD
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68583
-#EXTINF:-1,|PT| KURIAKOS TV
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68582
-#EXTINF:-1,|PT| TCV CABO
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68581
-#EXTINF:-1,##### |PT| INFANTIL #####
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68580
-#EXTINF:-1,|PT| BABY TV
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68579
-#EXTINF:-1,|PT| CANAL PANDA
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68578
-#EXTINF:-1,|PT| DISNEY CHANNEL
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68577
-#EXTINF:-1,|PT| DISNEY JUNIOR
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68576
-#EXTINF:-1,|PT| CARTOON NETWORK
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68575
-#EXTINF:-1,|PT| JIM JAM
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68574
-#EXTINF:-1,|PT| BIGGS
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68573
-#EXTINF:-1,|PT| NICKELODEON
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68572
-#EXTINF:-1,|PT| NICK JR.
-http://195.154.156.28:80/fFcHk7wfy9/VFr6DqyW4a/68571
+https://streaming-live
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,RTP 1 PT
+https://streaming-live.rtp.pt/liverepeater/smil:rtp1HD.smil/chunklist_b2540000_slpor.m3u8?pxt_rtp|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,RTP 1 PT
+https://streaming-live.rtp.pt/liverepeater/smil:rtp1HD.smil/playlist.m3u8?pxt_rtp|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,RTP 2 PT
+https://streaming-live.rtp.pt/liverepeater/smil:rtp2.smil/chunklist_b1290000_slpt.m3u8?pxt_rtp|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,RTP 2 PT
+https://streaming-live.rtp.pt/liverepeater/smil:rtp2.smil/playlist.m3u8?pxt_rtp|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,RTP 3 PT
+https://streaming-live.rtp.pt/livetvhlsDVR/rtpndvr.smil/chunklist_b1290000_DVR_slpt.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,RTP 3 PT
+https://streaming-live.rtp.pt/livetvhlsDVR/rtpndvr.smil/playlist.m3u8?DVR|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,RTP Internacional PT
+https://streaming-live.rtp.pt/liverepeater/smil:rtpi.smil/chunklist_b1290000_slpt.m3u8?pxt_rtp|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,RTP Internacional PT
+https://streaming-live.rtp.pt/liverepeater/smil:rtpi.smil/playlist.m3u8?pxt_rtp|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,RTP Memória PT
+https://streaming-live.rtp.pt/liverepeater/smil:rtpmem.smil/chunklist_b1290000_slpt.m3u8?pxt_rtp|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,RTP Memória PT
+https://streaming-live.rtp.pt/liverepeater/smil:rtpmem.smil/playlist.m3u8?pxt_rtp|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,RTP Madeira PT
+https://streaming-live.rtp.pt/liverepeater/smil:rtpmadeira.smil/chunklist_b640000_slpt.m3u8?pxt_rtp|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,RTP Madeira PT
+https://streaming-live.rtp.pt/liverepeater/smil:rtpmadeira.smil/playlist.m3u8?pxt_rtp|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,RTP Açores PT
+https://streaming-live.rtp.pt/liverepeater/smil:rtpacores.smil/chunklist_b640000_slpt.m3u8?pxt_rtp|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,RTP Açores PT
+https://streaming-live.rtp.pt/liverepeater/smil:rtpacores.smil/playlist.m3u8?pxt_rtp|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,RTP África PT
+https://streaming-live.rtp.pt/liverepeater/smil:rtpafrica.smil/chunklist_b640000_slpt.m3u8?pxt_rtp|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,RTP África PT
+https://streaming-live.rtp.pt/liverepeater/smil:rtpafrica.smil/playlist.m3u8?pxt_rtp|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,SIC PT
+https://live.impresa.pt/live/sic/sic540p.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1 tvg-id="SICN" tvg-logo="https://ptiptv.tk/logo?i=SICN" group-title="News",SIC Notícias PT
+http://live.impresa.pt/live/sicnot/sicnot.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,EURONEWS PT
+https://stream-03.dc3.dailymotion.com/sec(ZHW-kyIDNbzrgtZQEivCa9z6q2Q-cRalPyGGQinYOa8)/dm/3/x2j7lv2/s/live-1.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1 tvg-id="Porto Canal PT" tvg-name="Porto Canal PT" tvg-language="Portuguese" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/ba/Logo_Porto_Canal.jpg" tvg-country="PT" tvg-url="" group-title="General",Porto Canal PT
+https://streamer-b02.videos.sapo.pt/live/portocanal/playlist.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1 tvg-id="PORTO" tvg-logo="https://ptiptv.tk/logo?i=PORTO" group-title="Entertainment",Porto Canal PT
+https://streamer-a01.videos.sapo.pt/live/portocanal/playlist.m3u8
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1 tvg-id="ARTV PT" tvg-name="ARTV PT" tvg-language="Portuguese" tvg-logo="http://www.canal.parlamento.pt/images/ARTV_Logo.png" tvg-country="PT" tvg-url="" group-title="Legislative",ARTV | Canal Parlamento
+https://5e4fc274d9d46.streamlock.net/livenlin4/2liveartvpub/playlist.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1 tvg-id="Caca Vision PT" tvg-name="Caca Vision PT" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/3qB3JL7.png" tvg-country="PT" tvg-url="" group-title="Hobby",Caçavision (HQ)
+https://cdn039.fractalmedia.es/hls/caz_pt_high.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1 tvg-id="Caca Vision PT" tvg-name="Caca Vision PT" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/3qB3JL7.png" tvg-country="PT" tvg-url="" group-title="Hobby",Caçavision (LQ)
+https://cdn039.fractalmedia.es/hls/caz_pt_low.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1 tvg-id="Caca Vision PT" tvg-name="Caca Vision PT" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/3qB3JL7.png" tvg-country="PT" tvg-url="" group-title="Hobby",Caçavision (MQ)
+https://cdn039.fractalmedia.es/hls/caz_pt_med.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/GbQuvWG.png" tvg-country="PT" tvg-url="" group-title="Movies",Kuriakos Cine
+http://c2.manasat.com:1935/kcine/kcine3/FluxusTV.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="" tvg-logo="https://i.imgur.com/CZViCwB.jpg" tvg-country="PT" tvg-url="" group-title="",Kuriakos Cine
+http://c2.manasat.com:1935/kcine/kcine3/master.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/tfc2BYM.png" tvg-country="PT" tvg-url="" group-title="Kids",Kuriakos Kids
+http://c2.manasat.com:1935/kkids/kkids3/FluxusTV.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="" tvg-logo="https://i.imgur.com/aNVzKYJ.png" tvg-country="PT" tvg-url="" group-title="",Kuriakos Kids
+http://c2.manasat.com:1935/kkids/kkids3/master.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/q6K4S0N.png" tvg-country="PT" tvg-url="" group-title="Music",Kuriakos Music
+http://c2.manasat.com:1935/kmusic/kmusic3/FluxusTV.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="" tvg-logo="https://i.imgur.com/Zl40NYi.jpg" tvg-country="PT" tvg-url="" group-title="",Kuriakos Music
+http://c2.manasat.com:1935/kmusic/kmusic3/master.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/M5i4hfh.png" tvg-country="PT" tvg-url="" group-title="Religious",Kuriakos TV
+http://195.22.11.11:1935/ktv/ktv1/FluxusTV.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/M5i4hfh.png" tvg-country="PT" tvg-url="" group-title="Religious",Kuriakos TV (Backup)
+http://195.22.11.11:1935/ktv/ktv1/TeamBlue.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/jYIf7Mz.png" tvg-country="PT" tvg-url="" group-title="Religious",Sobrenatural TV
+http://213.13.26.11:1935/live/sobrenaturaltv/livestream.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/VgzVZto.png" tvg-country="PT" tvg-url="" group-title="Religious",Sobrenatural TV (Backup)
+http://livestreamcdn.net:1935/SobrenaturalTV/SobrenaturalTV/playlist.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1 tvg-id="TV Fatima PT" tvg-name="TV Fatima PT" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/hCFVc5S.jpg" tvg-country="PT" tvg-url="" group-title="Religious",TV Fátima
+https://streamer-b02.videos.sapo.pt/live/santuario.stream/livestream.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1 tvg-id="" tvg-logo="Capelinha_de_Fatima_TV_Fatima.png" group-title="PORTUGAL",[COLOR yellow][I][B]CAPELINHA FÁTIMA[/B][/I][/COLOR]
+rtmp://213.13.26.11/live playpath=santuario.stream swfUrl=http://imgs.sapo.pt/sapovideo/swf/flvplayer.swf?live=rtmp://{$hostname}/live/santuario&file=http://rd3.videos.sapo.pt/nk4p1I65eivPLPe4i1hy/mov/24 live=1 pageUrl=objectEncoding
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,ADBTV
+https://streamer-a03.videos.sapo.pt/live/sobrenaturaltv_3/chunklist_w1178538717.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,ON FM Portugal
+https://5ce9406b73c33.streamlock.net/ONFM/livestream/chunklist_w1509463363.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,TV de Braga
+https://5cf4a2c2512a2.streamlock.net/canalb/canalb/chunklist_w1537954069.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,TV CANÇÃO NOVA PORTUGAL
+http://tvajuhls-lh.akamaihd.net/i/tvdesk_1@147040/index_1080_av-p.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,Novo Tempo TV
+https://stream.live.novotempo.com/tv/smil:tvnovotempo.smil/chunklist_b3628000_slpor.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,IGREJA ONLINE MANÁ
+http://195.22.11.11:1935/igronline/igronline2/chunklist_w1238742767.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,TV Evangelizar
+https://5f593df7851db.streamlock.net/evangelizar/tv/chunklist_w1594912279.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,Rede Vida TV
+https://cvd1.cds.ebtcvd.net/live-redevida/smil:redevida.smil/chunklist_b608000.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,TV Aparecida
+https://caikron.com.br:8082/padroeira/padroeira/cktv/teste_source/chunks.m3u8?nimblesessionid=37257833|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,Rede Século 21 TV
+https://dhxt2zok2aqcr.cloudfront.net/live/rs21_240p414k/index.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1,Rede Gospel TV
+https://cdn.jmvstream.com/w/LVW-8719/LVW8719_AcLVAxWy5J/chunklist.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1,☆ CHANNELS TV ☆
+http://somosportugal
+
+#EXTM3U
+
+plugin://plugin.video.f4mTester/?streamtype=TSDOWNLOADER&name=[COLORgreen][B]•[/B][/COLOR][COLORgreen][B] KodiTVR[/COLOR][COLORyellow] PT[/B][/COLOR][COLORred][B] IPTV M3U[/B][/COLOR] ;url=
+
+#EXTINF:-1,[COLORgreen]I=======[/COLOR][COLORgold]([/COLOR] [COLORgreen][B]•[/B][/COLOR][COLORgreen][B] KodiTVR[/COLOR][COLORyellow] PT[/B][/COLOR][COLORred][B] IPTV M3U[/B][/COLOR]  [COLORred][B]•[/B][/COLOR] [COLORgold])[/COLOR][COLORred]=======I[/COLOR]
+skip
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTINF:-1 tvg-id="ARTV PT" tvg-name="ARTV PT" tvg-language="Portuguese" tvg-logo="http://www.canal.parlamento.pt/images/ARTV_Logo.png" group-title="Legislative",ARTV | Canal Parlamento
+https://5e4fc274d9d46.streamlock.net/livenlin4/2liveartvpub/playlist.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="Caca Vision PT" tvg-name="Caca Vision PT" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/3qB3JL7.png" group-title="Hobby",Caçavision (HQ)
+https://cdn039.fractalmedia.es/hls/caz_pt_high.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="Caca Vision PT" tvg-name="Caca Vision PT" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/3qB3JL7.png" group-title="Hobby",Caçavision (LQ)
+https://cdn039.fractalmedia.es/hls/caz_pt_low.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="Caca Vision PT" tvg-name="Caca Vision PT" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/3qB3JL7.png" group-title="Hobby",Caçavision (MQ)
+https://cdn039.fractalmedia.es/hls/caz_pt_med.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/GbQuvWG.png" group-title="Movies",Kuriakos Cine
+http://c2.manasat.com:1935/kcine/kcine3/FluxusTV.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="" tvg-logo="https://i.imgur.com/CZViCwB.jpg" group-title="",Kuriakos Cine
+http://c2.manasat.com:1935/kcine/kcine3/master.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/tfc2BYM.png" group-title="Kids",Kuriakos Kids
+http://c2.manasat.com:1935/kkids/kkids3/FluxusTV.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="" tvg-logo="https://i.imgur.com/aNVzKYJ.png" group-title="",Kuriakos Kids
+http://c2.manasat.com:1935/kkids/kkids3/master.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/q6K4S0N.png" group-title="Music",Kuriakos Music
+http://c2.manasat.com:1935/kmusic/kmusic3/FluxusTV.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="" tvg-logo="https://i.imgur.com/Zl40NYi.jpg" group-title="",Kuriakos Music
+http://c2.manasat.com:1935/kmusic/kmusic3/master.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/M5i4hfh.png" group-title="Religious",Kuriakos TV
+http://195.22.11.11:1935/ktv/ktv1/FluxusTV.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/M5i4hfh.png" group-title="Religious",Kuriakos TV (Backup)
+http://195.22.11.11:1935/ktv/ktv1/TeamBlue.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="Porto Canal PT" tvg-name="Porto Canal PT" tvg-language="Portuguese" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/ba/Logo_Porto_Canal.jpg" group-title="General",Porto Canal
+https://streamer-b02.videos.sapo.pt/live/portocanal/playlist.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="RTP Acores PT" tvg-name="RTP Acores PT" tvg-language="Portuguese" tvg-logo="https://cdn-images.rtp.pt/common/img/channels/logos/color/horizontal/106-563419141305.png" group-title="General",RTP Açores
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+https://streaming-live.rtp.pt/liverepeater/smil:rtpacores.smil/playlist.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="RTP Internacional PT" tvg-name="RTP Internacional PT" tvg-language="Portuguese" tvg-logo="https://cdn-images.rtp.pt/common/img/channels/logos/color/horizontal/120-344318101410.png" group-title="General",RTP Internacional
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+https://streaming-live.rtp.pt/liverepeater/smil:rtpi.smil/playlist.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="RTP Internacional PT" tvg-name="RTP Internacional PT" tvg-language="Portuguese" tvg-logo="https://cdn-images.rtp.pt/common/img/channels/logos/color/horizontal/120-344318101410.png" group-title="General",RTP Internacional (Backup)
+http://210.210.155.35/qwr9ew/s/s38/index.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="RTP Madeira PT" tvg-name="RTP Madeira PT" tvg-language="Portuguese" tvg-logo="https://cdn-images.rtp.pt/common/img/channels/logos/color/horizontal/107-443519141305.png" group-title="General",RTP Madeira
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+https://streaming-live.rtp.pt/liverepeater/smil:rtpmadeira.smil/playlist.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="RTP Memoria PT" tvg-name="RTP Memoria PT" tvg-language="Portuguese" tvg-logo="https://cdn-images.rtp.pt/common/img/channels/logos/color/horizontal/80-584819141705.png" group-title="",RTP Memória [not 24/7]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+https://streaming-live.rtp.pt/liverepeater/smil:rtpmem.smil/playlist.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="RTP Africa PT" tvg-name="RTP Africa PT" tvg-language="Portuguese" tvg-logo="https://cdn-images.rtp.pt/common/img/channels/logos/color/horizontal/27-363219141305.png" group-title="General",RTP África [not 24/7]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+https://streaming-live.rtp.pt/liverepeater/smil:rtpafrica.smil/playlist.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="RTP 1 PT" tvg-name="RTP 1 PT" tvg-language="Portuguese" tvg-logo="https://cdn-images.rtp.pt/common/img/channels/logos/color/horizontal/5-563718101410.png" group-title="General",RTP1 [not 24/7]
+#EXTVLCOPT:http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+https://streaming-live.rtp.pt/liverepeater/smil:rtp1.smil/playlist.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="RTP 2 PT" tvg-name="RTP 2 PT" tvg-language="Portuguese" tvg-logo="https://cdn-images.rtp.pt/common/img/channels/logos/color/horizontal/3-363718101410.png" group-title="General",RTP2 [not 24/7]
+#EXTVLCOPT:http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+https://streaming-live.rtp.pt/liverepeater/smil:rtp2.smil/playlist.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="RTP 3 PT" tvg-name="RTP 3 PT" tvg-language="Portuguese" tvg-logo="https://cdn-images.rtp.pt/common/img/channels/logos/color/horizontal/64-393818101410.png" group-title="News",RTP3 [not 24/7]
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+https://streaming-live.rtp.pt/livetvhlsDVR/rtpndvr.smil/playlist.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/jYIf7Mz.png" group-title="Religious",Sobrenatural TV
+http://213.13.26.11:1935/live/sobrenaturaltv/livestream.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/VgzVZto.png" group-title="Religious",Sobrenatural TV (Backup)
+http://livestreamcdn.net:1935/SobrenaturalTV/SobrenaturalTV/playlist.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0
+#EXTINF:-1 tvg-id="TV Fatima PT" tvg-name="TV Fatima PT" tvg-language="Portuguese" tvg-logo="https://i.imgur.com/hCFVc5S.jpg" group-title="Religious",TV Fátima
+https://streamer-b02.videos.sapo.pt/live/santuario.stream/livestream.m3u8|User-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+WOW64%3B+rv%3A47.0%29+Gecko%2F20100101+Firefox%2F47.0

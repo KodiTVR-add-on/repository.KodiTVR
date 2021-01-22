@@ -1,32 +1,142 @@
 #EXTINF:-1,[COLORgreen]BRAZILIAN RADIO[/COLOR]    [COLORdarkblue]KodiTVR[/COLOR] [COLORyellow]IPTV[/COLOR]
-http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5452
+http://familytv.net:80/live/
 #EXTM3U
 
 #EXTM3U
-http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5439
-#EXTINF:-1,RADIO GOSPEL HITS
-http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5440
-#EXTINF:-1,RADIO MGT LOVE HITS
-http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5441
-#EXTINF:-1,RADIO MARMALADE
-http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5442
-#EXTINF:-1,RADIO 1 FM REGGAETRADE 
-http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5443
-#EXTINF:-1,RADIO POSITIVA
-http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5444
-#EXTINF:-1,RADIO PONTE FM
-http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5445
-#EXTINF:-1,RADIO ORBAN OPTICODEC
-http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5446
-#EXTINF:-1,RADIO CROSS 
-http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5447
-#EXTINF:-1,----- EXTRA RADIOS -----
-http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5448
-#EXTINF:-1,RADIO STRICTLY HOUSE 
-http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5449
-#EXTINF:-1,RADIO DREQUENCY 5 FM
-http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5450
-#EXTINF:-1,RADIO KWVE FM
-http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5451
-#EXTINF:-1,RADIO WICKED MUSIC
-http://somosportugal.xyz:8080/dctelemovel/dctelemovel/5452
+#EXTINF:-1,M20 RADIO TV
+http://familytv.net:80/live/Peterson/Peterson/67332.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Condado FM Condado / PE - Brasil
+http://familytv.net:80/live/Peterson/Peterson/120038.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Cidade 670 AM Curitiba / PR - Brasil
+http://familytv.net:80/live/Peterson/Peterson/96954.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Cidade FM 97.3 Paranagua / PR - Brasil
+http://familytv.net:80/live/Peterson/Peterson/96955.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Planalto News FM 92.1 Passo Fundo / RS - Brasil
+http://familytv.net:80/live/Peterson/Peterson/89013.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Rasga Baleia Eusebio / CE - Brasil
+http://familytv.net:80/live/Peterson/Peterson/92820.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Viola de Ouro Ribeirão Preto / SP
+http://familytv.net:80/live/Peterson/Peterson/57327.m3u8|user-agent=GoPlayer
+#EXTINF:-1, Rádio Antena 1 94.7 FM São Paulo / SP - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41521.m3u8|user-agent=GoPlayer
+#EXTINF:-1, Rádio Cultura Caipira Caxias Do Sul / RS - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41524.m3u8|user-agent=GoPlayer
+#EXTINF:-1, Rádio Studio Souto - Electro House
+http://familytv.net:80/live/Peterson/Peterson/41488.m3u8|user-agent=GoPlayer
+#EXTINF:-1, Rádio Studio Souto - Roberto Carlos
+http://familytv.net:80/live/Peterson/Peterson/41502.m3u8|user-agent=GoPlayer
+#EXTINF:-1, Rádio Studio Souto - Rock Clássico
+http://familytv.net:80/live/Peterson/Peterson/41503.m3u8|user-agent=GoPlayer
+#EXTINF:-1, Rádio Super Difusora 94.5 FM Itapetininga / SP - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41517.m3u8|user-agent=GoPlayer
+#EXTINF:-1, Rádio Top Campeira Santa Cruz Do Sul / RS - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41534.m3u8|user-agent=GoPlayer
+#EXTINF:-1,ROCK 'N ROLL
+http://familytv.net:80/live/Peterson/Peterson/76191.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Alto Uruguai 970 AM Três Passos / RS - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41533.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Antena 1 103.7 FM Rio De Janeiro / RJ - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41522.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Ativa 104.5 FM Itaqui / RS - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41531.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Ativa de Itapetininga Itapetininga / SP - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41518.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Bagual Blumenau / SC - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41538.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Blau Nunes 97.9 FM Santa Barbara Do Sul / RS - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41528.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Casa dos Caipiras Pardinho / SP - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41525.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Central 87.9 FM Santiago / RS - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41532.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Cidade Jaú 87.9 FM Jau / SP - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41539.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Clube 89.9 FM Itapetininga / SP - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41516.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Extreme - Brasil Jau / SP - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41540.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Fandango Clássica 89.5 FM Cachoeira Do Sul / RS - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41537.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Grenal 1020 AM 95.9 FM Porto Alegre / RS - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41526.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Liberdade 970 AM Porto Alegre / RS - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41530.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Liberdade 99.7 FM Capivari Do Sul / RS - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41529.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Minuano 1410 AM Rio Grande / RS - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41527.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Ouro Verde 105.5 FM Curitiba / PR - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41542.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Panter FM Itapetininga / SP - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41520.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Axé
+http://familytv.net:80/live/Peterson/Peterson/41481.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Boleros em Seresta
+http://familytv.net:80/live/Peterson/Peterson/41482.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Brega Hits
+http://familytv.net:80/live/Peterson/Peterson/41483.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Clube da Criança
+http://familytv.net:80/live/Peterson/Peterson/41484.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Country
+http://familytv.net:80/live/Peterson/Peterson/41485.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Discoteca 70s
+http://familytv.net:80/live/Peterson/Peterson/41486.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Dubstep
+http://familytv.net:80/live/Peterson/Peterson/41487.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Eurodance 90s
+http://familytv.net:80/live/Peterson/Peterson/41489.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Forró
+http://familytv.net:80/live/Peterson/Peterson/41490.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Gospel
+http://familytv.net:80/live/Peterson/Peterson/41491.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Hip Hop
+http://familytv.net:80/live/Peterson/Peterson/41492.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Historinha Infantil
+http://familytv.net:80/live/Peterson/Peterson/41493.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Jovem Guarda
+http://familytv.net:80/live/Peterson/Peterson/41494.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Love Songs
+http://familytv.net:80/live/Peterson/Peterson/41495.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Megamix 80s
+http://familytv.net:80/live/Peterson/Peterson/41496.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - MPB Musicalidade
+http://familytv.net:80/live/Peterson/Peterson/41497.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - New Age
+http://familytv.net:80/live/Peterson/Peterson/41498.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Pagode
+http://familytv.net:80/live/Peterson/Peterson/41499.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Rap Nacional
+http://familytv.net:80/live/Peterson/Peterson/41500.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Reggae
+http://familytv.net:80/live/Peterson/Peterson/41501.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Rodeio
+http://familytv.net:80/live/Peterson/Peterson/41504.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Saudade
+http://familytv.net:80/live/Peterson/Peterson/41505.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Sertaneja
+http://familytv.net:80/live/Peterson/Peterson/41506.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Sertanejo Raizes
+http://familytv.net:80/live/Peterson/Peterson/41507.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Sertanejo Universitário
+http://familytv.net:80/live/Peterson/Peterson/41508.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Smooth Jazz
+http://familytv.net:80/live/Peterson/Peterson/41509.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Studio do Amor
+http://familytv.net:80/live/Peterson/Peterson/41510.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Techno
+http://familytv.net:80/live/Peterson/Peterson/41511.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Tecnobrega
+http://familytv.net:80/live/Peterson/Peterson/41512.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Top 40
+http://familytv.net:80/live/Peterson/Peterson/41513.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Studio Souto - Versão Brasileira
+http://familytv.net:80/live/Peterson/Peterson/41514.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio T 99.9 FM Ponta Grossa / PR - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41543.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Rádio Web Campeira FM Caxias Do Sul / RS - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41535.m3u8|user-agent=GoPlayer
+#EXTINF:-1,Nova Rádio Cidade 105.9 FM Itapetininga / SP - Brasil
+http://familytv.net:80/live/Peterson/Peterson/41515.m3u8|user-agent=GoPlayer
+
+
+
