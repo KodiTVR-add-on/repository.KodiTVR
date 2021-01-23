@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 """
-Copyright (C) 2019
-S ovim sam se poprilično ispatio i nije bilo lako...
+Copyright (C) 2021
+KodiTVR ADD-ON
 """
 
 import urllib, urllib2, sys, re, os, unicodedata
@@ -64,26 +64,26 @@ icon_uk = xbmc.translatePath(os.path.join(home, 'unitedkingdom.png'))
 
 ## Fuck you GRUPETA FN
 
-albania_m3u ="https://pastebin.com/raw/M3FFCqTF"
-austria_m3u ="https://pastebin.com/raw/rnrmsfPz"
-belgium_m3u ="https://pastebin.com/raw/C2GtYgxn"
-czech_m3u ="https://pastebin.com/raw/SLkdDdeY"
-germany_m3u ="https://pastebin.com/raw/BVFk6fdB"
-denmark_m3u ="https://pastebin.com/raw/4gd43qZ5"
-finland_m3u ="https://pastebin.com/raw/1c6TS1qE"
-france_m3u ="https://pastebin.com/raw/wHx19ZfQ"
-greece_m3u ="https://pastebin.com/raw/9RkGNCNP"
-hungary_m3u ="https://pastebin.com/raw/7cf746rq"
-italy_m3u ="https://pastebin.com/raw/uxiqmqB2"
-netherlands_m3u ="https://pastebin.com/raw/6qS1KXXq"
-norvay_m3u ="https://pastebin.com/raw/677h7Rbr"
-poland_m3u ="https://pastebin.com/raw/xB5qXArH"
-portugal_m3u ="https://pastebin.com/raw/Q2EbBxmq"
-slovakia_m3u ="https://pastebin.com/raw/dt2Xh0fT"
-spain_m3u ="https://pastebin.com/raw/MdttYPwm"
-sweden_m3u ="https://pastebin.com/raw/CJwDXRDz"
-turkey_m3u ="https://pastebin.com/raw/mc36niq8"
-unitedkingdom_m3u ="https://pastebin.com/raw/4DWBf4RZ"
+albania_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/al.m3u"
+austria_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/at.m3u"
+belgium_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/be.m3u"
+czech_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/cz.m3u"
+germany_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/de.m3u"
+denmark_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/dk.m3u"
+finland_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/fi.m3u"
+france_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/fr.m3u"
+greece_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/gr.m3u"
+hungary_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/hu.m3u"
+italy_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/it.m3u"
+netherlands_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/nl.m3u"
+norvay_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/no.m3u"
+poland_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/pl.m3u"
+portugal_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/pt.m3u"
+slovakia_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/sk.m3u"
+spain_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/es.m3u"
+sweden_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/se.m3u"
+turkey_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/tr.m3u"
+unitedkingdom_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/uk.m3u"
 
 xml_regex = '#(.+?),(.+)\s*(.+)\s*'
 m3u_thumb_regex = 'tvg-logo=[\'"](.*?)[\'"]'
