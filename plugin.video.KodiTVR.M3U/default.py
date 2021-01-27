@@ -76,7 +76,7 @@ greece_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels
 hungary_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/hu.m3u"
 italy_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/it.m3u"
 netherlands_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/nl.m3u"
-norvay_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/no.m3u"
+norway_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/no.m3u"
 poland_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/pl.m3u"
 portugal_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/pt.m3u"
 slovakia_m3u ="https://raw.githubusercontent.com/KodiTVR-add-on/iptv/main/channels/sk.m3u"
@@ -144,7 +144,7 @@ def main():
 		add_dir('[COLOR white][B]ITALY[/B][/COLOR]', u_tube, 12, icon_it, fan_it)    
 	if len(netherlands_m3u) > 0:	
 		add_dir('[COLOR white][B]NETHERLANDS[/B][/COLOR]', u_tube, 13, icon_nl, fan_nl)    
-	if len(norvay_m3u) > 0:	
+	if len(norway_m3u) > 0:	
 		add_dir('[COLOR white][B]NORWAY[/B][/COLOR]', u_tube, 14, icon_no, fan_no)     
 	if len(poland_m3u) > 0:	
 		add_dir('[COLOR white][B]POLAND[/B][/COLOR]', u_tube, 15, icon_pl, fan_pl)        
@@ -316,7 +316,7 @@ def m3u_spain():
 			pass             
             
 def m3u_sweden():
-	content = make_request(portugal_m3u)
+	content = make_request(sweden_m3u)
 	match = re.compile(m3u_regex).findall(content)
 	for thumb, name, url in match:	
 		try:
