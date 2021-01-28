@@ -2850,13 +2850,36 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
-<addon id="script.module.cryptopy" name="CryptoPy" version="1.2.6" provider-name="cryptopy.sourceforge.net">
+<addon id="script.module.cryptopy" name="CryptoPy" version="1.2.9" provider-name="cryptopy.sourceforge.net">
   <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="xbmc.python" version="2.24.0"/>
   </requires>
   <extension point="xbmc.python.module" library="lib"/>
   <extension point="xbmc.addon.metadata">
+    <summary lang="en">CryptoPy is a pure python implmentation of cryptographic algorithms and applications.</summary>
+    <description lang="en">CryptoPy is a pure python implmentation of cryptographic algorithms and applications. The algorithms are developed for readability more than speed. The collection now includes IEEE 802.11i specific algorithms that generated the test vectors for 802.11i.</description>
     <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="script.module.js2py" name="js2py" version="0.6.7" provider-name="Addons4Kodi">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.six" version="1.11.0"/>
+    <import addon="script.module.pyjsparser" version="2.7.1"/>
+    <import addon="script.module.tzlocal" version="1.5.1"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Pure Python JavaScript Translator/Interpreter</summary>
+    <description>Packed for Kodi from https://github.com/PiotrDabkowski/Js2Py</description>
+    <platform>all</platform>
+    <language></language>
+    <license>MIT</license>
+    <forum></forum>
+    <website>https://github.com/PiotrDabkowski/Js2Py</website>
+    <source>https://github.com/PiotrDabkowski/Js2Py</source>
+    <email></email>
   </extension>
 </addon>
 
@@ -2986,13 +3009,31 @@ You can clone the project and host it in your own server.
   </extension>
 </addon>
 
+<addon id="script.module.pyjsparser" name="pyjsparser" version="2.7.3" provider-name="Addons4Kodi">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Pure Python JavaScript Translator/Interpreter</summary>
+    <description>Packed for Kodi from https://github.com/PiotrDabkowski/pyjsparser</description>
+    <platform>all</platform>
+    <language></language>
+    <license>MIT</license>
+    <forum></forum>
+    <website>https://github.com/PiotrDabkowski/pyjsparser</website>
+    <source>https://github.com/PiotrDabkowski/pyjsparser</source>
+    <email></email>
+  </extension>
+</addon>
+
 <addon id="script.module.python.koding.aio"
    name="Python Koding AIO"
-   version="0.9.9.4.2"
-   provider-name="Total Revolution">
+   version="2.1"
+   provider-name="Total Revolution, Bugatsinho">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.urlresolver" version="1.2.0"/>
+    <import addon="script.module.resolveurl" version="5.0.45"/>
     <import addon="script.module.requests" version="2.3.0"/>
     <import addon="script.module.beautifulsoup" version="2.1.31"/>
     <import addon="script.module.unidecode" version="0.4.16"/>
@@ -3005,11 +3046,37 @@ You can clone the project and host it in your own server.
     <disclaimer lang="en"></disclaimer>
     <language></language>
     <license>Creative Commons 4.0-NC-ND</license>
-    <forum>http://totalrevolution.tv/forum</forum>
+    <forum>http:s//bugatsinho.github.io</forum>
     <website>http://totalrevolution.tv</website>
-    <news>Added Requirements function support for AFTV</news>
-    <source>https://github.com/totalrevolution/python-koding/tree/master/script.module.python.koding.aio</source>
+    <news>2.0 New version with the use of ResolveUrl</news>
+    <source>https://github.com/bugatsinho/python-koding/tree/master/script.module.python.koding.aio</source>
   </extension>
+</addon>
+
+<addon id="script.module.python.twitch" name="python-twitch for Kodi" version="2.0.16" provider-name="anxdpanic, A Talented Community">
+    <requires>
+        <import addon="xbmc.python" version="2.20.0"/>
+        <import addon="script.module.six" version="1.11.0"/>
+        <import addon="script.module.requests" version="2.12.4"/>
+    </requires>
+    <extension point="xbmc.python.module" library="resources/lib"/>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <news>
+[fix] playback, change access token to use gql endpoints
+[chg] change followed, following, and unfollowing games to use gql endpoints
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <platform>all</platform>
+        <summary lang="en_GB">Module for interaction with the Twitch.tv API</summary>
+        <description lang="en_GB">python-twitch for Kodi is module for interaction with the Twitch.tv API based on python-twitch by ingwinlu.</description>
+        <license>GPL-3.0-only</license>
+        <source>https://github.com/anxdpanic/script.module.python.twitch</source>
+        <forum>https://twitchaddon.panicked.xyz/forum</forum>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+    </extension>
 </addon>
 
 <addon id="script.module.requests"
@@ -3208,6 +3275,27 @@ You can clone the project and host it in your own server.
 	</extension>
 </addon>
 
+<addon id="script.module.win_inet_pton" name="win-inet-pton" version="1.1.0" provider-name="hickeroar">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Native python inet_pton implementation on Windows (with ctypes)</summary>
+    <description lang="en_GB">Native inet_pton and inet_ntop implementation for Python on Windows (with ctypes).</description>
+    <platform>windows</platform>
+    <language></language>
+    <license>Public Domain</license>
+    <forum></forum>
+    <website>https://github.com/hickeroar/win_inet_pton</website>
+    <source>https://github.com/dagwieers/script.module.win_inet_pton</source>
+    <email>dag@wieers.com</email>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
 <addon id="script.module.World_KodiTVR" name="[B][COLORsilver]World KodiTVR[/COLOR][/B] [B][COLORred]live TV[/COLOR][/B]" version="2.6" provider-name="KodiTVR">
   <requires>
     <import addon="xbmc.python" version="2.26.0"/>
@@ -3233,6 +3321,23 @@ You can clone the project and host it in your own server.
     <email>koditvr@gmail.com</email>
     <source></source>
   </extension>
+</addon>
+
+<addon id="script.module.xmltodict" name="xmltodict" version="0.11.0" provider-name="martinblech">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+        <language></language>
+        <summary lang="en">Python helper module</summary>
+        <description lang="en">xmltodict is a Python module that makes working with XML feel like you are working with JSON, as in this "spec".</description>
+        <license>MIT</license>
+        <platform>all</platform>
+        <website>https://github.com/martinblech/xmltodict</website>
+        <source>https://github.com/martinblech/xmltodict</source>
+        <forum></forum>
+    </extension>
 </addon>
 
 <addon id="script.quasar.burst" name="Quasar [COLOR FFFF6B00]Burst[/COLOR]" version="0.5.10" provider-name="scakemyer">
