@@ -636,6 +636,62 @@ Add-on này sẽ bỏ qua và không chuyển đổi XML dùng regex.
     </extension>
 </addon>
 
+<addon id="plugin.video.euronews.com" version="1.4.3" name="Euronews" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.addon" version="16.1.000"/>
+        <import addon="script.module.tulip" version="2.8.2"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <summary lang="en_GB">Euronews addon for Kodi</summary>
+        <summary lang="he_il">הרחבת Euronews עבור קודי</summary>
+        <summary lang="ru_RU">Дополнение Euronews для Kodi</summary>
+        <summary lang="es_ES">Complemento de Euronews para Kodi</summary>
+        <description lang="en_GB">Euronews, the most watched news channel in Europe, covers international news in various languages.[CR]With 400 journalists from more than 30 nationalities, Euronews offers a unique, independent and totally impartial perspective on world events.[CR]Available languages: English, French, German, Greek, Hungarian, Italian, Portuguese, Russian, Spanish, Turkish and Ukrainian</description>
+        <description lang="he_il">Euronews הוא ערוץ החדשות הפופולרי ביותר באירופה, כולל חדשות בינלאומיות בשפות שונות.[CR]עם 400 עיתונאים מיותר מ -30 לאומים, מציע נקודת מבט ייחודית, עצמאית ונטולת פניות לחלוטין על אירועי העולם .[CR]שפות זמינות: אנגלית, צרפתית, גרמנית, יוונית, הונגרית, איטלקית, פורטוגזית, רוסית, ספרדית, טורקית ואוקראינית</description>
+        <description lang="ru_RU">Euronews - самый популярный новостной канал в Европе, освещающий международные новости на разных языках.[CR]С 400 журналистами из более чем 30 национальностей, Euronews предлагает уникальный, независимый и абсолютно беспристрастный взгляд на мировые события.[CR]Доступные языки: английский, французский, немецкий, греческий, венгерский, итальянский, португальский, русский, испанский, турецкий и украинский</description>
+        <description lang="es_ES">Euronews, el canal de noticias más visto en Europa, cubre noticias internacionales en varios idiomas.[CR]Con 400 periodistas de más de 30 nacionalidades, Euronews ofrece una perspectiva única, independiente y totalmente imparcial sobre los eventos mundiales.[CR]Idiomas disponibles: inglés , Francés, alemán, griego, húngaro, italiano, portugués, ruso, español, turco y ucraniano</description>
+        <disclaimer lang="en_GB">This addon is not published nor endorsed by euronews.com</disclaimer>
+        <disclaimer lang="he_il">ההרחבה הזו לא פורסמה ולא נתמכת על ידי euronews.com</disclaimer>
+        <disclaimer lang="ru_RU">Это дополнение не опубликовано и не одобрено euronews.com</disclaimer>
+        <disclaimer lang="es_ES">Este complemento no está publicado ni respaldado por euronews.com</disclaimer>
+        <license>GPL-3.0-only</license>
+        <source>https://github.com/Twilight0/plugin.video.euronews.com</source>
+        <website>http://www.euronews.com/</website>
+        <size>351600</size>
+        <news>[B]1.4.2[/B]
+- Bumped dependencies
+- Some minor tweaks here and there
+- Notify if geoblocking is applied by the live stream server
+
+[B]1.4.1[/B]
+- Add de_DE translation (contrib. horstle)
+- Add hr_HR translation (contrib. arvvoid)
+- Add no_NO translation (contrib. solbu)
+
+[B]1.4.0[/B]
+- Add es_ES translation (contrib. roliverosc)
+- Add ro_RO translation (contrib. tmihai20)
+- Add nl_NL translation (contrib. dagwieers)
+- Add ru_RU translation (contrib. vlmaksime)
+- Kodi version conditional check via a different method</news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <!--<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>-->
+            <!--<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>-->
+            <!--<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>-->
+        </assets>
+        <language>en el fr de hu it pt ru tr es ua</language>
+        <!--<forum></forum>-->
+        <!--<email></email>-->
+    </extension>
+</addon>
+
 <addon id="plugin.video.f4mTester" version="3.0.0" name="F4mTester" provider-name="Shani">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -1419,6 +1475,41 @@ v3.0.5
 			<fanart>resources/r_fanart.jpg</fanart>
 		</assets>
 	</extension>
+</addon>
+
+<addon id="plugin.video.rtpplay" name="RTP Play" version="5.0.10" provider-name="enen92, guipenedo">
+    <requires>
+        <import addon="xbmc.python" version="2.25.0"/>
+        <import addon="script.module.routing" version="0.2.0"/>
+        <import addon="script.module.requests" version="2.12.4"/>
+        <import addon="script.module.inputstreamhelper" version="0.4.2"/>
+        <import addon="script.module.beautifulsoup4" version="4.6.2"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Play live and on-demand broadcasts from RTP Play</summary>
+        <description lang="en_GB">Play live and on-demand broadcasts from RTP Play</description>
+        <summary lang="pt_PT">Emissões em direto e em diferido da RTP Play</summary>
+        <description lang="pt_PT">Emissões em direto e em diferido da RTP Play</description>
+        <language>pt</language>
+        <platform>all</platform>
+        <license>GPL-3.0</license>
+        <forum>https://forum.kodi.tv/showthread.php?tid=154645</forum>
+        <website>http://rtp.pt/play</website>
+        <email>enen92@kodi.tv</email>
+        <source>https://github.com/enen92/plugin.video.rtpplay</source>
+        <news>
+            - Move xbmc.translatepath to xbmcvfs.translatepath
+        </news>
+        <disclaimer lang="en_GB">The plugin is unofficial and not endorsed by RTP. Expect it to break. </disclaimer>
+        <disclaimer lang="pt_PT">Este plugin não é oficial nem desenvolvido pela RTP. </disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
 </addon>
 
 <addon id="plugin.video.sparkle" name="Sparkle" version="0.0.82" provider-name="iwannabelikemike">
