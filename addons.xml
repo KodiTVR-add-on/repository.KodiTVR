@@ -4018,8 +4018,8 @@ v5.0.15 (2016-11-26) by amet
     </extension>
 </addon>
 
-<addon id="xbmc.python" version="2.26.0" provider-name="Team Kodi">
-  <backwards-compatibility abi="2.1.0"/>
+<addon id="xbmc.python" version="3.0.0" provider-name="Team Kodi">
+  <backwards-compatibility abi="3.0.0"/>
   <requires>
     <import addon="xbmc.core" version="0.1.0"/>
   </requires>
