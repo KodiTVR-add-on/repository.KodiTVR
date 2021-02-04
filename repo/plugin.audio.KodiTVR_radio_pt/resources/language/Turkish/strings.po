@@ -1,7 +1,7 @@
 # Kodi Media Center language file
-# Addon Name: Radio
-# Addon id: plugin.audio.radio_de
-# Addon Provider: Tristan Fischer, Team-Kodi
+# Addon Name: KodiTVR Radio
+# Addon id: plugin.audio.KodiTVR_radio_pt
+# Addon Provider: KodiTVR
 msgid ""
 msgstr ""
 "Project-Id-Version: Kodi Addons\n"
