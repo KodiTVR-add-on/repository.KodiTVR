@@ -1,142 +1,137 @@
 #EXTINF:-1,[COLORgreen]BRAZILIAN RADIO[/COLOR]    [COLORdarkblue]KodiTVR[/COLOR] [COLORyellow]IPTV[/COLOR]
-http://familytv.net:80/live/
-#EXTM3U
+http://audio.97fm.com.br/energia
 
 #EXTM3U
-#EXTINF:-1,M20 RADIO TV
-http://familytv.net:80/live/Peterson/Peterson/67332.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Condado FM Condado / PE - Brasil
-http://familytv.net:80/live/Peterson/Peterson/120038.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Cidade 670 AM Curitiba / PR - Brasil
-http://familytv.net:80/live/Peterson/Peterson/96954.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Cidade FM 97.3 Paranagua / PR - Brasil
-http://familytv.net:80/live/Peterson/Peterson/96955.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Planalto News FM 92.1 Passo Fundo / RS - Brasil
-http://familytv.net:80/live/Peterson/Peterson/89013.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Rasga Baleia Eusebio / CE - Brasil
-http://familytv.net:80/live/Peterson/Peterson/92820.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Viola de Ouro Ribeirão Preto / SP
-http://familytv.net:80/live/Peterson/Peterson/57327.m3u8|user-agent=GoPlayer
-#EXTINF:-1, Rádio Antena 1 94.7 FM São Paulo / SP - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41521.m3u8|user-agent=GoPlayer
-#EXTINF:-1, Rádio Cultura Caipira Caxias Do Sul / RS - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41524.m3u8|user-agent=GoPlayer
-#EXTINF:-1, Rádio Studio Souto - Electro House
-http://familytv.net:80/live/Peterson/Peterson/41488.m3u8|user-agent=GoPlayer
-#EXTINF:-1, Rádio Studio Souto - Roberto Carlos
-http://familytv.net:80/live/Peterson/Peterson/41502.m3u8|user-agent=GoPlayer
-#EXTINF:-1, Rádio Studio Souto - Rock Clássico
-http://familytv.net:80/live/Peterson/Peterson/41503.m3u8|user-agent=GoPlayer
-#EXTINF:-1, Rádio Super Difusora 94.5 FM Itapetininga / SP - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41517.m3u8|user-agent=GoPlayer
-#EXTINF:-1, Rádio Top Campeira Santa Cruz Do Sul / RS - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41534.m3u8|user-agent=GoPlayer
-#EXTINF:-1,ROCK 'N ROLL
-http://familytv.net:80/live/Peterson/Peterson/76191.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Alto Uruguai 970 AM Três Passos / RS - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41533.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Antena 1 103.7 FM Rio De Janeiro / RJ - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41522.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Ativa 104.5 FM Itaqui / RS - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41531.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Ativa de Itapetininga Itapetininga / SP - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41518.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Bagual Blumenau / SC - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41538.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Blau Nunes 97.9 FM Santa Barbara Do Sul / RS - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41528.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Casa dos Caipiras Pardinho / SP - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41525.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Central 87.9 FM Santiago / RS - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41532.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Cidade Jaú 87.9 FM Jau / SP - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41539.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Clube 89.9 FM Itapetininga / SP - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41516.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Extreme - Brasil Jau / SP - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41540.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Fandango Clássica 89.5 FM Cachoeira Do Sul / RS - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41537.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Grenal 1020 AM 95.9 FM Porto Alegre / RS - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41526.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Liberdade 970 AM Porto Alegre / RS - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41530.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Liberdade 99.7 FM Capivari Do Sul / RS - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41529.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Minuano 1410 AM Rio Grande / RS - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41527.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Ouro Verde 105.5 FM Curitiba / PR - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41542.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Panter FM Itapetininga / SP - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41520.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Axé
-http://familytv.net:80/live/Peterson/Peterson/41481.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Boleros em Seresta
-http://familytv.net:80/live/Peterson/Peterson/41482.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Brega Hits
-http://familytv.net:80/live/Peterson/Peterson/41483.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Clube da Criança
-http://familytv.net:80/live/Peterson/Peterson/41484.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Country
-http://familytv.net:80/live/Peterson/Peterson/41485.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Discoteca 70s
-http://familytv.net:80/live/Peterson/Peterson/41486.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Dubstep
-http://familytv.net:80/live/Peterson/Peterson/41487.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Eurodance 90s
-http://familytv.net:80/live/Peterson/Peterson/41489.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Forró
-http://familytv.net:80/live/Peterson/Peterson/41490.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Gospel
-http://familytv.net:80/live/Peterson/Peterson/41491.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Hip Hop
-http://familytv.net:80/live/Peterson/Peterson/41492.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Historinha Infantil
-http://familytv.net:80/live/Peterson/Peterson/41493.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Jovem Guarda
-http://familytv.net:80/live/Peterson/Peterson/41494.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Love Songs
-http://familytv.net:80/live/Peterson/Peterson/41495.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Megamix 80s
-http://familytv.net:80/live/Peterson/Peterson/41496.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - MPB Musicalidade
-http://familytv.net:80/live/Peterson/Peterson/41497.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - New Age
-http://familytv.net:80/live/Peterson/Peterson/41498.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Pagode
-http://familytv.net:80/live/Peterson/Peterson/41499.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Rap Nacional
-http://familytv.net:80/live/Peterson/Peterson/41500.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Reggae
-http://familytv.net:80/live/Peterson/Peterson/41501.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Rodeio
-http://familytv.net:80/live/Peterson/Peterson/41504.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Saudade
-http://familytv.net:80/live/Peterson/Peterson/41505.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Sertaneja
-http://familytv.net:80/live/Peterson/Peterson/41506.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Sertanejo Raizes
-http://familytv.net:80/live/Peterson/Peterson/41507.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Sertanejo Universitário
-http://familytv.net:80/live/Peterson/Peterson/41508.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Smooth Jazz
-http://familytv.net:80/live/Peterson/Peterson/41509.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Studio do Amor
-http://familytv.net:80/live/Peterson/Peterson/41510.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Techno
-http://familytv.net:80/live/Peterson/Peterson/41511.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Tecnobrega
-http://familytv.net:80/live/Peterson/Peterson/41512.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Top 40
-http://familytv.net:80/live/Peterson/Peterson/41513.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Studio Souto - Versão Brasileira
-http://familytv.net:80/live/Peterson/Peterson/41514.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio T 99.9 FM Ponta Grossa / PR - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41543.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Rádio Web Campeira FM Caxias Do Sul / RS - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41535.m3u8|user-agent=GoPlayer
-#EXTINF:-1,Nova Rádio Cidade 105.9 FM Itapetininga / SP - Brasil
-http://familytv.net:80/live/Peterson/Peterson/41515.m3u8|user-agent=GoPlayer
-
-
-
+#PLAYLISTV: pltv-logo="https://i.imgur.com/iDGXBOV.png" pltv-name="KodiTVR | RADIO | BRASIL" pltv-description="Lista de canais KodiTVR" pltv-cover="https://i.imgur.com/iDGXBOV.png" pltv-author="KodiTVR" pltv-site="https://www.facebook.com/KodiTVR/" pltv-phone="Em breve" pltv-donate="Em breve"
+#EXTINF:-1 tvg-logo="https://www.epm.com/wp-content/uploads/2016/05/tv-xxl.png" group-title="TV AO VIVO" pltv-subgroup="TV ABERTA", TV RADIO JORNAL 
+http://evpp.mm.uol.com.br/ne10/radiojornal-recife-avra-video-web.sdp/chunklist_w653587283.m3u8
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Hunter FM
+http://live.hunterfm.com/live
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Mundial Music Brasil
+http://162.243.197.147:80/mp3-128k
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Cana da Galileia
+http://servidor28.brlogic.com:8336/live
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Gospel Campinas
+http://centova.nardele.com.br:4343/stream
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Radio Beat 98
+http://s23.hstbr.net:8072/live
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Radio Atlanta
+http://143.208.11.104:8064/stream
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Antena 1
+http://a1rj.streams.com.br:7801/sm
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", USP FM
+http://flow.emm.usp.br:8007/radiousp-128.mp3
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", FM O DIA TV
+http://c2901-slbps-sambavideos.akamaized.net/livet/FMoDiaVideo_14d480346fa04ebcb4f03173f2dae707/ngrp:livestream/chunklist_b898304.m3u8
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Vibe FM
+http://servidor36.brlogic.com:8180/live
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Fanatica FM
+http://noasrv.caster.fm:10156/live
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Transamerica
+http://transamerica.crossradio.com.br:9114/live.mp3
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Truckers FM
+https://radio.truckers.fm/
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Vagalume Vibe
+https://stream.vagalume.fm/hls/14623883771774082279/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Vagalume Funk
+https://stream.vagalume.fm/hls/1470154922349875/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Vagalume Sertanejo Hits
+https://stream.vagalume.fm/hls/14619606471054026608/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Vagalume Pagode
+https://stream.vagalume.fm/hls/14619606471054026608/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Rádio Mix
+http://tuneinmix.crossradio.com.br:8008/stream/1/
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Rádio Energia
+http://audio.97fm.com.br/energia
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", JB FM
+https://20823.live.streamtheworld.com/JBFM.mp3?pname=TdPlayerApi&pversion=2.5&banners=&sbmid=e190d544-81ad-44ce-f431-bef4877dbe80
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Rádio Bandeirantes
+https://evpp.mm.uol.com.br/band/radiobandeirantes_sp/chunklist_w1799959325.m3u8
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", 98 FM
+http://streaming13.hstbr.net:8072/live
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", 93 FM
+https://18133.live.streamtheworld.com/FM93_SC
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Antena 1
+http://antena1.newradio.it/stream2?ext=.mp3
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", SulAmerica Paradiso RJ
+https://20323.live.streamtheworld.com/SULAMERICA_SC
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Itapoan FM
+http://streaming.livecenter.com.br:9300/stream/1/
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Atlantida FM
+http://42747t.lp.azioncdn.net/2747t/a/mp4:access_options/rtmp-live/atl_poa.sdp/playlist.m3u8?wowzasessionid=960888114
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Capital 1040AM
+http://audio.capitalcomvoce.com.br/capital
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Feliz FM SP
+http://felizfm.sateg.com.br:11520/stream/1/
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Rádio Gaúcha
+https://722747t.ha.azioncdn.net/2747t/_definst_/gaucha_rbs.sdp/chunklist_3c6a89e5-243e-4091-b0b9-9493c9e8136a.m3u8
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Guaiba FM
+http://cast4.audiostream.com.br:8007/app
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", S30 MaxCast Web Rádio
+http://s30.maxcast.com.br:8190/live
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", GR6 EXPLODE FM
+http://216.245.204.227:8054/live
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", RÁDIO 104 FM
+http://cast4.audiostream.com.br:8651/mp3
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", RÁDIO ATLÂNTIDA FM
+http://42747t.lp.azioncdn.net/2747t/a/mp4:access_options/rtmp-live/atl_poa.sdp/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", RÁDIO CAIÇARA FM/AM
+http://cast4.audiostream.com.br:8654/mp3
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", RÁDIO CAPÃO FM
+http://cast4.audiostream.com.br:8656/mp3
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", RÁDIO CONTINENTAL FM
+http://cast4.audiostream.com.br:8650/mp3
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", RÁDIO ELDORADO FM
+http://cast4.audiostream.com.br:8652/mp3
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", RÁDIO FM PREMIUM
+http://cast4.audiostream.com.br:8663/mp3
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", RÁDIO GRENAL FM
+http://cast4.audiostream.com.br:8649/mp3
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", RÁDIO IMBÉ FM
+http://cast4.audiostream.com.br:8660/mp3
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", RÁDIO LIBERDADE FM
+http://cast4.audiostream.com.br:8655/mp3
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", RÁDIO PAMPA FM
+http://cast4.audiostream.com.br:8653/mp3
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", RÁDIO FM XANGRI-LÁ
+http://cast4.audiostream.com.br:8659/mp3
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", RÁDIO FM TRAMANDAÍ
+http://cast4.audiostream.com.br:8658/mp3
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", RÁDIO FM EXPRESS
+http://cast4.audiostream.com.br:8648/mp3
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", RÁDIO FM TORRES
+http://cast4.audiostream.com.br:8661/mp3
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", RÁDIO FM CIDREIRA
+http://cast4.audiostream.com.br:8657/mp3
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios",  BAND VALE FM
+http://evpp.mm.uol.com.br/band/bandvale/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios",  BAND NATIVA FM
+http://evpp.mm.uol.com.br/band/nativa_sp/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", BAND AM SP*
+http://evpp.mm.uol.com.br/band/radiobandeirantes_sp/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", BAND FM SP*
+http://evpp.mm.uol.com.br/band/bandfm_sp/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", BAND NEWS SP*
+http://evpp.mm.uol.com.br/band/bandnewsfm_sp/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Bossa Nova
+http://6d9a.webradio.upx.net.br:9974/stream
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Pagode
+http://6d9a.webradio.upx.net.br:9061/stream
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Anos 2000
+http://6d9a.webradio.upx.net.br:9940/stream
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Lounge
+http://6d9a.webradio.upx.net.br:9064/stream
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Pop Rock
+http://6d9a.webradio.upx.net.br:8016/stream
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Festa
+http://6d9a.webradio.upx.net.br:9070/stream
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Música Clássica
+http://6d9a.webradio.upx.net.br:9970/stream
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", New Rock
+http://6d9a.webradio.upx.net.br:8028/stream
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Pop Hits
+http://6d9a.webradio.upx.net.br:9046/stream
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Metal
+http://6d9a.webradio.upx.net.br:9898/stream
+#EXTINF:-1 tvg-logo="https://www.widescreenaudio.be/wp-content/uploads/2015/04/radio-icon-norm.png" group-title="Radios", Trilhas Sonoras
+http://6d9a.webradio.upx.net.br:9896/stream
