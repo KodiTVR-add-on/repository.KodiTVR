@@ -1024,6 +1024,32 @@ na internet.
   </extension>
 </addon>
 
+<addon id="plugin.video.KodiTVR_MATRIX-LEIA_SPORT" name="[COLORblue]KodiTVR[/COLOR] [COLORred]MATRIX-LEIA[/COLOR] [COLORlime]SPORT[/COLOR]" version="1.0.0" provider-name="KodiTVR">
+	<requires>
+		<!-- <import addon="xbmc.python" version="2.1.0"/> -->
+		<import addon="script.module.beautifulsoup4" version="3.2.1"/>
+		<import addon="script.module.requests"  />
+		<import addon="script.module.resolveurl" />
+		<import addon="script.module.dateutil"/>
+		<import addon="script.module.pytz"/>
+
+
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">KodiTVR Sports Live add-on. [PT] KodiTVR Desportos Ao Vivo add-on</summary>
+		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this add-on. The author does not have any affiliation with the content provider. [PT] O autor não hospeda ou distribui qualquer conteúdo exibido por este add-on. O autor não tem nenhuma afiliação com o provedor de conteúdo.</disclaimer>
+
+		<platform>all</platform>
+
+		<assets>
+        <icon>icon.jpg</icon>
+    </assets>
+	</extension>
+</addon>
+
 <addon id="plugin.video.KodiTVR_PT_BR" name="[COLORgreen]KodiTVR[/COLOR]  [COLORred]PORTUGAL[/COLOR]  [COLORdarkblue]BR[/COLOR][COLORlime]ASIL[/COLOR]" version="1.0.8" provider-name="KodiTVR">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
