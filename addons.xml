@@ -917,33 +917,6 @@ na internet.
   </extension>
 </addon>
 
-<addon id="plugin.video.KodiTVR_desporto"
-       name="[COLORlime]KodiTVR SPORT NET[/COLOR]"
-       version="0.0.1"
-       provider-name="KodiTVR">
-  <requires>
-	  <import addon="script.module.requests" />
-    <import addon="script.module.six" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="run.py">
-    <provides>video</provides>
-  </extension>
-
-
-  <extension point="xbmc.addon.metadata">
-    <summary>KodiTVR Desporto</summary>
-    <description>Daily Sport for app Kodi...</description>
-
-	<disclaimer>[COLORlime]Add-on for app KODI to watch sports.[/COLOR]</disclaimer>
-	    <platform>all</platform>
-	  <assets>
-		<icon>icon.png</icon>
-		<fanart>fanart.jpg</fanart>
-	  </assets>
-
-  </extension>
-</addon>
-
 <addon id="plugin.video.KodiTVR_Liga-Nos"
 	name="[COLORred]KodiTVR[/COLOR]  LIGA NOS"
 	version="1.0.4"
