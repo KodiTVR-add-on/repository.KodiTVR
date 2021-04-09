@@ -3314,22 +3314,18 @@ You can clone the project and host it in your own server.
   </extension>
 </addon>
 
-<addon id="script.module.m3u8" name="m3u8" version="0.2.10" provider-name="globocom, Timewasted">
+<addon id="script.module.m3u8" name="m3u8" version="0.3.7" provider-name="Globo.com">
 	<requires>
-        <import addon="xbmc.python" version="2.14.0"/>
-        <import addon="script.module.iso8601" version="0.1.11"/>
+        <import addon="xbmc.python" version="2.19.0"/>
+        <import addon="script.module.iso8601"/>
 	</requires>
 	<extension point="xbmc.python.module" library="lib"/>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Python m3u8 Parser for HTTP Live Streaming (HLS) Transmissions</summary>
+		<summary lang="en">Python m3u8 parser</summary>
 		<description lang="en">Packed for XBMC from https://github.com/globocom/m3u8</description>
-		<language>en</language>
-		<platform>all</platform>
 		<license>MIT</license>
-		<forum></forum>
-		<website>https://github.com/globocom/m3u8</website>
-		<source>https://github.com/timewasted/script.module.m3u8</source>
-		<email>ryan@timewasted.me</email>
+		<website>https://pypi.org/project/m3u8/</website>
+		<source>https://github.com/globocom/m3u8</source>
 	</extension>
 </addon>
 
@@ -3355,6 +3351,24 @@ You can clone the project and host it in your own server.
     <website></website>
     <email></email>
     <source></source>
+  </extension>
+</addon>
+
+<addon id="script.module.mysql.connector" name="mysql-connector" version="8.0.17" provider-name="dagwieers">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">MySQL driver for Python</summary>
+    <description lang="en_GB">MySQL driver written in Python which does not depend on MySQL C client libraries and implements the DB API v2.0 specification (PEP-249).</description>
+    <platform>all</platform>
+    <license>GPL License</license>
+    <source>https://pypi.org/project/mysql-connector-python/</source>
+    <website>https://dev.mysql.com/doc/connector-python/en/</website>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
   </extension>
 </addon>
 
