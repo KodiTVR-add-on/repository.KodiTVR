@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.KodiTVR_Live_Sport" name="[COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]Sport[/COLOR]" version="0.1.7" provider-name="KodiTVR">
+<addon id="plugin.video.KodiTVR_Live_Sport" name="[COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]Sport[/COLOR]" version="0.1.8" provider-name="KodiTVR">
   <requires>
     <!--import addon="xbmc.python" version="2.1.0"/-->
     <import addon="script.module.dateutil" />
@@ -11,7 +11,9 @@
   <extension point="xbmc.addon.metadata">
     <summary lang="en">[COLORblue]KodiTVR_Live_Sport HD by KodiTVR[/COLOR]</summary>
     <description lang="en">KodiTVR_Live_Sport Streams from Internet</description>
-    <disclaimer lang="en">[COLORyellow]All the streams on this add-on [COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]Sport[/COLOR] are hosted on the third party site and uploaded by other people. We are not responsible for any content that hosted on on the third-party sites. If you have any legal issues please contact appropriate video owners hosters.[/COLOR]</disclaimer>
+    <disclaimer lang="en">[COLORyellow]All the streams on this add-on [COLORred]KodiTVR[/COLOR][COLORwhite]_Live_[/COLOR][COLORblue]Sport[/COLOR] are hosted on the third party site and uploaded by other people. 
+	We are not responsible for any content that hosted on on the third-party sites. 
+	If you have any legal issues please contact appropriate video owners hosters.[/COLOR]</disclaimer>
 	  <language>EN</language>
     <license>GNU GPL, version 2</license>
     <twitter>https://twitter.com/KodiTVR</twitter>
