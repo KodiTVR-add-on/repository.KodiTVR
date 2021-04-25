@@ -938,7 +938,7 @@ na internet.
   </extension>
 </addon>
 
-<addon id="plugin.video.KodiTVR_LIVE" name="[COLORblue]KodiTVR[/COLOR] LIVE SPORT [COLORred]TV[/COLOR]" version="1.0.0" provider-name="KodiTVR">
+<addon id="plugin.video.KodiTVR_LIVE" name="[COLORblue]KodiTVR[/COLOR] LIVE SPORT [COLORred]TV[/COLOR]" version="1.0.12" provider-name="KodiTVR">
 	<requires>
 		<!-- <import addon="xbmc.python" version="3.0.0" /> -->
 		<import addon="script.module.six"/>

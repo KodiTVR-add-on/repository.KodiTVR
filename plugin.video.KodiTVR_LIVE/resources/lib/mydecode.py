@@ -26,6 +26,10 @@ UACHR = "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, lik
 UA='Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0'
 packer = re.compile('(eval\(function\(p,a,c,k,e,(?:r|d).*)')
 clappr = re.compile('new\s+Clappr\.Player\(\{\s*?source:\s*?["\'](.+?)["\']')
+
+
+clappr2x=re.compile('new\s+Clappr\.Player\(.*?{.*?source:\s*?["\'](.+?)["\']')
+
 source = re.compile('sources\s*:\s*\[\s*\{\s*(?:type\s*:\s*[\'\"].+?[\'\"],|)src\s*:\s*[\'\"](.+?)[\'\"]')
 
 def getUrl(url,data=None,header={},cookies=None):
@@ -70,9 +74,18 @@ def decodeSecur(data):
 def debug(deb):
     pass
 def decode(url,data):
-    
+
+    data =re.sub('(<\!\-\-.*?\-\-\>)','',data, flags=re.DOTALL)
     srcs=re.compile('src=["\']\\s*((?:http|).*?)["\']',re.DOTALL+re.IGNORECASE).findall(data)
+    dosuniecia =['jquery.','googleapis','googletagmanager','googlecode.','platform.twitter']
+
+    srcs = [el for el in srcs if not any(ignore in el for ignore in dosuniecia)]
+    
+    
+    
+
     xbmc.log('@#@htmlhtml: %s' % str(srcs), LOGNOTICE)
+    
     m3ux=re.findall("""source: atob\(["\'](.+?)["\']""",data,re.DOTALL)
     if m3ux:
         vidurl=base64.b64decode(m3ux[0])
@@ -88,11 +101,14 @@ def decode(url,data):
             if 'livecounter' in query or 'pagead2.google' in query or 'imgur.com' in query or 'platform.twitter' in query or 'googletagmanager.com' in query or 'cloudfront.net/?' in query:
                 continue
             if 'jquery-1.6.min.js'in query or 'minilogo.gif' in query or 'getbanner.php' in query or 'top.mail.ru' in query or 'ads.cpxinteractive.com' in query or 'counter.yadro.ru' in query:#
-                continue# 'http://vecdn.pw/ch1.php', '//cdn.livetv327.me/cache/links/en.951264.html?', '//d3.c3.b1.a1.top.mail.ru/counter?id=1127324;js=13', '//d3.c3.b1.a1.top.mail.ru/counter?id=1127324;js=na', '//counter.yadro.ru/hit?t16.1;r', 'http://ads.cpxinteractive.com/ttj?id=783952']
+                continue
+            if '.png'in query or '.jpg' in query:
+                continue
 
             if 'ripple.is' in query:
 
                 return _rippleis(query,data,url)
+        
             if '/embed/' in query and 'exprestream.com' in url:
 
                 return _exprestreamcom(query,data,url)
@@ -101,11 +117,40 @@ def decode(url,data):
 
                 return _dubsto(query,data,url)
                 
-            elif query.startswith ('/live'):
+            elif query.startswith ('/live') and 'strims.world' in url:
+
                 return _strimsworld(query,data,url)
+            elif 'ufckhabib.com' in query:
+                return _ufckhabib    (query,data,url)
+
+            elif 'newdmn.' in query:
+                return _newdmn   (query,data,url)  
+            
+            elif 'macron.' in query:
+                return _macron    (query,data,url)  
                 
             elif 'mygoodstream' in query:
                 return _mygoodstream    (query,data,url)
+            elif 'streamsport.icu' in query:
+                return _streamsport    (query,data,url)
+
+            elif 'capodeportes.'  in query:
+                return _capodeportes   (query,data,url)  
+            elif 'cr7soccer' in query and '.php' in query:
+                return _cr7soccer    (query,data,url)
+                
+            elif 'showsport.xyz' in query:
+                return _showsport    (query,data,url)
+            elif 'sport-streaming' in query:
+                return _sport_streaming    (query,data,url)  
+                
+            elif 'streammart.' in query:
+                return _streammart    (query,data,url)
+                
+                
+            elif 'espn-live.stream' in query:
+                return _espn_live    (query,data,url)
+                
                 
             elif 'castmax.' in query:
                 return _castmax    (query,data,url)
@@ -495,6 +540,8 @@ def decode(url,data):
             elif 'privatestream' in query:
                 debug('@@privatestream')
                 return _privatestream(query,data)
+            elif 'sebnsc.club' in url:
+                return _sebnsc(url,data,url)
                 
             #elif 'bfst.to' in url:
             #    query=url
@@ -510,7 +557,188 @@ def decode(url,data):
     elif 'youtube' in url:
         return _youtube(url)    
     return None
+def _newdmn   (query,data,url)  :
+    query = query.replace('newdmn.icu','lowend.xyz')
+    query = 'https:'+query if query.startswith('//') else query
+    headers = {'User-Agent': UA,'Referer': url}    
+
+    contentVideo=getUrl(query,header=headers)
+    if six.PY3:
+        contentVideo = contentVideo.decode(encoding='utf-8', errors='strict')
+    html=contentVideo.replace("\'",'"')
+    video_url = clappr.findall(html)
+    clappr2='new\s+Clappr\.Player\(.*?{.*?source:\s*?["\'](.+?)["\']'
+    video_url2 = re.findall(clappr2,html,re.DOTALL)
+
+    if video_url or video_url2:
+        video_url = video_url[0] if video_url else video_url2[0]
+
+    if video_url:
+
+        video_url = 'https:'+video_url if video_url.startswith('//') else video_url
+        video_url += '|User-Agent={ua}&Referer={ref}'.format(ua=UA, ref=query)
+        vido_url = video_url
+    return vido_url 
+def _macron    (query,data,url)  :
+    query = 'https:'+query if query.startswith('//') else query
+    headers = {'User-Agent': UA,'Referer': url}    
     
+    contentVideo=getUrl(query,header=headers)
+    if six.PY3:
+        contentVideo = contentVideo.decode(encoding='utf-8', errors='strict')
+    html=contentVideo.replace("\'",'"')
+    vido_url=decode(query,html)
+    return vido_url 
+def _sport_streaming    (query,data,url) :
+    query = 'https:'+query if query.startswith('//') else query
+    headers = {'User-Agent': UA,'Referer': url}    
+    
+    contentVideo=getUrl(query,header=headers)
+    if six.PY3:
+        contentVideo = contentVideo.decode(encoding='utf-8', errors='strict')
+
+    html=contentVideo.replace("\'",'"')
+    vido_url=decode(query,html)
+    return vido_url 
+def _capodeportes   (query,data,url)  :
+    query = 'https:'+query if query.startswith('//') else query
+    headers = {'User-Agent': UA,'Referer': url}    
+
+    contentVideo=getUrl(query,header=headers)
+    if six.PY3:
+        contentVideo = contentVideo.decode(encoding='utf-8', errors='strict')
+
+    html=contentVideo.replace("\'",'"')
+
+    vido_url=decode(query,html)
+    return vido_url 
+
+def _showsport    (query,data,url):
+    query = 'https:'+query if query.startswith('//') else query
+    headers = {'User-Agent': UA,'Referer': url}    
+
+    contentVideo=getUrl(query,header=headers)
+    if six.PY3:
+        contentVideo = contentVideo.decode(encoding='utf-8', errors='strict')
+
+    html=contentVideo.replace("\'",'"')
+
+    
+def _ufckhabib    (query,data,url):
+    
+    query = 'https:'+query if query.startswith('//') else query
+    headers = {'User-Agent': UA,'Referer': url}    
+    
+    contentVideo=getUrl(query,header=headers)
+    if six.PY3:
+        contentVideo = contentVideo.decode(encoding='utf-8', errors='strict')
+    
+    html=contentVideo.replace("\'",'"')
+    atob = re.findall('window.atob\("([^"]+)"',html,re.DOTALL)#[0]
+    if atob:
+        vidurl=base64.b64decode(atob[0])
+        if six.PY3:
+            vidurl = vidurl.decode(encoding='utf-8', errors='strict')
+        return vidurl+'|User-Agent'+urllib_parse.quote(UA)+'&Referer='+query
+    else:
+        vido_url=decode(query,html)
+        return vido_url 
+def _espn_live    (query,data,url):
+    query = 'https:'+query if query.startswith('//') else query
+    headers = {'User-Agent': UA,'Referer': url}    
+
+    contentVideo=getUrl(query,header=headers)
+    if six.PY3:
+        contentVideo = contentVideo.decode(encoding='utf-8', errors='strict')
+
+    html=contentVideo.replace("\'",'"')
+    video_url = clappr.findall(html)
+    clappr2='new\s+Clappr\.Player\(.*?{.*?source:\s*?["\'](.+?)["\']'
+    video_url2 = re.findall(clappr2,html,re.DOTALL)
+
+    if video_url or video_url2:
+        video_url = video_url[0] if video_url else video_url2[0]
+
+    if video_url:
+
+        video_url = 'https:'+video_url if video_url.startswith('//') else video_url
+        video_url += '|User-Agent={ua}&Referer={ref}'.format(ua=UA, ref=query)
+        vido_url = video_url
+    return vido_url 
+def _streammart    (query,data,url):
+    query = 'https:'+query if query.startswith('//') else query
+    headers = {'User-Agent': UA,'Referer': url}    
+
+    contentVideo=getUrl(query,header=headers)
+    if six.PY3:
+        contentVideo = contentVideo.decode(encoding='utf-8', errors='strict')
+
+    html=contentVideo.replace("\'",'"')
+    packed = packer.findall(contentVideo)[0]
+
+    unpacked = jsunpack.unpack(packed)
+
+    video_url = clappr.findall(unpacked)#[0]
+    video_ur2 = source.findall(unpacked)#[0]
+
+    if video_url or video_url2:
+        video_url = video_url[0] if video_url else video_url2[0]
+        video_url += '|User-Agent={ua}&Referer={ref}'.format(ua=UA, ref=query)
+    
+    return video_url
+    
+def _cr7soccer    (query,data,url):
+    query = 'https:'+query if query.startswith('//') else query
+    headers = {'User-Agent': UA,'Referer': url}    
+    
+    contentVideo=getUrl(query,header=headers)
+    if six.PY3:
+        contentVideo = contentVideo.decode(encoding='utf-8', errors='strict')
+
+    html=contentVideo.replace("\'",'"')
+    vido_url=decode(url,html)
+    return vido_url 
+def _streamsport    (query,data,url):
+    query = 'https:'+query if query.startswith('//') else query
+    headers = {'User-Agent': UA,'Referer': url}    
+
+    contentVideo=getUrl(query,header=headers)
+    if six.PY3:
+        contentVideo = contentVideo.decode(encoding='utf-8', errors='strict')
+
+    html=contentVideo.replace("\'",'"')
+    video_url = clappr.findall(html)
+    clappr2='new\s+Clappr\.Player\(.*?{.*?source:\s*?["\'](.+?)["\']'
+    video_url2 = re.findall(clappr2,html,re.DOTALL)
+
+    if video_url or video_url2:
+        video_url = video_url[0] if video_url else video_url2[0]
+
+    if video_url:
+
+        video_url = 'https:'+video_url if video_url.startswith('//') else video_url
+        video_url += '|User-Agent={ua}&Referer={ref}'.format(ua=UA, ref=query)
+        vido_url = video_url
+    return vido_url 
+  #  a=''
+def _sebnsc(url,data,ref):
+
+    nturlx = re.findall('STREAM SOURCE.*?iframe.*?src="(.+?)"', data,re.DOTALL+re.IGNORECASE)[0]
+    
+    hh=url.split('/')[-1]
+    nturl = url.replace(hh,nturlx)
+    headers = {'User-Agent': UA,'Referer': url}    
+
+    contentVideo=getUrl(nturl,header=headers)
+    if six.PY3:
+        contentVideo = contentVideo.decode(encoding='utf-8', errors='strict')
+    html=contentVideo.replace("\'",'"')
+
+    vido_url=decode(url,html)
+    return vido_url 
+    #a=''
+
+  
 def _mygoodstream    (query,data,url):
     headers = {'User-Agent': UA,'Referer': url}    
 
@@ -524,7 +752,7 @@ def _castmax    (query,data,url):
     if id:
         nturl = 'https://castmax.net/embed/'+id[0]+'.html'
     
-     #   url = 'https://www.limetvv.com/embeddx.php?live=%s&vw=700&vh=440'%id[0]
+
     else:
         nturl = query
     headers = {'User-Agent': UA,'Referer': url}    
@@ -532,9 +760,9 @@ def _castmax    (query,data,url):
     contentVideo=getUrl(nturl,header=headers)    
     if six.PY3:
         contentVideo = contentVideo.decode(encoding='utf-8', errors='strict')
-   # web_pdb.set_trace()
+
     html=contentVideo.replace("\'",'"')
-    #web_pdb.set_trace()
+
     a=''
 def _givemenbastreams(query,data,url)    :
     headers = {'User-Agent': UA,'Referer': url}    
@@ -601,7 +829,7 @@ def _embedstream    (query,data,url):
         'referer': 'https://embedstream.me/',
         'accept-language': 'en-US,en;q=0.9',
     }
- #   web_pdb.set_trace()
+
     pdettxt =re.findall('pdettxt\s*=\s*"(.+?)"',html,re.DOTALL)[0]
     zmid=re.findall('zmid\s*=\s*"(.+?)"',html,re.DOTALL)[0]
     edm=re.findall('edm\s*=\s*"(.+?)"',html,re.DOTALL)[0]
@@ -655,8 +883,10 @@ def _plytv    (query,url,orig):
     if six.PY3:
        contentVideo = contentVideo.decode(encoding='utf-8', errors='strict')
     html=contentVideo.replace("\'",'"')
+    url = 'https://www.tvply.me/sdembed' if 'cdn.tvply.me' in html else 'https://www.plytv.me/sdembed'
+    qbc= 'https://www.tvply.me/'  if 'cdn.tvply.me' in html else'https://www.plytv.me/'
     headers = {
-        'authority': 'www.plytv.me',
+       # 'authority': 'www.plytv.me',
         'cache-control': 'max-age=0',
         'upgrade-insecure-requests': '1',
         'origin': orig,
@@ -670,7 +900,7 @@ def _plytv    (query,url,orig):
         'referer': query,
         'accept-language': 'en-US,en;q=0.9',
     }
-    
+
     pdettxt =re.findall('pdettxt\s*=\s*"(.+?)"',html,re.DOTALL)[0]
     zmid=re.findall('zmid\s*=\s*"(.+?)"',html,re.DOTALL)[0]
     edm=re.findall('edm\s*=\s*"(.+?)"',html,re.DOTALL)[0]
@@ -686,13 +916,15 @@ def _plytv    (query,url,orig):
     'pid': (str(pid)),
     'ptxt': pdettxt
     }
+    
+    response_content = sess.post(url, headers=headers, params=params, data=data,verify=False).content
 
-    response_content = sess.post('https://www.plytv.me/sdembed', headers=headers, params=params, data=data,verify=False).content
     if six.PY3:
         response_content = response_content.decode(encoding='utf-8', errors='strict')
     
 
     if 'function(h,u,n,t,e,r)' in response_content:
+
         import dehunt as dhtr
         ff=re.findall('function\(h,u,n,t,e,r\).*?}\((".+?)\)\)',response_content,re.DOTALL)[0]#.spli
         ff=ff.replace('"','')
@@ -709,7 +941,7 @@ def _plytv    (query,url,orig):
             video_url = video_url.decode(encoding='utf-8', errors='strict')
         UAb= 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36'
     
-        qbc= 'https://www.plytv.me/'
+      #  qbc= 'https://www.plytv.me/'
         video_url+= '|User-Agent={ua}&Referer={ref}'.format(ua=UAb, ref=qbc)
 
     else:
@@ -963,26 +1195,37 @@ def _daddylive(query,data,url):
     
     
 def _wigistream(query,data,url):
-    if 'daddylive' in url:
-        url = 'https://daddylive.co/'
-    headers = {'User-Agent': UA,'Referer': url}    
-    video_url=''
-    contentVideo=getUrl(query,header=headers)
-    if six.PY3:
-        contentVideo = contentVideo.decode(encoding='utf-8', errors='strict')
+	if 'daddylive' in url:
+		url = 'https://daddylive.co/'
+	headers = {'User-Agent': UA,'Referer': url}    
+	video_url=''
+	contentVideo=getUrl(query,header=headers)
+	if six.PY3:
+		contentVideo = contentVideo.decode(encoding='utf-8', errors='strict')
+	
+	packeds = packer.findall(contentVideo)#[0]
+	unpacked=contentVideo
+	for packed in packeds:
+	
+		unpacked += jsunpack.unpack(packed)
+	
+	video_url = clappr.findall(unpacked)
+	video_url2 = source.findall(unpacked)
 
-    packed = packer.findall(contentVideo)[0]
- #   web_pdb.set_trace()
-    unpacked = jsunpack.unpack(packed)
+	video_url3 = re.findall("""new\s+Clappr\.Player\(.*?source\s* :\s*['"](.+?)['"]""",unpacked,re.DOTALL)
 
-    video_url = clappr.findall(unpacked)#[0]
-    video_ur2 = source.findall(unpacked)#[0]
+	if video_url:
+		video_url = video_url[0]
+	elif video_url2:
+		video_url = video_url2[0]
+	elif video_url3:
+		video_url = video_url3[0]
 
-    if video_url or video_url2:
-        video_url = video_url[0] if video_url else video_url2[0]
-        video_url += '|User-Agent={ua}&Referer={ref}'.format(ua=UA, ref=query)
-    
-    return video_url
+	if video_url:
+
+		video_url += '|User-Agent={ua}&Referer={ref}'.format(ua=UA, ref=query)
+	
+	return video_url
 def _paheplayer    (query,data,url):
     headers = {'User-Agent': UA,'Referer': url}    
 
@@ -996,15 +1239,19 @@ def _paheplayer    (query,data,url):
     
 def _strimsworld(query,data,url):
 
-    headers = {'User-Agent': UA,'Referer': url}    
-    query = 'http://strims.world' + query
-    contentVideo=getUrl(query,header=headers)
-    if six.PY3:
-        contentVideo = contentVideo.decode(encoding='utf-8', errors='strict')
-    video_url=''
-    vido_url=''
-
-    html=contentVideo.replace("\'",'"')
+    if not 'strims.world' in query:
+        headers = {'User-Agent': UA,'Referer': url}    
+        query = 'http://strims.world' + query
+        contentVideo=getUrl(query,header=headers)
+        if six.PY3:
+            contentVideo = contentVideo.decode(encoding='utf-8', errors='strict')
+        video_url=''
+        vido_url=''
+    
+        html=contentVideo.replace("\'",'"')
+    else:
+        html = data
+        
 
     if 'eval(unescape' in html:
         html    =  urllib_parse.unquote(re.findall("""unescape\(['"](.+?)['"]""",html)[0])
@@ -1019,6 +1266,8 @@ def _strimsworld(query,data,url):
             video_url += '|User-Agent={ua}&Referer={ref}'.format(ua=UA, ref=query)
             vido_url = video_url
     if not video_url:
+        html = html.replace("\\'",'"')
+
         vido_url=decode(query,html)
     return vido_url 
     
@@ -1948,6 +2197,8 @@ def _sportzonlinepw(query,data,url):
     html=getUrl(query,header=headers)
     if six.PY3:
         html = html.decode(encoding='utf-8', errors='strict')
+    query =query.replace('sportzonline.co/','sportzonline.to/')
+
     vido_url = decode(query,html)
     return vido_url    
 
@@ -2013,7 +2264,7 @@ def _livesport4ucom(query,data,url):
     header = {'User-Agent':UA,'Referer': url}    
     content = getUrl(query,header=header)
     if six.PY3:
-        contentVideo = contentVideo.decode(encoding='utf-8', errors='strict')
+        content = content.decode(encoding='utf-8', errors='strict')
     feed = re.compile('id=["\'](.*?)["\']; width=["\'](.*?)["\']; height=["\'](.*?)["\'];').findall(content)
     if feed:
         url_main='http://hdcast.pw/stream_jw2.php?id=%s&width=%s&height=%s&stretching=uniform'%(feed[0][0],feed[0][1],feed[0][2])        
@@ -2029,11 +2280,12 @@ def _livesport4ucom(query,data,url):
     return video_url    
 
 def _nowlivepro    (query,data,url):
+
     video_url=''
     header = {'User-Agent':UA,'Referer': url}        
     content = getUrl(query,header=header)  
     if six.PY3:
-        contentVideo = contentVideo.decode(encoding='utf-8', errors='strict')
+        content = content.decode(encoding='utf-8', errors='strict')
     unescs=re.findall('unescape\("(.+?)"',content)
     for unesc in unescs:
         link = urllib_parse.unquote(unesc)
@@ -2200,6 +2452,8 @@ def getRequest (url, referUrl, userAgent, xRequestedWith=""):
 def _telerium(query,data,url):
     parsed_url = urllib_parse.urlparse(query)
     domain = parsed_url.netloc
+    if 'embed.' in domain:
+        domain = 'telerium.digital'
     import json
     import datetime
 
@@ -2215,14 +2469,24 @@ def _telerium(query,data,url):
         'Referer': url,
         'Upgrade-Insecure-Requests': '1',
     }
-    html=sessx.get(query,headers=headers22,verify=False).text
 
-    cid = re.findall("""cid\s*=\s['"](.+?)['"]""",html)    
+    htmlx=sessx.get(query,headers=headers22,verify=False).text
 
-    script =re.findall('(var _0x.*?)<\/script>',html,re.DOTALL)[0]    
+    cid = re.findall("""cid\s*=\s['"](.+?)['"]""",htmlx)    
+    if not cid:
+        data=data.replace("\'",'"')
+
+        id =re.findall('>id\s*=\s*"([^"]+)"',data,re.DOTALL)[-1]
+        urlx = 'https://telerium.digital/embed/'+id+'.html'
+        htmlx=sessx.get(urlx,headers=headers22,verify=False).text
+        cid = re.findall("""cid\s*=\s['"](.+?)['"]""",htmlx) 
+        query = urlx
+    script =re.findall('(var _0x.*?)<\/script>',htmlx,re.DOTALL)[0]    
 
     decscript = TRD.getkey(script)
     scriptdeco = decscript.replace("'+'",'').replace("\'",'"')
+    data=''
+    htmlx=''
 
     azz = re.findall('token\s*=\s*_0x.+?\(reverse\s*\,\s*_0x.+?\[(.+?)\]',scriptdeco)#[0]
     azz = azz[0] if azz else re.findall('token\s*=\s*reverse.*?\[(.+?)\]',scriptdeco)[0] 
@@ -2269,6 +2533,7 @@ def _telerium(query,data,url):
     tur = eval(tur)
 
     html = sessx.head(timeurls[tur],headers=sessx.headers)
+
     a= html.headers#('')
     c= a['last-modified'] 
     #xbmc.log('@#@last-modifiedlast-modified: %s' % str(c), LOGNOTICE)
@@ -2317,8 +2582,9 @@ def _telerium(query,data,url):
 
     }  
 
-    data = sessx.get(nturl,headers=sessx.headers,cookies=cookies).json()
+    data = sessx.get(nturl,headers=sessx.headers,cookies=cookies).text
 
+    data = sessx.get(nturl,headers=sessx.headers,cookies=cookies).json()
     urln = data.get("url",None)
     tokenurl = data.get("tokenurl",None)
 

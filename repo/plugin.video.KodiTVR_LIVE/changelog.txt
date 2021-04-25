@@ -1,5 +1,16 @@
 *KodiTVR LIVE SPORT TV
+1.0.12
+- fix vipleague
+- fix strims world
+- added rojadirect
+- added crackstreams
+- fix vipleague
+- fix mydecode
 
+-compatible with Kodi18.x - 19.x version
+=====================«
 1.0
 - initial version 
 -compatible with Kodi18.x - 19.x version
+
+

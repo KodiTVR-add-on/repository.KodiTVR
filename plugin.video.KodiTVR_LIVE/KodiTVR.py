@@ -180,36 +180,72 @@ def home():
     setUnblockKuk()
     #addDir('Sport365 LIVE [COLOR red] (nie działa) [/COLOR]', ex_link='', params2={'_service':'sport365','_act':'ListChannels'}, mode='xxx', iconImage=RESOURCES+'sport365.png', fanart=FANART)
     #add_item('http://livelooker.com/pl/dzisiaj.html', 'LiveLooker', RESOURCES+'vipl.png', True, "livelooker", infoLabels=False)
-    add_item('http://liveonscore.tv', 'KodiTVR | LiveOnScore', RESOURCES+'liveonscor.png', True, "liveonscore2", infoLabels=False)
-    add_item('https://www.vipleague.lc', 'KodiTVR | VipLeague', RESOURCES+'vipl.png', True, "vipleague2", infoLabels=False)
+    add_item('http://liveonscore.tv', 'KodiTVR | Live On Score', RESOURCES+'liveonscor.png', True, "liveonscore2", infoLabels=False)
+    add_item('https://www.vipleague.lc', 'KodiTVR | Vip League', RESOURCES+'vipl.png', True, "vipleague2", infoLabels=False)
     
-    add_item('http://livetv.sx/enx/allupcoming/', 'KodiTVR | LiveTV.sx', RESOURCES+'livetv.png', True, "livetvsx", infoLabels=False)
+    add_item('http://livetv.sx/enx/allupcoming/', 'KodiTVR | Live TV', RESOURCES+'livetv.png', True, "livetvsx", infoLabels=False)
     add_item('https://sport.tvp.pl/transmisje', 'KodiTVR | TVP Sport', RESOURCES+'tvpsport.png', True, "listTVP")    
     add_item('cricfree', 'KodiTVR | Crickfree', RESOURCES+'crfree.png', True, 'scheduleCR')    
     add_item('http://strims.world', 'KodiTVR | Strims World', RESOURCES+'sworld.png', True, 'scheduleSW')    
     
-    add_item('http://strims.world', 'KodiTVR | LiveSport.ws', RESOURCES+'logoc.png', True, 'livesportws')    
-    add_item('http://strims.world', 'KodiTVR | SportsBay', RESOURCES+'logosb.png', True, 'getsportsbay')    
-    add_item('https://www.tvcom.pl/', 'KodiTVR | TVCOM', RESOURCES+'tvcom.png', True, 'gettvcom')    
+    add_item('http://strims.world', 'KodiTVR | Live Sport', RESOURCES+'logoc.png', True, 'livesportws')    
+    add_item('http://strims.world', 'KodiTVR | Sports Bay', RESOURCES+'logosb.png', True, 'getsportsbay')    
+    add_item('https://www.tvcom.pl/', 'KodiTVR | TV COM', RESOURCES+'tvcom.png', True, 'gettvcom')    
+    add_item('http://www.rojadirecta.me/en?p4', 'KodiTVR | rojadirecta', RESOURCES+'roja.jpg', True, 'getroja')  
     
-    #add_item('http://strims.world', 'Soccer Streams', RESOURCES+'sworld.png', True, 'scheduleSstreams')    
-    add_item('', 'KodiTVR | Live channels', RESOURCES+'chan2.png', True, "liveChannels")        
+    add_item('http://crackstreams.is/', 'KodiTVR | Crack streams', RESOURCES+'icon.png', True, "crackstreamsmenu", infoLabels=False)
+   
+    add_item('', 'Live channels', RESOURCES+'chan2.png', True, "liveChannels")        
     xbmcplugin.endOfDirectory(addon_handle)
 
     
+def CrackstreamsMenu():
+    add_item("http://crackstreams.is/nba-streams/", 'NBA streams', 'http://crackstreams.is/icons/nba.png', True, "crackstreams", infoLabels=False)
+    add_item("http://crackstreams.is/ncaabstreams/", 'NCAAB streams', 'http://crackstreams.is/icons/ncaab2.png', True, "crackstreams", infoLabels=False)
+    add_item("http://crackstreams.is/nflstreams/", 'NFL streams', 'http://crackstreams.is/icons/nfl.png', True, "crackstreams", infoLabels=False)
+    add_item("http://crackstreams.is/mmastreams/", 'MMA streams', 'http://crackstreams.is/icons/mmax.png', True, "crackstreams", infoLabels=False)
+    add_item("http://crackstreams.is/boxingstreams/", 'Boxing streams', 'http://crackstreams.is/icons/boxing.png', True, "crackstreams", infoLabels=False)
+    xbmcplugin.endOfDirectory(addon_handle)  
+def GetCrackstreams():
+    url = params.get('url', None)
+    
+    links= se.getCrackstreams(url)
+    if links:
+        for f in links:
 
+            add_item(f.get('href'), f.get('title'),f.get('image'), False,'playcrackstreams', infoLabels={'plot':f.get('title'),'code':f.get('code')},odtworz=False)    
+
+        xbmcplugin.setContent(addon_handle, 'videos')    
+        xbmcplugin.endOfDirectory(addon_handle) 
+def PlayCrackstreams():
+    url = params.get('url', None)
+    tytul = params.get('title', None)
+    zdj = params.get('image', None)
+    stream_url = se.getStreamCrackstreams(url)
+
+    if stream_url:
+        play_item = xbmcgui.ListItem(path=stream_url,label=tytul)
+        play_item.setArt({'thumb': zdj, 'poster': zdj, 'banner': zdj, 'fanart': FANART})
+        play_item.setInfo(type="Video", infoLabels={"title": tytul,'plot':tytul})
+        if six.PY3:
+            play_item.setProperty('inputstream', 'inputstream.adaptive')
+        else:
+            play_item.setProperty('inputstreamaddon', 'inputstream.adaptive')
+        play_item.setProperty("IsPlayable", "true")
+        play_item.setProperty('inputstream.adaptive.manifest_type', 'hls')
+        play_item.setMimeType('application/vnd.apple.mpegurl')
+        play_item.setContentLookup(False)
+        
+        xbmc.Player().play(stream_url,play_item)    
 def LiveOnScoreMenu():
-    #add_item('http://liveonscore.tv', 'Main', RESOURCES+'liveonscor.png', True, "liveonscore", infoLabels=False)
+
     add_item('', 'Soccer', RESOURCES+'liveonscor.png', True, "liveonscoresocmenu", infoLabels=False)
     add_item('http://liveonscore.tv/category/mma-boxing/', 'Mma - boxing', RESOURCES+'liveonscor.png', True, "liveonscorestreams", infoLabels=False)
     add_item('http://liveonscore.tv/category/motor-sports/', 'Motorsports', RESOURCES+'liveonscor.png', True, "liveonscorestreams", infoLabels=False)
     add_item('http://liveonscore.tv/category/nba-stream/', 'NBA', RESOURCES+'liveonscor.png', True, "liveonscorestreams", infoLabels=False)
-    #add_item('http://wpstream.tv/category/mlb-streams/', 'MLB', RESOURCES+'liveonscor.png', True, "liveonscorestreams", infoLabels=False)
 
     add_item('http://liveonscore.tv/category/nfl-streams/', 'NFL', RESOURCES+'liveonscor.png', True, "liveonscorestreams", infoLabels=False)
-    #add_item('http://wpstream.tv/category/nhl-streams/', 'NHL', RESOURCES+'liveonscor.png', True, "liveonscorestreams", infoLabels=False)
-#    add_item('https://www.vipleague.lc', 'VipLeague', RESOURCES+'liveonscor.png', True, "liveonscore", infoLabels=False)
-    
+
     add_item('', 'Search', RESOURCES+'liveonscor.png', True, "liveonscoresearch", infoLabels=False)
 
     xbmcplugin.endOfDirectory(addon_handle)    
@@ -252,6 +288,10 @@ def playLiveOnScore():
         play_item = xbmcgui.ListItem(path=stream_url,label=tytul)
         play_item.setArt({'thumb': zdj, 'poster': zdj, 'banner': zdj, 'fanart': FANART})
         play_item.setInfo(type="Video", infoLabels={"title": tytul,'plot':tytul})
+        if six.PY3:
+            play_item.setProperty('inputstream', 'inputstream.adaptive')
+        else:
+            play_item.setProperty('inputstreamaddon', 'inputstream.adaptive')
         play_item.setProperty("IsPlayable", "true")
         play_item.setProperty('inputstream.adaptive.manifest_type', 'hls')
         play_item.setMimeType('application/vnd.apple.mpegurl')
@@ -261,6 +301,23 @@ def playLiveOnScore():
 
     else:
         xbmcgui.Dialog().notification('[COLOR red][B]Error[/B][/COLOR]', '[COLOR red][B]This video is not available at the moment.[/B][/COLOR]', xbmcgui.NOTIFICATION_INFO, 5000)
+
+def getroja():
+    url = params.get('url', None)
+    links = se.ListROJA(url)    
+   
+    if links:
+        for f in links:
+            imag=((f.get('code')).lower()).replace('football','soccer').replace('nba','basketball').replace('boxing','fighting').replace('wwe','fighting').replace('ncaa','basketball')
+            if 'ufc' in imag:
+                imag='fighting'
+            if 'motors' in imag:
+                imag='f1'
+            add_item(f.get('href'), f.get('title'), RESOURCES+'%s.png'%imag, True, 'linksCR',infoLabels={'code':f.get('code'),'plot':f.get('title')})    
+  
+    xbmcplugin.setContent(addon_handle, 'videos')
+    xbmcplugin.endOfDirectory(addon_handle)    
+        
 def gettvcom():
     url = params.get('url', None)
     links = se.ListTVCOM1(url)    
@@ -538,7 +595,10 @@ def playsportsbaytv():
             hea= '&'.join(['%s=%s' % (name, value) for (name, value) in headersok2.items()])    
     
             play_item = xbmcgui.ListItem(path=src)
-            play_item.setProperty('inputstreamaddon', 'inputstream.adaptive')
+            if six.PY3:
+                play_item.setProperty('inputstream', 'inputstream.adaptive')
+            else:
+                play_item.setProperty('inputstreamaddon', 'inputstream.adaptive')
             play_item.setProperty('inputstream.adaptive.manifest_type', tt)
             play_item.setProperty('inputstream.adaptive.stream_headers', hea)
             play_item.setProperty('inputstream.adaptive.license_key', "|" + hea)
@@ -562,7 +622,10 @@ def playsportsbaytv():
             DRM = 'com.widevine.alpha'
             play_item = xbmcgui.ListItem(path=mpd)
             
-            play_item.setProperty('inputstreamaddon', 'inputstream.adaptive')
+            if six.PY3:
+                play_item.setProperty('inputstream', 'inputstream.adaptive')
+            else:
+                play_item.setProperty('inputstreamaddon', 'inputstream.adaptive')
             play_item.setProperty('inputstream.adaptive.manifest_type', PROTOCOL)
             play_item.setProperty('inputstream.adaptive.license_type', DRM)
 
@@ -646,7 +709,11 @@ def playsportsbaytv():
 
                 play_item = xbmcgui.ListItem(path=stream+'|'+hea)
 
-                play_item.setProperty('inputstreamaddon', 'inputstream.adaptive')
+                if six.PY3:
+                    play_item.setProperty('inputstream', 'inputstream.adaptive')
+                else:
+                    play_item.setProperty('inputstreamaddon', 'inputstream.adaptive')
+                
                 play_item.setProperty('inputstream.adaptive.manifest_type', 'hls')
                 play_item.setProperty('inputstream.adaptive.stream_headers', hea)
                 play_item.setProperty('inputstream.adaptive.license_key', '|'+hea)
@@ -780,6 +847,10 @@ def getLinksLiveSport():
                 stream_url = resolveurl.resolve(stream_url)
             play_item = xbmcgui.ListItem(path=stream_url,label=tytul)
             play_item.setInfo(type="Video", infoLabels={"title": tytul,'plot':tytul})
+            if six.PY3:
+                play_item.setProperty('inputstream', 'inputstream.adaptive')
+            else:
+                play_item.setProperty('inputstreamaddon', 'inputstream.adaptive')
             play_item.setProperty("IsPlayable", "true")
             play_item.setProperty('inputstream.adaptive.manifest_type', 'hls')
             play_item.setMimeType('application/vnd.apple.mpegurl')
@@ -802,16 +873,42 @@ def PlayLiveSport():
     is_helper = inputstreamhelper.Helper('hls')
     if is_helper.check_inputstream():
         play_item = xbmcgui.ListItem(path=stream_url)
-        play_item.setProperty('inputstreamaddon', is_helper.inputstream_addon)
+        if six.PY3:
+            play_item.setProperty('inputstream', is_helper.inputstream_addon)
+        else:
+            play_item.setProperty('inputstreamaddon', is_helper.inputstream_addon)
+       #play_item.setProperty('inputstreamaddon', is_helper.inputstream_addon)
         play_item.setProperty('inputstream.adaptive.manifest_type', 'hls')
         play_item.setMimeType('application/x-mpegurl')
         play_item.setContentLookup(False)
         xbmcplugin.setResolvedUrl(addon_handle, True, listitem=play_item)
 
+        
+def GetSwfolder():
+
+    url = params.get('url', None)
+
+    links = se.getScheduleSWfolder(url)  
+    if links:
+        for f in links:
+
+            ikona=ikony(f.get('image'))
+
+            ab = f.get('href')
+            if ab.endswith('/'):
+                add_item(ab, f.get('title'), ikona, True,'streamsSWfolder', odtworz=False)
+            else:
+                add_item(ab, f.get('title'), ikona, False,'streamsSW', odtworz=False)                
+    
+        xbmcplugin.setContent(addon_handle, 'videos')    
+        xbmcplugin.endOfDirectory(addon_handle)    
+    else:
+        xbmcgui.Dialog().notification('[COLOR red][B]Error[/B][/COLOR]', '[COLOR red][B]No schedule links.[/B][/COLOR]', xbmcgui.NOTIFICATION_INFO, 5000)    
+        
 def getScheduleSW():
 
     links = se.getScheduleSW()
-    #add_item('http://strims.world/KSW50.php', '[B][COLOR gold]KSW[/B][/COLOR]', '', False,'streamsSW', odtworz=False)
+
     if links:
         for f in links:
             if 'kiedy' in f.get('href'):
@@ -820,7 +917,11 @@ def getScheduleSW():
                 add_item('', title, RESOURCES+'calendar.png', True, '', infoLabels=False, pusto=True)
             else:
                 ikona=ikony(f.get('image'))
-                add_item(f.get('href'), f.get('title'), ikona, False,'streamsSW', odtworz=False)                
+                ab = f.get('href')
+                if ab.endswith('/'):
+                    add_item(ab, f.get('title'), ikona, True,'streamsSWfolder', odtworz=False)
+                else:
+                    add_item(ab, f.get('title'), ikona, False,'streamsSW', odtworz=False)                
 
         xbmcplugin.setContent(addon_handle, 'videos')    
         xbmcplugin.endOfDirectory(addon_handle)    
@@ -869,11 +970,11 @@ def getChannelsSW():
     add_item("http://strims.world/tv/canalsport.php", '[COLOR lime] ► [/COLOR] [B][COLOR gold]Canal + Sport[/COLOR][/B]', "http://epg.ovh/logo/Canal++Sport.png", False, 'streamsSW2', odtworz=False) #, '[COLOR lime] ► [/COLOR] [B][COLOR gold]Canal + Sport[/COLOR][/B]', "http://epg.ovh/logo/Canal++Sport.png", False, 'streamsSW2', odtworz=False)
     add_item("http://strims.world/tv/canalsport_2.php", '[COLOR lime] ► [/COLOR] [B][COLOR gold]Canal + Sport(rezerw)[/COLOR][/B]', "http://epg.ovh/logo/Canal++Sport.png", False, 'streamsSW2', odtworz=False) #, '[COLOR lime] ► [/COLOR] [B][COLOR gold]Canal + Sport[/COLOR][/B]', "http://epg.ovh/logo/Canal++Sport.png", False, 'streamsSW2', odtworz=False)
 
-	
+    
     add_item("http://strims.world/tv/canalsport2_2.php", '[COLOR lime] ► [/COLOR] [B][COLOR gold]Canal + Sport 2(rezerw)[/COLOR][/B]', "http://epg.ovh/logo/Canal++Sport+2.png", False, 'streamsSW2', odtworz=False)
 
-	
-	
+    
+    
     add_item("http://strims.world/tv/canalsport2.php", '[COLOR lime] ► [/COLOR] [B][COLOR gold]Canal + Sport 2[/COLOR][/B]', "http://epg.ovh/logo/Canal++Sport+2.png", False, 'streamsSW2', odtworz=False)
 
     add_item("http://strims.world/tv/canalsport2.php", '[COLOR lime] ► [/COLOR] [B][COLOR gold]Canal + Sport 2[/COLOR][/B]', "http://epg.ovh/logo/Canal++Sport+2.png", False, 'streamsSW2', odtworz=False)
@@ -1007,10 +1108,77 @@ def getChannelsCR():
     xbmcplugin.setContent(addon_handle, 'videos')    
     xbmcplugin.endOfDirectory(addon_handle)        
 
+def playcr():
+    url = params.get('url', None)
+    stream_url=se.resolvingCR(url,url)
+    if stream_url:
+        play_item = xbmcgui.ListItem(path=stream_url)
+        xbmcplugin.setResolvedUrl(addon_handle, True, listitem=play_item)
+    else:
+        xbmcgui.Dialog().notification('[COLOR red][B]Error[/B][/COLOR]', "[COLOR red][B]Can't resolve this link.[/B][/COLOR]", xbmcgui.NOTIFICATION_INFO, 5000)
+        play_item = xbmcgui.ListItem(path=stream_url)
+        
+        xbmcplugin.setResolvedUrl(addon_handle, False, listitem=play_item)
+        return
+    
+    
+    
 def getLinksCR():
     url = params.get('url', None)
-    links=se.getCRlink(url)
+
+    if 'roja:' in url:
+        links = eval(urllib_parse.unquote(url.split(':')[1]))
+    else:
+        links=se.getCRlink(url)
+    stream_url=''
+    items = len(links)
+    if links:
+        for f in links:
+            add_item(f.get('href'), f.get('title'), RESOURCES+'chan2.png', False, 'playcr')        
+    xbmcplugin.setContent(addon_handle, 'videos')    
+    xbmcplugin.endOfDirectory(addon_handle) 
     
+    
+    
+    
+ #   if links:
+ #       t = [ x.get('title') for x in links]
+ #       u = [ x.get('href') for x in links]
+ #       al = "Links"    
+ #       
+ #       if items>1:    
+ #   
+ #           
+ #           select = xbmcgui.Dialog().select(al, t)
+ #           
+ #           if select > -1:
+ #               link = u[select];    
+ #               stream_url=se.resolvingCR(link,url)
+ #       else:
+ #           link = u[0];
+ #           stream_url=se.resolvingCR(link,url)
+ #       if stream_url:
+ #           play_item = xbmcgui.ListItem(path=stream_url)
+ #           xbmcplugin.setResolvedUrl(addon_handle, True, listitem=play_item)
+ #       else:
+ #           xbmcgui.Dialog().notification('[COLOR red][B]Error[/B][/COLOR]', "[COLOR red][B]Can't resolve this link.[/B][/COLOR]", xbmcgui.NOTIFICATION_INFO, 5000)
+ #           play_item = xbmcgui.ListItem(path=stream_url)
+ #           
+ #           xbmcplugin.setResolvedUrl(addon_handle, False, listitem=play_item)
+ #           return
+ #   else:
+ #       xbmcgui.Dialog().notification('[COLOR red][B]Error[/B][/COLOR]', '[COLOR red][B]This video is not available at the moment.[/B][/COLOR]', xbmcgui.NOTIFICATION_INFO, 5000)
+ #       return
+  
+    
+    
+def getLinksCRx():
+    url = params.get('url', None)
+    if 'roja:' in url:
+        links = eval(urllib_parse.unquote(url.split(':')[1]))
+    else:
+        links=se.getCRlink(url)
+    stream_url=''
     items = len(links)
     if links:
         t = [ x.get('title') for x in links]
@@ -1032,7 +1200,9 @@ def getLinksCR():
             play_item = xbmcgui.ListItem(path=stream_url)
             xbmcplugin.setResolvedUrl(addon_handle, True, listitem=play_item)
         else:
+            xbmcgui.Dialog().notification('[COLOR red][B]Error[/B][/COLOR]', "[COLOR red][B]Can't resolve this link.[/B][/COLOR]", xbmcgui.NOTIFICATION_INFO, 5000)
             play_item = xbmcgui.ListItem(path=stream_url)
+            
             xbmcplugin.setResolvedUrl(addon_handle, False, listitem=play_item)
             return
     else:
@@ -1098,7 +1268,11 @@ def getStreamsSW2():
                 play_item = xbmcgui.ListItem(path=stream_url,label=tytul)
                 play_item.setInfo(type="Video", infoLabels={"title": tytul,'plot':tytul})
                 play_item.setProperty("IsPlayable", "true")
-                play_item.setProperty('inputstreamaddon', is_helper.inputstream_addon)
+                if six.PY3:
+                    play_item.setProperty('inputstream', is_helper.inputstream_addon)
+                else:
+                    play_item.setProperty('inputstreamaddon', is_helper.inputstream_addon)
+            #   play_item.setProperty('inputstreamaddon', is_helper.inputstream_addon)
                 play_item.setProperty('inputstream.adaptive.manifest_type', 'hls')
                 
                 play_item.setMimeType('application/vnd.apple.mpegurl')
@@ -1166,7 +1340,10 @@ def getStreamsSW():
                     play_item = xbmcgui.ListItem(path=stream_url,label=tytul)
                     play_item.setInfo(type="Video", infoLabels={"title": tytul,'plot':tytul})
                     play_item.setProperty("IsPlayable", "true")
-                    play_item.setProperty('inputstreamaddon', is_helper.inputstream_addon)
+                    if six.PY3:
+                        play_item.setProperty('inputstream', is_helper.inputstream_addon)
+                    else:
+                        play_item.setProperty('inputstreamaddon', is_helper.inputstream_addon)
                     play_item.setProperty('inputstream.adaptive.manifest_type', 'hls')
                     
                     play_item.setMimeType('application/vnd.apple.mpegurl')
@@ -1263,7 +1440,10 @@ def getLinksSW():
             is_helper = inputstreamhelper.Helper('hls')
             if is_helper.check_inputstream():
                 play_item = xbmcgui.ListItem(path=link)
-                play_item.setProperty('inputstreamaddon', is_helper.inputstream_addon)
+                if six.PY3:
+                    play_item.setProperty('inputstream', is_helper.inputstream_addon)
+                else:
+                    play_item.setProperty('inputstreamaddon', is_helper.inputstream_addon)
                 play_item.setProperty('inputstream.adaptive.manifest_type', 'hls')
                 play_item.setMimeType('application/x-mpegurl')
                 play_item.setContentLookup(False)
@@ -1284,7 +1464,10 @@ def getLinksSW2():
             is_helper = inputstreamhelper.Helper('hls')
             if is_helper.check_inputstream():
                 play_item = xbmcgui.ListItem(path=link)
-                play_item.setProperty('inputstreamaddon', is_helper.inputstream_addon)
+                if six.PY3:
+                    play_item.setProperty('inputstream', is_helper.inputstream_addon)
+                else:
+                    play_item.setProperty('inputstreamaddon', is_helper.inputstream_addon)
                 play_item.setProperty('inputstream.adaptive.manifest_type', 'hls')
                 play_item.setMimeType('application/x-mpegurl')
                 play_item.setContentLookup(False)
@@ -1320,7 +1503,10 @@ def PlayTVP():
         is_helper = inputstreamhelper.Helper('hls')
         if is_helper.check_inputstream():
             play_item = xbmcgui.ListItem(path=link)
-            play_item.setProperty('inputstreamaddon', is_helper.inputstream_addon)
+            if six.PY3:
+                play_item.setProperty('inputstream', is_helper.inputstream_addon)
+            else:
+                play_item.setProperty('inputstreamaddon', is_helper.inputstream_addon)
             play_item.setProperty('inputstream.adaptive.manifest_type', 'hls')
             play_item.setMimeType('application/x-mpegurl')
             play_item.setContentLookup(False)
@@ -1336,7 +1522,10 @@ def PlaySW():
         is_helper = inputstreamhelper.Helper('hls')
         if is_helper.check_inputstream():
             play_item = xbmcgui.ListItem(path=link)
-            play_item.setProperty('inputstreamaddon', is_helper.inputstream_addon)
+            if six.PY3:
+                play_item.setProperty('inputstream', is_helper.inputstream_addon)
+            else:
+                play_item.setProperty('inputstreamaddon', is_helper.inputstream_addon)
             play_item.setProperty('inputstream.adaptive.manifest_type', 'hls')
             play_item.setMimeType('application/x-mpegurl')
             play_item.setContentLookup(False)
@@ -1541,7 +1730,9 @@ def getLinks():
     for new in link:
         add_item('http:'+new[0], new[1], RESOURCES+'play.png', False, 'playlivetvsx')
     xbmcplugin.endOfDirectory(addon_handle)        
-    
+  
+
+  
 def playVipLeague()    :
     url = params.get('url', None)
     stream,err = se.VipLeagueStream(url)
@@ -1549,7 +1740,19 @@ def playVipLeague()    :
         xbmcgui.Dialog().notification('[B]Error[/B]', '[B]'+err+'[/B]',xbmcgui.NOTIFICATION_INFO, 8000,False)
     else:
         if stream:
+
             play_item = xbmcgui.ListItem(path=stream)
+            stream,hea = stream.split('|')
+
+            if six.PY3:
+                play_item.setProperty('inputstream', 'inputstream.adaptive')
+            else:
+                play_item.setProperty('inputstreamaddon', 'inputstream.adaptive')
+            play_item.setProperty("IsPlayable", "true")
+            play_item.setProperty('inputstream.adaptive.manifest_type', 'hls')
+            play_item.setProperty('inputstream.adaptive.stream_headers', hea)
+            play_item.setMimeType('application/vnd.apple.mpegurl')
+            play_item.setContentLookup(False)
 
             xbmcplugin.setResolvedUrl(addon_handle, True, listitem=play_item)
     
@@ -1826,7 +2029,10 @@ def PlayAdaptive(link):
     is_helper = inputstreamhelper.Helper('hls')
     if is_helper.check_inputstream():
         play_item = xbmcgui.ListItem(path=link)
-        play_item.setProperty('inputstreamaddon', is_helper.inputstream_addon)
+        if six.PY3:
+            play_item.setProperty('inputstream', is_helper.inputstream_addon)
+        else:
+            play_item.setProperty('inputstreamaddon', is_helper.inputstream_addon)
         play_item.setProperty('inputstream.adaptive.manifest_type', 'hls')
         play_item.setMimeType('application/x-mpegurl')
         play_item.setContentLookup(False)
@@ -2306,7 +2512,11 @@ def PlayChan():
         src = base64.b64decode(src4[0])#
         if 'manifest.mpd' in src:
             play_item = xbmcgui.ListItem(path=src)
-            play_item.setProperty('inputstreamaddon', 'inputstream.adaptive')
+            if six.PY3:
+                play_item.setProperty('inputstream', 'inputstream.adaptive')
+            else:
+                play_item.setProperty('inputstreamaddon', 'inputstream.adaptive')
+           # play_item.setProperty('inputstreamaddon', 'inputstream.adaptive')
             play_item.setProperty('inputstream.adaptive.manifest_type', 'mpd')
             play_item.setMimeType('video/mp4')
             play_item.setContentLookup(False)
@@ -2739,7 +2949,17 @@ if __name__ == '__main__':
         PlayTVCOM()    
     elif mode == 'gettvcomdysc'    :
         gettvcomdysc()    
-
-    
+    elif mode == 'getroja':
+        getroja()
+    elif mode == 'playcr':
+        playcr()
+    elif mode == "crackstreamsmenu":
+        CrackstreamsMenu()
+    elif mode =="crackstreams":
+        GetCrackstreams()
+    elif mode == 'playcrackstreams':
+        PlayCrackstreams()
+    elif mode == 'streamsSWfolder':
+        GetSwfolder()
 else:
     pass

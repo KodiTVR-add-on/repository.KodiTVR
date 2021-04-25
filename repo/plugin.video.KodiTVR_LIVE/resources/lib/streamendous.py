@@ -4,8 +4,6 @@ import sys,os,urllib3
 import six
 from six.moves import urllib_error, urllib_request, urllib_parse, http_cookiejar
 
-
-import threading
 import re
 import time
 import requests
@@ -15,6 +13,7 @@ else:
     from resources.lib.cmf3 import parseDOM
 #import urlparse
 import mydecode
+import base64
 try:
     reload(sys)
     sys.setdefaultencoding('utf8')
@@ -30,8 +29,6 @@ except:
     dataPath       = xbmc.translatePath(addonInfo('profile')).decode('utf-8')
 
 
-
-#dataPath = xbmc.translatePath(addonInfo('profile')).decode('utf-8')
 vleagueFile = os.path.join(dataPath, 'vleague.txt')
 
 scraper = cfdeco7.create_scraper()
@@ -43,6 +40,7 @@ BASEURL4='https://www.soccerstreams100.com/'
 BASEURL5='https://livesport.ws/en/'
 BASEURL6='https://www.vipleague.lc'
 BASEURL7='http://liveonscore.tv'
+BASEURL8='http://crackstreams.is'
 sess = requests.Session()
 sess365 = requests.Session()
 UA='Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0'
@@ -57,14 +55,20 @@ def getUrl(url,ref=BASEURL2,json=False):
         if json:
             html=html.json()
         else:
-            html=html.content
-            if six.PY3:
-                html = html.decode(encoding='utf-8', errors='strict')
+            html=html.text
+           # if six.PY3:
+           #     try:
+           #         html = html.decode(encoding='utf-8', errors='strict')
+           #     except:
+           #         pass
             if html.find('by DDoS-GUARD')>0:   
                 headers = {'User-Agent': UAbot,'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8','Referer': ref,'Cookie':unbkuk}
-                html=requests.get(url,headers=headers,verify=False,timeout=30).content  
-                if six.PY3:
-                    html = html.decode(encoding='utf-8', errors='strict')
+                html=requests.get(url,headers=headers,verify=False,timeout=30).text 
+              #  if six.PY3:
+               #     try:
+               #         html = html.decode(encoding='utf-8', errors='strict')
+               #     except:
+               #         pass
                 #or creating a cookie “_ddgu” with random characters
     return html
     
@@ -78,7 +82,63 @@ def getUrl2(url,ref=BASEURL2):
     if six.PY3:
         html = html.decode(encoding='utf-8', errors='strict')
     return html,last
+ 
+
+
+
+
+def ListROJA(url) :
+    out =[]
+    # npage = False
+    hd = {'User-Agent': UA}
     
+    # if srch:
+    #     url = 'http://liveonscore.tv/?s='+srch
+    #    html=getUrl(url,BASEURL7)
+    #else:
+    html=getUrl(url,url)
+    #html = (re.sub(' (<span class="es">.+?</span>)','',html)).replace("\'",'"')
+    html = re.sub('(\\xda)','U',html)
+    html = re.sub('(\\xfa)','u',html).replace("\'",'"')
+
+    links = parseDOM(html,'span',attrs = {'class':'\d+'})
+    for subset in links:
+
+        czas = parseDOM(subset,'span',attrs = {'class':'t'})[0]
+
+        try:
+            dysc = parseDOM(subset,'span',attrs = {'class':'en'})[0]
+        except:
+            dysc ='other'
+
+        tyt = parseDOM(subset,'span',attrs = {'itemprop':'name'})[0]
+        event = re.findall('>([^<]+)<b>',subset,re.DOTALL)[0]
+        plot = event+' - ' +tyt
+        fg = dysc 
+        tyt = '[B][COLOR khaki]%s : [/COLOR][/B][COLOR gold][B]%s[/B][/COLOR]'%(czas,tyt) #czas+ ' - ' +tyt
+        
+        subs = parseDOM(subset,'tr')[1:]
+        dd=[]
+       # 
+        for sb in subs:
+            sb = re.sub('(\\n)','',sb)
+            ab = re.findall('>([^<]+)<', sb, re.DOTALL)#[0]
+            if ab[0] == 'P2P':
+                continue
+            else:
+
+                href = parseDOM(sb, 'a', ret='href')[0]
+
+                tit = ab[-7]+' - ' + ab[-5]+' - '+ ab[-3]
+                
+                
+                dd.append({'href':href,'title':tit})
+
+        ff='roja:'+urllib_parse.quote(str(dd))
+        out.append({'title':tyt,'href':ff,'image':'','code':fg,'plot':plot})
+    
+    return out
+
 def getLiveOnScoreStreams(url,srch=''):
     out =[]
     npage = False
@@ -479,6 +539,7 @@ def getSWstreamsx(url):
         pass
     return out
 def getCRlink(url):
+
     out=[]
     html=getUrl(url)
     result = parseDOM(html,'div',attrs = {'class':'video_btn'})#[0]
@@ -573,8 +634,17 @@ def checksp365(url):
     return ab        
         
 def resolvingCR(url,ref):
-    html=getUrl(url,ref)
 
+    try:
+        html=getUrl(url,ref)
+    except:
+        html=''
+    if 'rojadirecta' in url and 'goto/' in url:
+
+        url = re.findall('a href="([^"]+)"',html,re.DOTALL)[0]
+        ref = 'http://www.rojadirecta.me/en?p4'
+        html=getUrl(url,ref)
+    
     if not 'manifest.m3u8' in url:
         iframes= parseDOM(html,'iframe',ret='src')#[0]
         dal=''
@@ -592,11 +662,7 @@ def resolvingCR(url,ref):
                 html=getUrl(iframe,url)    
                 url=iframe
                 break
-            #elif checksp365(iframe):
-            ##elif 'realstream.s' in iframe:
-            #    
-            #    stream=getsport365stream(iframe, url)
-            #    return stream
+
             elif 'sportsbay.org' in iframe:
                 if iframe.startswith('//'):
     
@@ -642,7 +708,10 @@ def resolvingCR(url,ref):
             vido_url = vido_url[0]
         else:
             vido_url=re.findall("""source:\s*['"](.+?)['"]""",html,re.DOTALL)
-    
+
+            if vido_url:
+                if 'google.' in vido_url[0] :
+                    vido_url = ''
             vido_url = vido_url[0]+'|User-Agent='+UA+'&Referer='+dal if vido_url else mydecode.decode(url,html)
             if vido_url:
                 if 'about:blank' in vido_url:
@@ -719,6 +788,24 @@ def getSElink(url):
 
         co+=1
     return out
+    
+    
+def getScheduleSWfolder(url):
+    out=[]
+
+    html=getUrl(url)
+
+    first  = parseDOM(html,'td',attrs = {'class':'tb-mid'})
+    if first:
+        first = first[0].replace("\'",'"')
+        
+        hreftit = re.findall('href="([^"]+)">([^<]+)<',first,re.DOTALL)
+        for href, tyt in hreftit:
+            href = url+href if not 'http' in href and '.php' in href else href
+            out.append({'title':tyt,'href':href,'image':''})    
+        
+    return out    
+  
 def getScheduleSW():
     out=[]
     html=getUrl(BASEURL3)
@@ -871,18 +958,220 @@ def repdays(day):
         day=day.replace('Tomorrow','Next day')
     return day    
     
+   
+def getCrackstreams(url):
+    out = []
+    hd = {'User-Agent': UA}
     
+    html=getUrl(url,BASEURL8)
+
+    result = parseDOM(html,  'div', attrs={'class':"col\-xs\-\d+ col-md\-\d+ col\-sm\-\d+"})[0] 
+    links = re.findall('(<a.*?<\/a>)', result,re.DOTALL)
+    for link in links:
+        href = parseDOM(link,'a',ret='href')[0]
+        img = parseDOM(link,'img',ret='src')[0]
+        t1 = parseDOM(link,'h4')[0]
+        t2 = parseDOM(link,'p')#[0]
+        t2 = t2[0] if t2 else ''
+
+        href = BASEURL8+href if href.startswith('/') else href
+        img = BASEURL8+img if img.startswith('/') else img
+
+        out.append({'title':t1,'href':href,'image':img,'code':t2})
+
+    return out
+
+def getStreamCrackstreams(url):
+    packer = re.compile('(eval\(function\(p,a,c,k,e,(?:r|d).*)')
+    stream = ''
+
+    html=getUrl(url,BASEURL8)
+
+    iframe = parseDOM(html, 'iframe', ret='src')#[0]
+    vidurl =''
+    if iframe:
+
+        nturl = url+iframe[0]
+        html=getUrl(nturl,url)
+        stream_url = re.findall("""atob\s*\(\s*['"](.+?)['"]""",html,re.DOTALL)
+
+        if stream_url:
+            vidurl=base64.b64decode(stream_url[0])
+            if six.PY3:
+                vidurl = vidurl.decode(encoding='utf-8', errors='strict')
+            vidurl = vidurl+'|User-Agent='+UA+'&Referer='+url    
+    return vidurl        
+
 def VipLeagueStream(url):
     hd = {'User-Agent': UA}
+
     html=sess.get(url,headers=hd,verify=False).content
     if six.PY3:
         html = html.decode(encoding='utf-8', errors='strict')
     err=''
     stream=''
-    if 'https://cdn.plytv.me/' in html:
-        stream,err = mydecode._plytv    (url,url,BASEURL6)
+    if 'https://cdn.plytv.me/' in html or 'cdn.tvply.me' in html:
+    
+        stream,err = _plytv    (url,url,BASEURL6)
     return stream,err
 
+def _plytv    (query,url,orig):
+    headers = {
+        'Host': 'key.seckeyserv.me',
+        'user-agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:87.0) Gecko/20100101 Firefox/87.0',
+        'accept': 'application/json, text/javascript, */*; q=0.01',
+        'accept-language': 'pl,en-US;q=0.7,en;q=0.3',
+        'referer': 'https://www.tvply.me/sdembed?v=wanker~wankersd',
+        'origin': 'https://www.tvply.me',
+        'dnt': '1',
+        'te': 'trailers',
+    }
+    
+
+
+
+
+
+    video_url=''
+    err=None
+    headers = {'User-Agent': UA,'Referer': url}    
+
+    contentVideo=getUrl(query,url)
+   # if six.PY3:
+   #    contentVideo = contentVideo.decode(encoding='utf-8', errors='strict')
+   
+
+    html=contentVideo.replace("\'",'"')
+    url = 'https://www.tvply.me/sdembed' if 'cdn.tvply.me' in html else 'https://www.plytv.me/sdembed'
+    qbc= 'https://www.tvply.me/'  if 'cdn.tvply.me' in html else'https://www.plytv.me/'
+    headers = {
+
+        'cache-control': 'max-age=0',
+        'upgrade-insecure-requests': '1',
+        'origin': orig,
+        'content-type': 'application/x-www-form-urlencoded',
+        'user-agent': UA,
+        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+        'sec-gpc': '1',
+        'sec-fetch-site': 'cross-site',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-dest': 'iframe',
+        'referer': query,
+        'accept-language': 'en-US,en;q=0.9',
+    }
+
+    pdettxt =re.findall('pdettxt\s*=\s*"(.+?)"',html,re.DOTALL)[0]
+    zmid=re.findall('zmid\s*=\s*"(.+?)"',html,re.DOTALL)[0]
+    edm=re.findall('edm\s*=\s*"(.+?)"',html,re.DOTALL)[0]
+    pid = re.findall('pid\s*=\s*(\d+);',html,re.DOTALL)[0]
+    
+
+    
+    params = (
+        ('v', zmid),
+    )
+    
+    data = {
+    'pid': (str(pid)),
+    'ptxt': pdettxt
+    }
+    urlk = url+'?v='+str(zmid)#ita1hd~ita1a
+    response_content = sess.post(urlk, headers=headers, params=params, data=data,verify=False).content
+
+    headersx1 = {
+    'User-Agent': UA,
+    'Accept': '*/*',
+    'Accept-Language': 'pl,en-US;q=0.7,en;q=0.3',
+    'Referer': urlk,
+    'Origin': orig,
+    'DNT': '1',
+    'Connection': 'keep-alive',}
+    ntx = 'https://plytv.rocks?v='+str(zmid)+'&d=desktop&u=vipleague.lc&url='+urllib_parse.quote(urlk)
+    response = sess.get(ntx, headers=headersx1,verify=False)#.content
+    av=response.cookies
+    ac=sess.cookies
+    sck=''.join(['%s=%s;'%(c.name, c.value) for c in ac])
+    
+    headers = {
+        'Host': 'cdn.tvply.me',
+        'user-agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:87.0) Gecko/20100101 Firefox/87.0',
+        'accept': '*/*',
+        'accept-language': 'pl,en-US;q=0.7,en;q=0.3',
+        'referer': query,
+        'dnt': '1',
+        'te': 'trailers',
+    }
+    try:
+        response = sess.get('https://cdn.tvply.me/scripts/embed.min.js', headers=headers,verify=False)#.content
+        av=response.cookies
+        ac=sess.cookies
+        sck=''.join(['%s=%s;'%(c.name, c.value) for c in response.cookies])
+    except:
+        pass
+    
+    
+    
+    
+    
+    
+    
+    
+    if six.PY3:
+        response_content = response_content.decode(encoding='utf-8', errors='strict')
+    
+
+    if 'function(h,u,n,t,e,r)' in response_content:
+
+        import dehunt as dhtr
+        ff=re.findall('function\(h,u,n,t,e,r\).*?}\((".+?)\)\)',response_content,re.DOTALL)[0]#.spli
+        ff=ff.replace('"','')
+        h, u, n, t, e, r = ff.split(',')
+        
+        cc = dhtr.dehunt (h, int(u), n, int(t), int(e), int(r))
+
+        cc=cc.replace("\'",'"')
+
+        fil = re.findall('file:\s*window\.atob\((.+?)\)',cc,re.DOTALL)[0]
+
+        src = re.findall(fil+'\s*=\s*"(.+?)"',cc,re.DOTALL)[0]
+        video_url = base64.b64decode(src)
+        if six.PY3:
+            video_url = video_url.decode(encoding='utf-8', errors='strict')
+            
+        strName = re.findall('const\s*strName\s*=\s*"([^"]+)"',cc,re.DOTALL)[0]
+        #scode = 
+        #expires
+        keyurl = re.findall('keyUrl\s*=\s*"([^"]+)"',cc,re.DOTALL)[0]    
+        keyurl = base64.b64decode(keyurl)
+        if six.PY3:
+            keyurl = keyurl.decode(encoding='utf-8', errors='strict')
+        scode,expires = re.findall('formauthurl\({"scode":\s*"([^"]+)",\s"ts":\s(\d+)\}',cc,re.DOTALL)[0]
+        urlnext = keyurl+'/?stream='+strName+'&scode='+scode+'&expires='+str(expires)
+
+        
+
+        UAb= 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36'
+    
+
+        headersx = {
+        'User-Agent': UA,
+        'Accept': '*/*',
+        'Accept-Language': 'pl,en-US;q=0.7,en;q=0.3',
+        'Referer': urlk,
+        'Origin': orig,
+        'DNT': '1',
+        'Connection': 'keep-alive',}
+
+        hea= '&'.join(['%s=%s' % (name, value) for (name, value) in headersx.items()])
+        video_url=video_url+ '|'+hea
+
+    else:
+        err='The stream will start soon. Please check again after a moment'
+
+    return video_url,err
+    
+    
+    
 def getLinksVipLeague(id,tyt):
     
     out = []
@@ -891,34 +1180,36 @@ def getLinksVipLeague(id,tyt):
     b = f.read()
     f.close()
     data =json.loads(b)
+
     dt = re.findall('(\(.+?\))',tyt,re.DOTALL)
     p1 = re.findall('^(.+?)\[COLOR',tyt,re.DOTALL)
     p1 =p1[0] if p1 else tyt
     f=data.get(id,{})
-    f = f.replace("\'",'"') if f else f#1#base
-
-    datas = re.findall('class="col-12 text(.+?)\/button><\/div',f,re.DOTALL)
-    l=1
-    for data in datas:
-
-        aa=''
-        hrefs= re.findall('data-uri="(.+?)"',data,re.DOTALL)#[0]
-        
-        for href in hrefs:
-
-            ql = re.findall(href+'.+?mr-1">(.+?)<',data,re.DOTALL)
-            ql= ql[0] if ql else ''
-            href = BASEURL6+href if href.startswith('/') else href
+    if f:
+        f = f.replace("\'",'"') if f else f#1#base
+    
+        datas = re.findall('class="col-12 text(.+?)\/button><\/div',f,re.DOTALL)
+        l=1
+        for data in datas:
+    
+            aa=''
+            hrefs= re.findall('data-uri="(.+?)"',data,re.DOTALL)#[0]
             
-            data = re.sub("<[^>]*>","",data) #if qual else ''
-            t2 = re.findall('\#(\w+)',data,re.DOTALL)#[0]
-            t2 = t2[0] if t2 else ''
-
-            tytul= t2+' Link %d %s'%(l,ql)
-
-            out.append({'title':tytul,'href':str(href),'image':'','code':dt[0] if dt else tytul,'plot':p1})
-            l+=1
-
+            for href in hrefs:
+    
+                ql = re.findall(href+'.+?mr-1">(.+?)<',data,re.DOTALL)
+                ql= ql[0] if ql else ''
+                href = BASEURL6+href if href.startswith('/') else href
+                
+                data = re.sub("<[^>]*>","",data) #if qual else ''
+                t2 = re.findall('\#(\w+)',data,re.DOTALL)#[0]
+                t2 = t2[0] if t2 else ''
+    
+                tytul= t2+' Link %d %s'%(l,ql)
+    
+                out.append({'title':tytul,'href':str(href),'image':'','code':dt[0] if dt else tytul,'plot':p1})
+                l+=1
+    
     return out    
 def getVipLeagueStreams(url,srch=""):
 
@@ -945,6 +1236,7 @@ def getVipLeagueStreams(url,srch=""):
         html=sess.get(url,headers=hd,verify=False).content
     if six.PY3:
         html = html.decode(encoding='utf-8', errors='strict')
+
     result = parseDOM(html,'div',attrs = {'id':".+?",'class':"invisible"})#[0]         #<div class="arrowgreen"><div id="btyTUX" class="invisible">   invisible
     if result:
 
@@ -962,6 +1254,7 @@ def getVipLeagueStreams(url,srch=""):
         
         nturl = 'https://www.vipleague.lc/loadschdata?ids='+schdata
         html=sess.get(nturl,headers=headers5, params=params,verify=False).content
+        #xbmc.log('@#@htmlhtmlhtmlhtmlhtml: %s' % str(html), xbmc.LOGNOTICE)
         if six.PY3:
             html = html.decode(encoding='utf-8', errors='strict')
         f = xbmcvfs.File(vleagueFile, 'w')
@@ -971,6 +1264,7 @@ def getVipLeagueStreams(url,srch=""):
         tithrefikondt = re.findall('title="([^"]+)".*?data-target=".*?(\d+)".*?<span class="vleague (\w+).*?".*?span content="([^"]+)"',result[0],re.DOTALL)#[0]
 
         for tyt,href,ikon,dt in tithrefikondt:
+
             dt = getrealtime(dt,dif)
             tit = '%s [COLOR gold](%s)[/COLOR]'%(tyt,dt)
             out.append({'title':tit,'href':str(href),'image':ikon,'code':dt})
@@ -984,11 +1278,11 @@ def gettimedif():
     readable2 = b.strftime('%Y-%m-%dT%H:%M')
 
     try:
-        date_time_obj=datetime.datetime.strptime(readable1, '%Y-%m-%dT%H:%M')
+        date_time_obj=datetime.datetime.strptime(readable1, '%Y-%m-%dT%H:%M')+datetime.timedelta(hours=1)
         date_time_obj2=datetime.datetime.strptime(readable2, '%Y-%m-%dT%H:%M')
 
     except TypeError:
-        date_time_obj=datetime.datetime(*(time.strptime(readable1, '%Y-%m-%dT%H:%M')[0:6]))
+        date_time_obj=datetime.datetime(*(time.strptime(readable1, '%Y-%m-%dT%H:%M')[0:6]))+datetime.timedelta(hours=1)
         date_time_obj2=datetime.datetime(*(time.strptime(readable2, '%Y-%m-%dT%H:%M')[0:6]))
 
     def to_timestamp(a_date):
@@ -1048,7 +1342,7 @@ def getLiveSport():
 
     if resp.status_code == 403:
         my_addon.setSetting('proksWS', 'true')
-		
+        
         html = getUrlProx(BASEURL5)
     else:
         my_addon.setSetting('proksWS', 'false')
