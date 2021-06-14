@@ -1,4 +1,8 @@
 *KodiTVR LIVE SPORT TV
+2.0.14
+- fix package
+=====================«
+*KodiTVR LIVE SPORT TV
 1.0.12
 - fix vipleague
 - fix strims world
@@ -12,5 +16,3 @@
 1.0
 - initial version 
 -compatible with Kodi18.x - 19.x version
-
-
